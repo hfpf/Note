@@ -1,0 +1,96 @@
+1. request和response是由客户端还是服务器创建?
+2. 重定向是基于http协议的么？请求转发和请求包含是基于http协议的么？
+3. 响应编码问题：
+　　response.getWriter().print("传智")，是否能保证不出乱码？
+　　response.setCharacterEncoding("utf-8");response.getWriter().print("传智")，是否能保证不出乱码？
+　　response.setContentType("text/html;charset=utf-8");response.getWriter().print("传智")，是否能保证不出乱码？
+　　response.setHeader("Content-Type", "text/html;charset=utf-8");response.getWriter().print("传智")，是否能保证不出乱码？
+　　response.getOutputStream().write("传智".getByte("utf-8"))，是否能保证不能乱码？
+4. HTTP协议中是否制定了response的API?
+5. 浏览器是否知道response对象的存在？
+6. 服务器是通过什么对象向客户端发送http响应信息的？
+7. response向客户端发送数据只能使用response.getWriter()这一个流？
+8. response对象是否有缓存？
+9. 通常是否需要我们自己来关闭response.getWriter()和response.getOutputStream()?
+10. 服务器从response中获取信息，然后发送给客户端？
+11. response的两个流是否可以同时使用？
+12. 请求转发时第一个Servlet设置的响应头是否会留下，设置的响应体是否会留下？
+13. 看代码
+	Servlet1:
+	response.getOutputStream().write(“传智”.getBytes(“gbk”));
+	response.getWriter().write(“播客”);
+	request.getRequestDispatcher(“/Servlet2”).forward(request,response);
+
+	Servlet2:
+	response.getOutputStream().write(“OK”.getBytes(“utf-8”));
+
+	输出结果是什么？
+14. 看代码
+	Servlet1：
+	response.setHeader(“Content-Type”,“text/html;charset=utf-8”);
+	response.getOutputStream().write(“传智”.getBytes(“utf-8”));
+	request.getRequestDispatcher(“/Servlet2”).forward(request,response);
+
+	Servlet2：
+	response.getOutputStream().write(“播客”.getBytes(“utf-8”));
+	输出结果是什么？
+15. 当需要改变浏览器地址栏中的地址，是使用重定向还是请求转发？
+16. 重定向路径是否需要加载项目名？
+17. ServletRequest与HttpServletRequest的区别是，前者与协议无关，而后者与http协议有关，所以后者可以获取与http协议相关的信息
+18. request是由服务器创建的，每个请求都会创建一个新的request对象。
+19. request对象由浏览器发送给服务器？
+20. request域是什么？
+21. request域的范围为整个请求链
+22. request对象在发出请求时开始，到响应时结束，对么？
+23. request.getAttribute()方法用来获取浏览器发送过来的请求参数？
+24. 请求参数是由浏览器发送给服务器的
+25. request对象请求参数进行增、删、改、查
+26. 请求参数与request域有关系么？
+27. 重定向为两个请求，第一个请求中的请求参数，在第二个请求中是否可以获取的到？
+28. 服务器默认使用什么编码来解码请求数据？
+29. request.setCharacterEncoding()方法只对什么请求方式有效？
+30. GET请求方法处理编码怎么处理？
+31. 看代码
+	Servlet1：
+	response.setCharacterEncoding("utf-8");
+	response.setHeader("Content-Type", "text/html;charset=utf-8");
+	response.getWriter().write("传播");
+	request.getRequestDispatcher("/servlet/Servlet2").forward(request,response);
+	Servlet2：
+		response.getWriter().write("智慧");
+		request.getRequestDispatcher("/servlet/Servlet3").forward(request,response);
+		response.setHeader("Content-Type", "text/html;charset=iso8859-1");
+	Servlet3：
+		response.getWriter().write("挥洒汗水");
+	输出结果是什么？
+32. 看代码
+	Servlet1：
+		response.setContentType("text/html;charset=gbk");
+		response.getWriter().write("传播智慧");
+		request.getRequestDispatcher("/servlet/Servlet2").forward(request,response);
+		response.sendRedirect("/app/servlet/Servlet3");
+	Servlet2：
+	response.getWriter().write("收获成长");
+	输出结果是什么？
+33. 请求转发和请求包含与浏览器无关，对么？
+34. 请求包含可以实现多个Servlet的输出合并？
+35. 请求包含不能包含html页面？
+36. response.sendRedirect(“/app/Servlet2”); 地址栏中地址会变化么？
+37. response.sendRedirect(“/Servlet2”);会不会404?
+38. response.setStatues(302);response.setHeader(“location”,”/app/Servlet2”);会404么
+39. response.setHeader(“Refresh”,”0;url=/app/Servlet2”);会404么
+40. 在Servlet中这样是获取哪里的资源：FileInputStream fin = new  FileInputStream(“1.jpg”);
+41. 在Servlet中这样是获取哪里的资源：FileInputStream fin = new  FileInputStream(this.getServletContext().getRealPath(“/1.jpg”));
+42. 在Servlet中这样是获取哪里的资源：InputStream fin = this.getClass().getClassLoader().getResourceAsStream("1.jpg");
+43. 在Servlet中这样是获取哪里的资源：InputStream fin = this.getClass().getClassLoader().getResourceAsStream("../1.jpg");
+43. request.getParameter()、request.getAttribute()、request.getHeader()，说明一下。
+44. sendRedirect()是谁的方法?
+
+
+
+
+
+
+
+
+

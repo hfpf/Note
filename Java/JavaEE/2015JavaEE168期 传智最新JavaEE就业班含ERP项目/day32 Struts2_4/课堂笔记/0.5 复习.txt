@@ -1,0 +1,57 @@
+复习:
+		1.国际化
+			1.properties文件怎样声明
+				1.全局
+					位置:任意
+					需要在struts.xml文件中声明常量。
+				2.局部
+					1.针对于action
+						位置:与action类在同一个包下
+						名称:actionClassNam.properties
+					2.针对于包
+						位置:在指定的包下.
+						名称:package.properties
+					3.在jsp页面临时使用
+						位置:任意
+						在jsp页面上使用<s:i18n name="">
+			2.在struts2中什么位置使用国际化
+				1.action类中
+				2.validation配置文件
+				3.jsp页面
+			3.在struts2中怎样使用国际化
+				getText();
+				<message key="">
+				<s:text>
+		2.拦截器
+			
+			struts2中的Interceptor是使用AOP思想  AOP思想底层实现就是动态代理。
+			Interceptor它使用了责任链模式。
+			
+			1.在struts2中怎样使用拦截器
+				1.创建一个类实现Interceptor接口(继承AbstractInterceptor，继承MethodFilterInterceptor)
+					实现接口:intercept
+					重写的方法:doIntercept
+					
+					让拦截器继续执行:通过方法的参数 ActionInvocation.invoke();
+					
+				2.在struts.xml文件中声明
+					<interceptors>
+						<intercept name="" class="">
+						也可以声明拦截器栈
+					</interceptors>	
+					
+				3.在action中引用
+					<interceptor-ref name="">
+					
+				注意:只要显示声明拦截器，默认的defaultStack失效。
+			
+			2.源代码分析:
+				在Dispatcher中通过获取Action的代理对象  ActionProxy,在其执行操作时，会调用
+				它的invoke方法，在invoke方法中将所有的拦截器调用 。
+				
+				
+				
+		3.文件上传下载
+			上传:					
+			下载:
+				

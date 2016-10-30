@@ -1,0 +1,43 @@
+﻿result:
+
+1). result 是 action 节点的子节点
+
+2). result 代表 action 方法执行后, 可能去的一个目的地
+
+3). 一个 action 节点可以配置多个 result 子节点. 
+
+4). result 的 name 属性值对应着 action 方法可能有的一个返回值. 
+
+	<result name="index">/index.jsp</result>
+
+5). result 一共有 2 个属性, 一个是name，还有一个是 type: 表示结果的响应类型
+
+6). result 的 type 属性值在 struts-default 包的 result-types 节点的 name 属性中定义.
+    常用的有：
+    > dispatcher(默认的): 转发. 同 Servlet 中的转发. 
+    > redirect: 重定向
+    > redirectAction: 重定向到一个 Action
+    	注意: 通过 redirect 的响应类型也可以便捷的实现 redirectAction 的功能!
+    	
+		<result name="index" type="redirectAction">
+			<param name="actionName">testAction</param>
+			<param name="namespace">/atguigu</param>
+		</result>
+		
+		OR
+		
+		<result name="index" type="redirect">/atguigu/testAction.do</result>
+    	
+    > chain: 转发到一个 Action
+    	注意: 不能通过 type=dispatcher 的方式转发到一个 Action
+    	
+        只能是:
+         
+		<result name="test" type="chain">
+			<param name="actionName">testAction</param>
+			<param name="namespace">/atguigu</param>
+		</result>
+		
+		不能是:
+		
+		<result name="test">/atguigu/testAction.do</result>

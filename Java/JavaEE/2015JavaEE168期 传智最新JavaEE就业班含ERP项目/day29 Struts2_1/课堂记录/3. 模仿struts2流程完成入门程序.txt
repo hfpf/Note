@@ -1,0 +1,65 @@
+模仿struts2流程完成入门程序:
+		index.jsp
+		hello.jsp
+		HelloAction
+		struts.xml
+	-----------------
+	1.创建一个Filter----StrutsFilter
+	2.在web.xml文件中配置StrutsFilter
+		<filter>
+			<filter-name>struts</filter-name>
+			<filter-class>cn.itcast.filter.StrutsFilter</filter-class>
+		</filter>
+
+		<filter-mapping>
+			<filter-name>struts</filter-name>
+			<url-pattern>/*</url-pattern>
+		</filter-mapping>
+	3.在StrutsFilter中完成拦截操作，并访问Action中的方法，跳转到hello.jsp页面操作.
+		
+			// 2.1 得到请求资源路径
+			String uri = request.getRequestURI();
+			String contextPath = request.getContextPath();
+			String path = uri.substring(contextPath.length() + 1);
+
+			// System.out.println(path); // hello
+
+			// 2.2 使用path去struts.xml文件中查找某一个<action name=path>这个标签
+			SAXReader reader = new SAXReader();
+			// 得到struts.xml文件的document对象。
+			Document document = reader.read(new File(this.getClass()
+					.getResource("/struts.xml").getPath()));
+
+			Element actionElement = (Element) document
+					.selectSingleNode("//action[@name='" + path + "']"); // 查找<action
+																			// name='hello'>这样的标签
+
+			if (actionElement != null) {
+				// 得到<action>标签上的class属性以及method属性
+				String className = actionElement.attributeValue("class"); // 得到了action类的名称
+				String methodName = actionElement.attributeValue("method");// 得到action类中的方法名称。
+
+				// 2.3通过反射，得到Class对象，得到Method对象
+				Class actionClass = Class.forName(className);
+				Method method = actionClass.getDeclaredMethod(methodName);
+
+				// 2.4 让method执行.
+				String returnValue = (String) method.invoke(actionClass
+						.newInstance()); // 是让action类中的方法执行，并获取方法的返回值。
+
+				// 2.5
+				// 使用returnValue去action下查找其子元素result的name属性值，与returnValue做对比。
+				Element resultElement = actionElement.element("result");
+				String nameValue = resultElement.attributeValue("name");
+
+				if (returnValue.equals(nameValue)) {
+					// 2.6得到了要跳转的路径。
+					String skipPath = resultElement.getText();
+
+					// System.out.println(skipPath);
+
+					request.getRequestDispatcher(skipPath).forward(request,
+							response);
+					return;
+				}
+			}

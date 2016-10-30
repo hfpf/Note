@@ -1,0 +1,33 @@
+2. 在 Action 中访问 WEB 资源:
+
+1). 什么是 WEB 资源 ?
+
+	HttpServletRequest, HttpSession, ServletContext 等原生的 Servlet API。 
+
+2). 为什么访问 WEB 资源?
+
+	B\S 的应用的 Controller 中必然需要访问 WEB 资源: 向域对象中读写属性, 读写 Cookie, 获取 realPath ....
+
+3). 如何访问 ?
+
+I. 和 Servlet API 解耦的方式: 只能访问有限的 Servlet API 对象, 且只能访问其有限的方法(读取请求参数, 读写域对象的属性, 使 session 失效...). 
+
+	> 使用 ActionContext
+	
+	> 实现 XxxAware 接口
+	
+	> 选用的建议: 若一个 Action 类中有多个 action 方法, 且多个方法都需要使用域对象的 Map 或 parameters, 则建议使用
+	Aware 接口的方式
+	
+	> session 对应的 Map 实际上是 SessionMap 类型的! 强转后若调用其 invalidate() 方法, 可以使其 session 失效!
+		if (sessionMap instanceof SessionMap) {
+			SessionMap sm = (SessionMap) sessionMap;
+			sm.invalidate();
+			System.out.println("session失效了！");
+		}
+		
+II. 和 Servlet API 耦合的方式: 可以访问更多的 Servlet API 对象, 且可以调用其原生的方法.  
+
+	> 使用 ServletActionContext
+	
+	> 实现 ServletXxxAware 接口.

@@ -1,0 +1,80 @@
+Action
+			
+	1.关于Action类的创建方式介绍:
+		有三种方式
+		1.创建一个POJO类.
+			简单的Java对象(Plain Old Java Objects)
+			指的是没有实现任何接口，没有继承任何父类(除了Object)
+			
+			优点:无耦合。
+			缺点:所以工作都要自己实现。
+			
+			在struts2框架底层是通过反射来操作:
+				* struts2框架 读取struts.xml 获得 完整Action类名 
+				* obj = Class.forName("完整类名").newInstance();
+				* Method m = Class.forName("完整类名").getMethod("execute");  m.invoke(obj); 通过反射 执行 execute方法
+
+		2.创建一个类，实现Action接口.  com.opensymphony.xwork2.Action
+			
+			优点:耦合低。提供了五种结果视图，定义了一个行为方法。
+			缺点:所以工作都要自己实现。
+			
+			public static final String SUCCESS = "success"; // 数据处理成功 （成功页面）
+			public static final String NONE = "none";  		// 页面不跳转  return null; 效果一样
+			public static final String ERROR = "error";  	// 数据处理发送错误 (错误页面)
+			public static final String INPUT = "input"; 	// 用户输入数据有误，通常用于表单数据校验 （输入页面）
+			public static final String LOGIN = "login"; 	// 主要权限认证 (登陆页面)
+
+		3.创建一个类，继承自ActionSupport类.  com.opensymphony.xwork2.ActionSupport
+			ActionSupport类实现了Action接口。
+			
+			优点:表单校验、错误信息设置、读取国际化信息 三个功能都支持.
+			缺点:耦合度高。
+			
+		在开发中，第三种会使用的比较多.
+	--------------------------------------------------------------------------	
+	关于action的访问:
+	
+		1.通过设置method的值，来确定访问action类中的哪一个方法.
+			<action name="book_add" class="cn.itcast.action.BookAction"	method="add"></action>
+			当访问的是book_add,这时就会调用BookAction类中的add方法。			
+			<action name="book_update" class="cn.itcast.action.BookAction"	method="update"></action>
+			当访问的是book_update,这时就会调用BookAction类中的update方法。
+			
+		2.使用通配符来简化配置
+			1.在struts.xml文件中
+				<action name="*_*" class="cn.itcast.action.{1}Action" method="{2}"></action>
+			2.在jsp页面上
+				book.jsp
+					<a href="${pageContext.request.contextPath}/Book_add">book add</a><br>
+					<a href="${pageContext.request.contextPath}/Book_update">book update</a><br>
+					<a href="${pageContext.request.contextPath}/Book_delete">book delete</a><br>
+					<a href="${pageContext.request.contextPath}/Book_search">book search</a><br>
+				product.jsp
+					<a href="${pageContext.request.contextPath}/Product_add">product add</a><br>
+					<a href="${pageContext.request.contextPath}/Product_update">product update</a><br>
+					<a href="${pageContext.request.contextPath}/Product_delete">product delete</a><br>
+					<a href="${pageContext.request.contextPath}/Product_search">product search</a><br>
+				
+				当访问book add时，这时的路径是  Book_add,那么对于struts.xml文件中.
+				第一个星就是   Book
+				第二个星就是   add
+				对于{1}Action---->BookAction
+				对于method={2}--->method=add
+				
+			使用通配符来配置注意事项:
+				1.必须定义一个统一的命名规范。
+				2.不建议使用过多的通配符，阅读不方便。
+		----------------------------------------------
+		3.动态方法调用	(了解)
+			在struts.xml文件中
+				 <action name="book" class="cn.itcast.action.BookAction"></action>
+			访问时路径: http://localhost/struts2_day01_2/book!add
+				就访问到了BookAction类中的add方法。
+			
+			对于book!add 这就是动态方法调用。
+			
+			注意：struts2框架支持动态方法调用，是因为在default.properties配置文件中设置了
+                 动态方法调用为true.
+
+				struts.enable.DynamicMethodInvocation = true	

@@ -1,0 +1,25 @@
+
+在页面开头加入以下语句
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+
+不加可能会出现样式改变.不能正确的显示组件的外观
+
+
+1.window
+	html方式实现
+	js+html
+	$("#myDD").window("open");
+	$("#myDD").window({});
+
+2.window
+	html方式实现
+	js+html
+3.dialog
+4.message  js实现
+5.linkbutton
+	html 
+	js+html
+6.Tab选项卡
+
+  

@@ -1,0 +1,19 @@
+struts2框架
+	1.
+		介绍struts2   
+		关于struts2配置(关于Action配置)---重点
+		关于struts2结果类型
+	2.
+		struts2处理请求参数---重点
+		struts2的类型转换
+		struts2的校验
+	3.
+		struts2国际化
+		struts2拦截器----重点
+		struts2文件上传与下载
+		struts2中ognl与valuestack----重点
+	4.
+		ognl与valuestatck-----重点
+		struts2中的防止表单重复提交
+		struts2中ajax插件.  
+	5.练习

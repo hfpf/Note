@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <title>快捷键</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/easybook.css" />
+
+
+    </head>
+
+<body><div class="container">
+<div class="item chapter">
+    <h1 class="title"><span class="label">32</span> <span class="title">快捷键</span></h1>
+    <h2 id="f411d0f1f925d9b48d8c1d451bd809b1">说明</h2>
+
+<p>IntelliJ IDEA 的便捷操作性，快捷键的功劳占了一大半，对于各个快捷键组合请认真对待。IntelliJ IDEA 本身的设计思维是提倡键盘优先于鼠标的，所以各种快捷键组合层出不穷，对于快捷键设置也有各种支持，对于其他 IDE 的快捷键组合也有预设模板进行支持。</p>
+
+<p>关于各个快捷键的频率分类上可能每个人都有各自的看法，下面的整理也只是以我个人的使用习惯来划分的，而我应该是可以代表某一部分小众人员。但是我个人还是强烈建议你可以在我的基础上整理一份属于你的快捷键目录（删除掉多余的字眼，只保留快捷键内容），本篇文章也只是起到一个工具和引子的作用。</p>
+
+<p>对于下面各个快捷键的使介绍描述也许用我个人语言翻译起来不够准确或是不全面，且在不同的文件类型上按出来的效果也可能结果不太一样,所以 <strong>强烈建议</strong> 你自己把各个快捷键都亲自操作下体会下各个快捷键的实际用法。</p>
+
+<h2 id="a62d8a1a23e3bddf0a25ee87c407246d">前提</h2>
+
+<p>由于文化的不同，我们使用的电脑必备一个软件就是中文输入法，而目前大多数人都使用搜狗拼音输入法或是其他类似的。而这些输入法跟 IntelliJ IDEA 有一个万恶的冲突永恒不变：快捷键冲突。所以为了配合 IntelliJ IDEA，我们要去掉这些输入法下的所有快捷键。</p>
+
+<div class="figure" id="figure-32-1">
+    <img src="images/xxvii-c-keymap-premise-1.jpg" alt="前提"  />
+
+    <p class="caption"><strong>图片 32.1</strong> 前提</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图红色圈住内容所示，默认是 <code>逗号</code> 我改为了 ESC 键下的 <code>波浪号</code>，<code>Ctrl + 逗号</code> 这个快捷键适合做智能提示用，下面的快捷键列表会讲。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-32-2">
+    <img src="images/xxvii-c-keymap-premise-2.jpg" alt="前提"  />
+
+    <p class="caption"><strong>图片 32.2</strong> 前提</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图红色圈住内容所示，这些快捷键很容易跟 IntelliJ IDEA 快捷键冲突，需要全部去掉。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-32-3">
+    <img src="images/xxvii-c-keymap-premise-3.jpg" alt="前提"  />
+
+    <p class="caption"><strong>图片 32.3</strong> 前提</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图红色圈住内容所示，QQ 这些快捷键也很容易跟 IntelliJ IDEA 快捷键冲突，需要全部去掉，最多保持一个截图功能即可。</li>
+  </ul>
+</blockquote>
+
+<p>可能还有其他一些软件，比如网易云音乐、有道词典等等这些软件都可能存在快捷键冲突，所以为了 IntelliJ IDEA 这些软件的快捷键都是值得舍弃的，如果你在开发的时候。</p>
+
+<h2 id="2b61e0d5977f2e38f06e16281c802b47">Ctrl</h2>
+
+<div class="table" id="table-32-1">
+
+    <table>
+<thead>
+<tr>
+  <th align="left">快捷键</th>
+  <th align="left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Ctrl + F</td>
+  <td align="left">在当前文件进行文本查找 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + R</td>
+  <td align="left">在当前文件进行文本替换 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Z</td>
+  <td align="left">撤销 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Y</td>
+  <td align="left">删除光标所在行 或 删除选中的行 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + X</td>
+  <td align="left">剪切光标所在行 或 剪切选择内容</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + C</td>
+  <td align="left">复制光标所在行 或 复制选择内容</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + D</td>
+  <td align="left">复制光标所在行 或 复制选择内容，并把复制内容插入光标位置下面 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + W</td>
+  <td align="left">递进式选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展选中范围 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + E</td>
+  <td align="left">显示最近打开的文件记录列表</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + N</td>
+  <td align="left">根据输入的 <strong>类名</strong> 查找类文件</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + G</td>
+  <td align="left">在当前文件跳转到指定行处</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + J</td>
+  <td align="left">插入自定义动态代码模板</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + P</td>
+  <td align="left">方法参数提示显示</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Q</td>
+  <td align="left">光标所在的变量 / 类名 / 方法名等上面（也可以在提示补充的时候按），显示文档内容</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + U</td>
+  <td align="left">前往当前光标所在的方法的父类的方法 / 接口定义</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + B</td>
+  <td align="left">进入光标所在的方法/变量的接口或是定义处，等效于 <code>Ctrl + 左键单击</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + K</td>
+  <td align="left">版本控制提交项目，需要此项目有加入到版本控制才可用</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + T</td>
+  <td align="left">版本控制更新项目，需要此项目有加入到版本控制才可用</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + H</td>
+  <td align="left">显示当前类的层次结构</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + O</td>
+  <td align="left">选择可重写的方法</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + I</td>
+  <td align="left">选择可继承的方法</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + &#43;</td>
+  <td align="left">展开代码</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + &#45;</td>
+  <td align="left">折叠代码</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + /</td>
+  <td align="left">注释光标所在行代码，会根据当前不同文件类型使用不同的注释符号 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + &#91;</td>
+  <td align="left">移动光标到当前所在代码的花括号开始位置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + &#93;</td>
+  <td align="left">移动光标到当前所在代码的花括号结束位置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + F1</td>
+  <td align="left">在光标所在的错误代码处显示错误信息</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + F3</td>
+  <td align="left">调转到所选中的词的下一个引用位置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + F4</td>
+  <td align="left">关闭当前编辑文件</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + F8</td>
+  <td align="left">在 Debug 模式下，设置光标当前行为断点，如果当前已经是断点则去掉断点</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + F9</td>
+  <td align="left">执行 Make Project 操作</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + F11</td>
+  <td align="left">选中文件 / 文件夹，使用助记符设定 / 取消书签</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + F12</td>
+  <td align="left">弹出当前文件结构层，可以在弹出的层上直接输入，进行筛选</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Tab</td>
+  <td align="left">编辑窗口切换，如果在切换的过程又加按上delete，则是关闭对应选中的窗口</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Enter</td>
+  <td align="left">智能分隔行</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + End</td>
+  <td align="left">跳到文件尾</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Home</td>
+  <td align="left">跳到文件头</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Space</td>
+  <td align="left">基础代码补全，默认在 Windows 系统上被输入法占用，需要进行修改，建议修改为 <code>Ctrl + 逗号</code> <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Delete</td>
+  <td align="left">删除光标后面的单词或是中文句</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + BackSpace</td>
+  <td align="left">删除光标前面的单词或是中文句</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + 1,2,3...9</td>
+  <td align="left">定位到对应数值的书签位置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + 左键单击</td>
+  <td align="left">在打开的文件标题上，弹出该文件路径</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + 光标定位</td>
+  <td align="left">按 Ctrl 不要松开，会显示光标所在的类信息摘要</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + 左方向键</td>
+  <td align="left">光标跳转到当前单词 / 中文句的左侧开头位置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + 右方向键</td>
+  <td align="left">光标跳转到当前单词 / 中文句的右侧开头位置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + 前方向键</td>
+  <td align="left">等效于鼠标滚轮向前效果</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + 后方向键</td>
+  <td align="left">等效于鼠标滚轮向后效果</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="a2e92861b757ab878312dd57993d60cf">Alt</h2>
+
+<div class="table" id="table-32-2">
+
+    <table>
+<thead>
+<tr>
+  <th align="left">快捷键</th>
+  <th align="left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Alt + &#96;</td>
+  <td align="left">显示版本控制常用操作菜单弹出层</td>
+</tr>
+<tr>
+  <td align="left">Alt + Q</td>
+  <td align="left">弹出一个提示，显示当前类的声明 / 上下文信息</td>
+</tr>
+<tr>
+  <td align="left">Alt + F1</td>
+  <td align="left">显示当前文件选择目标弹出层，弹出层中有很多目标可以进行选择</td>
+</tr>
+<tr>
+  <td align="left">Alt + F2</td>
+  <td align="left">对于前面页面，显示各类浏览器打开目标选择弹出层</td>
+</tr>
+<tr>
+  <td align="left">Alt + F3</td>
+  <td align="left">选中文本，逐个往下查找相同文本，并高亮显示</td>
+</tr>
+<tr>
+  <td align="left">Alt + F7</td>
+  <td align="left">查找光标所在的方法 / 变量 / 类被调用的地方</td>
+</tr>
+<tr>
+  <td align="left">Alt + F8</td>
+  <td align="left">在 Debug 的状态下，选中对象，弹出可输入计算表达式调试框，查看该输入内容的调试结果</td>
+</tr>
+<tr>
+  <td align="left">Alt + Home</td>
+  <td align="left">定位 / 显示到当前文件的 <code>Navigation Bar</code></td>
+</tr>
+<tr>
+  <td align="left">Alt + Enter</td>
+  <td align="left">IntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Alt + Insert</td>
+  <td align="left">代码自动生成，如生成对象的 set / get 方法，构造函数，toString() 等</td>
+</tr>
+<tr>
+  <td align="left">Alt + 左方向键</td>
+  <td align="left">按左方向切换当前已打开的文件视图</td>
+</tr>
+<tr>
+  <td align="left">Alt + 右方向键</td>
+  <td align="left">按右方向切换当前已打开的文件视图</td>
+</tr>
+<tr>
+  <td align="left">Alt + 前方向键</td>
+  <td align="left">当前光标跳转到当前文件的前一个方法名位置</td>
+</tr>
+<tr>
+  <td align="left">Alt + 后方向键</td>
+  <td align="left">当前光标跳转到当前文件的后一个方法名位置</td>
+</tr>
+<tr>
+  <td align="left">Alt + 1,2,3...9</td>
+  <td align="left">显示对应数值的选项卡，其中 1 是 Project 用得最多</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="825a3d98017bab11815ad2817201324c">Shift</h2>
+
+<div class="table" id="table-32-3">
+
+    <table>
+<thead>
+<tr>
+  <th align="left">快捷键</th>
+  <th align="left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Shift + F1</td>
+  <td align="left">如果有外部文档可以连接外部文档</td>
+</tr>
+<tr>
+  <td align="left">Shift + F2</td>
+  <td align="left">跳转到上一个高亮错误 或 警告位置</td>
+</tr>
+<tr>
+  <td align="left">Shift + F3</td>
+  <td align="left">在查找模式下，查找匹配上一个</td>
+</tr>
+<tr>
+  <td align="left">Shift + F4</td>
+  <td align="left">对当前打开的文件，使用新Windows窗口打开，旧窗口保留</td>
+</tr>
+<tr>
+  <td align="left">Shift + F6</td>
+  <td align="left">对文件 / 文件夹 重命名</td>
+</tr>
+<tr>
+  <td align="left">Shift + F7</td>
+  <td align="left">在 Debug 模式下，智能步入。断点所在行上有多个方法调用，会弹出进入哪个方法</td>
+</tr>
+<tr>
+  <td align="left">Shift + F8</td>
+  <td align="left">在 Debug 模式下，跳出，表现出来的效果跟 <code>F9</code> 一样</td>
+</tr>
+<tr>
+  <td align="left">Shift + F9</td>
+  <td align="left">等效于点击工具栏的 <code>Debug</code> 按钮</td>
+</tr>
+<tr>
+  <td align="left">Shift + F10</td>
+  <td align="left">等效于点击工具栏的 <code>Run</code> 按钮</td>
+</tr>
+<tr>
+  <td align="left">Shift + F11</td>
+  <td align="left">弹出书签显示层</td>
+</tr>
+<tr>
+  <td align="left">Shift + Tab</td>
+  <td align="left">取消缩进</td>
+</tr>
+<tr>
+  <td align="left">Shift + ESC</td>
+  <td align="left">隐藏当前 或 最后一个激活的工具窗口</td>
+</tr>
+<tr>
+  <td align="left">Shift + End</td>
+  <td align="left">选中光标到当前行尾位置</td>
+</tr>
+<tr>
+  <td align="left">Shift + Home</td>
+  <td align="left">选中光标到当前行头位置</td>
+</tr>
+<tr>
+  <td align="left">Shift + Enter</td>
+  <td align="left">开始新一行。光标所在行下空出一行，光标定位到新行位置</td>
+</tr>
+<tr>
+  <td align="left">Shift + 左键单击</td>
+  <td align="left">在打开的文件名上按此快捷键，可以关闭当前打开文件</td>
+</tr>
+<tr>
+  <td align="left">Shift + 滚轮前后滚动</td>
+  <td align="left">当前文件的横向滚动轴滚动</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="e3025837a0cb66dbc536ae73f4f55fda">Ctrl + Alt</h2>
+
+<div class="table" id="table-32-4">
+
+    <table>
+<thead>
+<tr>
+  <th align="left">快捷键</th>
+  <th align="left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Ctrl + Alt + L</td>
+  <td align="left">格式化代码，可以对当前文件和整个包目录使用 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + O</td>
+  <td align="left">优化导入的类，可以对当前文件和整个包目录使用 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + I</td>
+  <td align="left">光标所在行 或 选中部分进行自动代码缩进，有点类似格式化</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + T</td>
+  <td align="left">对选中的代码弹出环绕选项弹出层</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + J</td>
+  <td align="left">弹出模板选择窗口，将选定的代码加入动态模板中</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + H</td>
+  <td align="left">调用层次</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + B</td>
+  <td align="left">在某个调用的方法名上使用会跳到具体的实现处，可以跳过接口</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + V</td>
+  <td align="left">快速引进变量</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + Y</td>
+  <td align="left">同步、刷新</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + S</td>
+  <td align="left">打开 IntelliJ IDEA 系统设置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + F7</td>
+  <td align="left">显示使用的地方。寻找被该类或是变量被调用的地方，用弹出框的方式找出来</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + F11</td>
+  <td align="left">切换全屏模式</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + Enter</td>
+  <td align="left">光标所在行上空出一行，光标定位到新行</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + Home</td>
+  <td align="left">弹出跟当前文件有关联的文件弹出层</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + Space</td>
+  <td align="left">类名自动完成</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + 左方向键</td>
+  <td align="left">退回到上一个操作的地方 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + 右方向键</td>
+  <td align="left">前进到上一个操作的地方 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + 前方向键</td>
+  <td align="left">在查找模式下，跳到上个查找的文件</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Alt + 后方向键</td>
+  <td align="left">在查找模式下，跳到下个查找的文件</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="0bf82ba6d05ffabff2073c42657647e5">Ctrl + Shift</h2>
+
+<div class="table" id="table-32-5">
+
+    <table>
+<thead>
+<tr>
+  <th align="left">快捷键</th>
+  <th align="left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Ctrl + Shift + F</td>
+  <td align="left">根据输入内容查找整个项目 或 指定目录内文件 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + R</td>
+  <td align="left">根据输入内容替换对应内容，范围为整个项目 或 指定目录内文件 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + J</td>
+  <td align="left">自动将下一行合并到当前行末尾 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + Z</td>
+  <td align="left">取消撤销 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + W</td>
+  <td align="left">递进式取消选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展取消选中范围 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + N</td>
+  <td align="left">通过文件名定位 / 打开文件 / 目录，打开目录需要在输入的内容后面多加一个正斜杠 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + U</td>
+  <td align="left">对选中的代码进行大 / 小写轮流转换 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + T</td>
+  <td align="left">对当前类生成单元测试类，如果已经存在的单元测试类则可以进行选择</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + C</td>
+  <td align="left">复制当前文件磁盘路径到剪贴板</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + V</td>
+  <td align="left">弹出缓存的最近拷贝的内容管理器弹出层</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + E</td>
+  <td align="left">显示最近修改的文件列表的弹出层</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + H</td>
+  <td align="left">显示方法层次结构</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + B</td>
+  <td align="left">跳转到类型声明处</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + I</td>
+  <td align="left">快速查看光标所在的方法 或 类的定义</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + A</td>
+  <td align="left">查找动作 / 设置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + /</td>
+  <td align="left">代码块注释 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + &#91;</td>
+  <td align="left">选中从光标所在位置到它的顶部中括号位置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + &#93;</td>
+  <td align="left">选中从光标所在位置到它的底部中括号位置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + &#43;</td>
+  <td align="left">展开所有代码</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + &#45;</td>
+  <td align="left">折叠所有代码</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + F7</td>
+  <td align="left">高亮显示所有该选中文本，按Esc高亮消失</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + F8</td>
+  <td align="left">在 Debug 模式下，指定断点进入条件</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + F9</td>
+  <td align="left">编译选中的文件 / 包 / Module</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + F12</td>
+  <td align="left">编辑器最大化</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + Space</td>
+  <td align="left">智能代码提示</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + Enter</td>
+  <td align="left">自动结束代码，行末自动添加分号 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + Backspace</td>
+  <td align="left">退回到上次修改的地方</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + 1,2,3...9</td>
+  <td align="left">快速添加指定数值的书签</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + 左键单击</td>
+  <td align="left">把光标放在某个类变量上，按此快捷键可以直接定位到该类中 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + 左方向键</td>
+  <td align="left">在代码文件上，光标跳转到当前单词 / 中文句的左侧开头位置，同时选中该单词 / 中文句</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + 右方向键</td>
+  <td align="left">在代码文件上，光标跳转到当前单词 / 中文句的右侧开头位置，同时选中该单词 / 中文句</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + 左方向键</td>
+  <td align="left">在光标焦点是在工具选项卡上，缩小选项卡区域</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + 右方向键</td>
+  <td align="left">在光标焦点是在工具选项卡上，扩大选项卡区域</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + 前方向键</td>
+  <td align="left">光标放在方法名上，将方法移动到上一个方法前面，调整方法排序</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + 后方向键</td>
+  <td align="left">光标放在方法名上，将方法移动到下一个方法前面，调整方法排序</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="79a7ade344e6321bb49e9fe2e928d46d">Alt + Shift</h2>
+
+<div class="table" id="table-32-6">
+
+    <table>
+<thead>
+<tr>
+  <th align="left">快捷键</th>
+  <th align="left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Alt + Shift + N</td>
+  <td align="left">选择 / 添加 task</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + F</td>
+  <td align="left">显示添加到收藏夹弹出层 / 添加到收藏夹</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + C</td>
+  <td align="left">查看最近操作项目的变化情况列表</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + I</td>
+  <td align="left">查看项目当前文件</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + F7</td>
+  <td align="left">在 Debug 模式下，下一步，进入当前方法体内，如果方法体还有方法，则会进入该内嵌的方法中，依此循环进入</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + F9</td>
+  <td align="left">弹出 <code>Debug</code>  的可选择菜单</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + F10</td>
+  <td align="left">弹出 <code>Run</code>  的可选择菜单</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + 左键双击</td>
+  <td align="left">选择被双击的单词 / 中文句，按住不放，可以同时选择其他单词 / 中文句</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + 前方向键</td>
+  <td align="left">移动光标所在行向上移动</td>
+</tr>
+<tr>
+  <td align="left">Alt + Shift + 后方向键</td>
+  <td align="left">移动光标所在行向下移动</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="7589cafe7a42413c095670c012d39e80">Ctrl + Shift + Alt</h2>
+
+<div class="table" id="table-32-7">
+
+    <table>
+<thead>
+<tr>
+  <th align="left">快捷键</th>
+  <th align="left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">Ctrl + Shift + Alt + V</td>
+  <td align="left">无格式黏贴</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + Alt + N</td>
+  <td align="left">前往指定的变量 / 方法</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + Alt + S</td>
+  <td align="left">打开当前项目设置</td>
+</tr>
+<tr>
+  <td align="left">Ctrl + Shift + Alt + C</td>
+  <td align="left">复制参考信息</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="0d98c74797e49d00bcc4c17c9d557a2b">其他</h2>
+
+<div class="table" id="table-32-8">
+
+    <table>
+<thead>
+<tr>
+  <th align="left">快捷键</th>
+  <th align="left">介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">F2</td>
+  <td align="left">跳转到下一个高亮错误 或 警告位置 <code>（必备）</code></td>
+</tr>
+<tr>
+  <td align="left">F3</td>
+  <td align="left">在查找模式下，定位到下一个匹配处</td>
+</tr>
+<tr>
+  <td align="left">F4</td>
+  <td align="left">编辑源</td>
+</tr>
+<tr>
+  <td align="left">F7</td>
+  <td align="left">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则进入当前方法体内，如果该方法体还有方法，则不会进入该内嵌的方法中</td>
+</tr>
+<tr>
+  <td align="left">F8</td>
+  <td align="left">在 Debug 模式下，进入下一步，如果当前行断点是一个方法，则不进入当前方法体内</td>
+</tr>
+<tr>
+  <td align="left">F9</td>
+  <td align="left">在 Debug 模式下，恢复程序运行，但是如果该断点下面代码还有断点则停在下一个断点上</td>
+</tr>
+<tr>
+  <td align="left">F11</td>
+  <td align="left">添加书签</td>
+</tr>
+<tr>
+  <td align="left">F12</td>
+  <td align="left">回到前一个工具窗口</td>
+</tr>
+<tr>
+  <td align="left">Tab</td>
+  <td align="left">缩进</td>
+</tr>
+<tr>
+  <td align="left">ESC</td>
+  <td align="left">从工具窗口进入代码文件窗口</td>
+</tr>
+<tr>
+  <td align="left">连按两次Shift</td>
+  <td align="left">弹出 <code>Search Everywhere</code> 弹出层</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="1bbb01aa6d230a164cebbd2d87f70ae9">官网快捷键资料</h2>
+
+<blockquote>
+  <ul>
+  <li>Windows / Linux：<a href="https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf">https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf</a></li>
+  <li>Mac OS X：<a href="https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf">https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf</a></li>
+  </ul>
+</blockquote>
+
+<h2 id="99f2b285fbc5596fc9f4a32629f0131a">第三方快捷键资料</h2>
+
+<blockquote>
+  <ul>
+  <li>来自 eta02913：<a href="http://xinyuwu.iteye.com/blog/1005454">http://xinyuwu.iteye.com/blog/1005454</a></li>
+  </ul>
+</blockquote>
+
+<h2 id="510549ce836b73cde10e6b4bb8438b1a">快捷键修改</h2>
+
+<div class="figure" id="figure-32-4">
+    <img src="images/xxvii-a-keymap-setting-1.jpg" alt="修改快捷键"  />
+
+    <p class="caption"><strong>图片 32.4</strong> 修改快捷键</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>按 <code>Ctrl + Alt + S</code> 弹出 IDE 设置，如上图选择左侧的 <code>Keymap</code>。</li>
+  <li>IntelliJ IDEA 支持两种方式来筛选我们要找的快捷键，一种是上图标注 1 所示的，通过输入快捷键描述内容；一种是上图标注 2 所示的，通过 <strong>按</strong> 指定快捷键快捷键，这里需要再次强调的是，这个输入框是自动监听你当前按下的按键，而不是用来输入的。</li>
+  <li>上图标注 3 所示，初安装的 IntelliJ IDEA 使用的是 <code>Default</code> 的快捷键模板，IntelliJ IDEA 默认的快捷键模板都是不可修改的。如果你直接修改，当前这个位置 IntelliJ IDEA 会自动变成 <code>Default Copy</code>，建议你养成习惯，修改之前先点击 <code>Copy</code>，拷贝一套快捷键模板，然后输入自己的命名。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-32-5">
+    <img src="images/xxvii-a-keymap-setting-2.jpg" alt="修改快捷键"  />
+
+    <p class="caption"><strong>图片 32.5</strong> 修改快捷键</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>IntelliJ IDEA 是支持一个操作命令同时设置多个快捷键组合，就如上图的 <code>Backspace</code>，同时支持 <code>Backspace</code> 和 <code>Shift + Backspace</code> 两组快捷键。</li>
+  <li>要修改某个快捷键，选中快捷键介绍内容，右键，就会弹出如上图标注 1 所示操作选择。</li>
+  <li>命令 <code>Add Keyboard Shortcut</code> 用来添加新纯键盘快捷键组合。</li>
+  <li>命令 <code>Add Mouse Shortcut</code> 用来添加新 <code>键盘 + 鼠标</code> 快捷键组合，比如设置 <code>Ctrl + 左键单击</code> 这类快捷组合。其中在弹出的添加面板中 <code>Click Pad</code> 是用来监听当前鼠标是左键单击还是右键单击。</li>
+  <li>命令 <code>Add Abbreviation</code> 根据 IntelliJ IDEA 的版本文档解释，添加简称主要是为了方便 <code>Search Everywhere</code> 中使用，但是我尝试之后发现没办法根据我设置的简称搜索，暂时无法了解其作用。 </li>
+  <li>命令 <code>Remove 快捷键</code> 移出当前操作命令已设置的快捷键组合，由于 IntelliJ IDEA 默认就占用了很多快捷键组合，所以如果你要修改某个快捷键，建议还是删除掉旧的。 </li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-32-6">
+    <img src="images/xxvii-a-keymap-setting-3.jpg" alt="修改快捷键"  />
+
+    <p class="caption"><strong>图片 32.6</strong> 修改快捷键</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>IntelliJ IDEA 对其他 IDE 用户很友好，如上图对于其他主流的 IDE，快捷键上已经默认了有其过度快捷键模板了，但是我还是建议你专心使用 IntelliJ IDEA 的默认。</li>
+  </ul>
+</blockquote>
+
+<h2 id="0d98c74797e49d00bcc4c17c9d557a2b">其他</h2>
+
+<div class="figure" id="figure-32-7">
+    <img src="images/xxvii-b-ideavim-1.jpg" alt="vim插件推荐"  />
+
+    <p class="caption"><strong>图片 32.7</strong> vim插件推荐</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如果你是一个 Vim 粉，IntelliJ IDEA 也为你准备了一个方案：如上图安装 IdeaVim 插件即可。</li>
+  </ul>
+</blockquote>
+
+</div>
+</div></body>
+</html>

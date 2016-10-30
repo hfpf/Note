@@ -1,0 +1,58 @@
+struts2快速入门:
+		index.jsp------>HelloServlet-------->hello.jsp  web开发流程.
+		index.jsp------>HelloAction--------->hello.jsp  struts2流程
+		
+		1.导入jar包
+			下载struts2的jar包  struts-2.3.15.1-all 版本.
+			
+			struts2的目录结构:
+				apps: 例子程序
+				docs:文档
+				lib:struts2框架所应用的jar以及插件包				
+				src:源代码  
+					core  它是struts2的源代码
+					xwork-core struts2底层使用了xwork,xwork的源代码
+					
+			注意:在struts2开发，一般情况下最少导入的jar包，去apps下的struts2-blank示例程序中copy
+		
+		2.创建index.jsp页面
+		  创建hello.jsp页面
+
+		3.对struts2框架进行配置
+			1.web.xml文件中配置前端控制器(核心控制器)-----就是一个Filter
+				目的:是为了让struts2框架可以运行。
+				 <filter>
+					<filter-name>struts2</filter-name>
+					<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+				</filter>
+
+				<filter-mapping>
+					<filter-name>struts2</filter-name>
+					<url-pattern>/*</url-pattern>
+				</filter-mapping>
+				
+			2.创建一个struts.xml配置文件 ,这个是struts2框架配置文件。
+				目的:是为了struts2框架流程可以执行。
+				
+				名称:struts.xml
+				位置:src下(classes下)
+				
+		4.创建一个HelloAction类
+			要求，在HelloAction类中创建一个返回值是String类型的方法，注意，无参数。
+			public String say()｛
+				return "good";
+			｝
+			
+		5.在struts.xml文件中配置HelloAction
+			
+			<package name="default" namespace="/" extends="struts-default">
+				<action name="hello" class="cn.itcast.action.HelloAction"
+					method="say">
+					<result name="good">/hello.jsp</result>
+				</action>
+			</package>
+			
+		6.在index.jsp中添加连接，测试
+			<a href="${pageContext.request.contextPath}/hello">第一次使用struts2</a>
+			在地址栏中输入:http://localhost/struts2_day01/index.jsp  访问连接，就可以看到
+			HelloAction类中的say方法执行了，也跳转到了hello.jsp.

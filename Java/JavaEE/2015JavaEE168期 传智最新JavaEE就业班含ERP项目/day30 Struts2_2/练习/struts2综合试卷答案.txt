@@ -1,0 +1,20 @@
+1 BD
+2 AD  
+struts2 model 是 JavaBean 、controller 是Filter 、Action 、 view 支持JSP Freemarker Velocity 等技术
+
+3 ABCE
+4 BE
+5 ABCDE
+6 AD
+7 ADEF
+8 B
+9 ABCD
+10 BC
+11 ABCDE
+12 ABCDE
+13 ABDE
+14 ACDE
+15 ACD
+
+
+ 

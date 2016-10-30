@@ -1,0 +1,634 @@
+/*
+
+
+  Name:         clean
+  Description:  simple and minimalistic
+  Author:       javier.eguiluz@gmail.com
+  Last updated: 11/August/2013*/
+
+
+
+
+/* ==========================================================================
+   @normalize
+   ========================================================================== */
+
+/* Custom fonts
+   ========================================================================= */
+/* Inconsolata : http://www.google.com/webfonts/specimen/Inconsolata */
+/* ==========================================================================
+   @typography
+   ========================================================================== */
+/* @body
+   -------------------------------------------------------------------------- */
+body {
+    color: #000;
+    font-size:0.6em ;
+    height: 100%;
+    magin:0;
+    padding-top:2em;
+    word-wrap: break-word;
+    word-break: normal;
+}
+/* @links
+   -------------------------------------------------------------------------- */
+a, a:visited {
+    color:#337ab7;
+    text-decoration: none;
+}
+a:hover {
+    color:#337ab7;
+    text-decoration: none;
+}
+/* @headings
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1;
+    margin: 1.2em 0 .25em 0;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.41667em; }
+h3 { font-size: 1.125em; }
+h4 { font-size: 1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; }
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    margin-top: .4em;
+}
+/* @paragraphs
+   -------------------------------------------------------------------------- */
+p {
+    margin: 1em 0;
+}
+/* @lists
+   -------------------------------------------------------------------------- */
+ul, ol {
+    list-style-type: disc;
+    margin: 1em 0 1em 1em;
+    padding: 0 0 0 1.5em;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul li, ol li {
+    margin: .5em 0;
+}
+
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+dl {
+  margin-bottom: 1em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 1em;
+}
+/* @misc
+   -------------------------------------------------------------------------- */
+blockquote {
+    border-left:.2em solid #eee;
+    margin: 1em 0;
+    padding-left:0.5em;
+    color:#999;
+}
+
+.left   { float: left;  }
+.right  { float: right; }
+.center { text-align: center; }
+
+
+/* ==========================================================================
+   @images
+   ========================================================================== */
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+.left img {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+.right img {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+.center img {
+    display: block;
+    text-align: center;
+}
+
+/* ==========================================================================
+   @tables
+   ========================================================================== */
+table {
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: .5em;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #DDDDDD;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table thead th {
+  vertical-align: bottom;
+}
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+table tbody + tbody {
+  border-top: 2px solid #DDDDDD;
+}
+
+table.condensed th,
+table.condensed td {
+  padding: .25em;
+}
+
+table.bordered {
+  border: 1px solid #DDDDDD;
+  border-collapse: collapse;
+  border-left: 0;
+}
+
+table.bordered th,
+table.bordered td {
+  border-left: 1px solid #dddddd;
+}
+
+table.bordered caption + thead tr:first-child th,
+table.bordered caption + tbody tr:first-child th,
+table.bordered caption + tbody tr:first-child td,
+table.bordered colgroup + thead tr:first-child th,
+table.bordered colgroup + tbody tr:first-child th,
+table.bordered colgroup + tbody tr:first-child td,
+table.bordered thead:first-child tr:first-child th,
+table.bordered tbody:first-child tr:first-child th,
+table.bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+table.striped tbody tr:nth-child(odd) td,
+table.striped tbody tr:nth-child(odd) th {
+  background-color: #F9F9F9;
+}
+
+table.hover tbody tr:hover td,
+table.hover tbody tr:hover th {
+  background-color: #F5F5F5;
+}
+
+table tbody tr.success td {
+  background-color: #dff0d8;
+}
+
+table tbody tr.error td {
+  background-color: #f2dede;
+}
+
+table tbody tr.warning td {
+  background-color: #fcf8e3;
+}
+
+table tbody tr.info td {
+  background-color: #d9edf7;
+}
+
+table-hover tbody tr.success:hover td {
+  background-color: #d0e9c6;
+}
+
+table-hover tbody tr.error:hover td {
+  background-color: #ebcccc;
+}
+
+table-hover tbody tr.warning:hover td {
+  background-color: #faf2cc;
+}
+
+table-hover tbody tr.info:hover td {
+  background-color: #c4e3f3;
+}
+
+/* ==========================================================================
+   @code
+   ========================================================================== */
+code, pre {
+    background-color: #eee;
+    padding:0.2em;
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+    word-break: normal; 
+}
+
+pre {
+    background-color: #eee;
+    margin: 0 0 1em;
+    padding: 0 0 0 .4em;
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+    word-break: normal; 
+}
+p.code {
+    background-color: #eee;
+    margin: 0 0 1em;
+    padding: 0 0 0 .4em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: normal;
+}
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    font: inherit;
+}
+/* @highlighting
+-------------------------------------------------------------------------- */
+div.code .co1,        div.code .co2,
+div.code .co3,
+div.code .co4
+{ color: #8E908C; }
+div.code .st_h,
+div.code .st0         { color: #718C00; }
+div.code .kw1,        div.code .kw2,
+div.code .kw3,
+div.code .kw4
+{ color: #8959A8; }
+div.code .sy0         { color: #3E999F; }
+
+div.php .re0          { color: #C82829; }
+div.php .br0          { color: #777; }
+div.php .sy0          { color: #3E999F; }
+div.php .kw1,         div.php .kw2
+{ color: #8959A8; }
+div.php .kw3          { color: #4271AE; }
+div.php .kw4          { color: #F5871F; }
+div.php .st_h,        div.php .st0,
+div.php .co3          { color: #718C00; }
+
+div.yaml .co3,        div.yaml .co4,
+div.yaml .sy2         { color: #C82829; }
+div.yaml .st0         { color: #718C00; }
+div.yaml .nu0         { color: #4271AE; }
+
+div.html .sc-1        { color: #8E908C; }
+div.html .st0         { color: #718C00; }
+div.html .kw2         { color: #C82829; }
+div.html .kw3         { color: #4271AE; }
+div.html .sc0         { color: #8959A8; }
+
+div.ini .re0          { color: #C82829; }
+div.ini .co0          { color: #8E908C; }
+div.ini .re1          { color: #8959A8; }
+div.ini .re2          { color: #718C00; }
+
+div.sql .kw1          { color: #8959A8; }
+div.sql .sy0          { color: #3E999F; }
+div.sql .st0          { color: #718C00; }
+div.sql .nu0          { color: #F5871F; }
+
+div.xml .sc-1         { color: #8E908C; }
+div.xml .re1          { color: #C82829; }
+div.xml .re0          { color: #4271AE; }
+div.xml .st0,         div.xml .sc2          { color: #718C00; }
+
+div.twig .coMULTI     { color: #8E908C; }
+div.twig .br0         { color: #C82829; }
+div.twig .kw6,        div.twig .br0 + .sy0, div.twig .sy0 + .br0, div.twig .re0,        div.twig .re1         { color: #C82829; }
+div.twig .kw1,        div.twig .kw5,        div.twig .kw4         { color: #8959A8; }
+div.twig .st0         { color: #718C00; }
+div.twig .sy0         { color: #3E999F; }
+div.twig .kw2         { color: #4271AE; }
+
+
+code, pre, pre span, pre * {
+    font-family: inconsolata, monospace !important;
+
+}
+
+div.container {
+    padding: .5em;
+}
+
+/* ==========================================================================
+   @items
+   ========================================================================== */
+/* @common
+   -------------------------------------------------------------------------- */
+.item {
+    margin:0;
+    padding:0;
+}
+.container{
+    margin:0;
+    padding:0;
+}
+/* @acknowledgement
+   -------------------------------------------------------------------------- */
+/* @afterword
+   -------------------------------------------------------------------------- */
+.item.afterword {
+    text-align: center;
+    margin:0;
+    padding:2em;
+    background-color:#e8e8e8;
+    page-break-inside:avoid;
+    font-size:.6em;
+}
+.item.afterword a{
+   color: #1fa641;
+}
+.item.afterword div.book{
+   margin-bottom:2em;
+   margin-top:5em;
+   padding-top:3m;
+}
+.item.afterword div.book img{
+  width:25em; 
+  height:11.9em;
+}
+.item.afterword div.weixin{
+   margin:7em 0 10em 0;
+}
+.item.afterword div.weixin img{
+  width: 17.8em;                                          
+  height:17.8em;
+}
+.item.afterword div.view{
+   margin:12em 0 .2em 0;
+   font-size:1.5em;
+   color:#1fa641;
+}
+.item.afterword div.view img{
+  width:3.2em;
+  height:1.6em;
+}
+
+/* @appendix
+   -------------------------------------------------------------------------- */
+
+
+.item.appendix h1 {
+    margin: 5em 1em .25em 0;
+}
+
+.item.appendix h1 span {
+    color: #555;
+    display: block;
+    font-size: 90%;
+    font-weight: normal;
+    padding-bottom: .25em;
+}
+
+.item.appendix h1 + h2,
+.item.chapter h2 + h3,
+.item.chapter h3 + h4,
+.item.chapter h4 + h5,
+.item.chapter h5 + h6 {
+    margin-top: 1em;
+}
+/* @author
+   -------------------------------------------------------------------------- */
+/* @chapter
+   -------------------------------------------------------------------------- */
+
+
+.item.chapter h1 {
+    color: #1fa641;
+    hyphens: none;
+    padding: 50% 0 0 0;
+    height: 26em;
+    text-align: center;
+    background-image:url('../images/chapter.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    margin:0 0 5em 0;
+    page-break-inside:avoid;
+    font-size:1em;
+}
+.item.chapter h2 {
+    font-size: 1.4em;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #1fa641;
+    margin:3em 0 2.45em 0;
+    page-break-before: always;
+}
+.item.chapter h3 {
+    font-size: 1.2em;
+    margin: 2em 0 1.6em 0;
+    border-left: 0.2em solid #1fa641;
+    padding: 0.3125em 0 0.3125em 0.625em;
+}
+.item.chapter h4 {
+    font-size: 1em;
+    margin: 2em 0 2em 0;
+}
+.item.chapter h5 { font-size: 8pt; }
+.item.chapter h6 { font-size: 8pt; }
+
+.item.chapter h1 + h2,
+.item.chapter h2 + h3,
+.item.chapter h3 + h4,
+.item.chapter h4 + h5,
+.item.chapter h5 + h6 {
+    margin-top: 1em;
+}
+/* @conclusion
+   -------------------------------------------------------------------------- */
+/* @cover
+   -------------------------------------------------------------------------- */
+.item.cover {
+    margin:0;
+    padding:0;
+    background-image:url('../images/bookCover.jpg');
+    background-size:cover;
+    width:100%;
+    height:100%;
+}
+
+
+.item.cover h1 {
+    color: #000;
+    font-size: 2em;
+    line-height: 1.1;
+    padding: 1.5em .25em .25em 0;
+    text-align: left;
+}
+.item.cover h2 {
+    color: #555;
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: .5em;
+    text-align: left;
+}
+/* @dedication
+   -------------------------------------------------------------------------- */
+
+
+.level_1{
+   border:1px solid red;
+}
+.level_2{
+   border:1px solid black;
+}
+
+.item.dedication {
+    padding-top: 5em;
+}
+.item.dedication h1.title {
+    display: none;
+}
+.item.dedication p {
+    font-style: italic;
+    text-align: center;
+}
+/* @edition
+   -------------------------------------------------------------------------- */
+/* @epilogue
+   -------------------------------------------------------------------------- */
+/* @foreword
+   -------------------------------------------------------------------------- */
+/* @glossary
+   -------------------------------------------------------------------------- */
+/* @introduction
+   -------------------------------------------------------------------------- */
+/* @license
+   -------------------------------------------------------------------------- */
+/* @lof
+   -------------------------------------------------------------------------- */
+/* @lot
+   -------------------------------------------------------------------------- */
+/* @part
+   -------------------------------------------------------------------------- */
+
+
+.item.part h1 {
+    font-size: 2em;
+    margin: 3em 0;
+}
+.item.part h1 span {
+    color: #000;
+    display: block;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: .5em;
+}
+
+.item.chapter h1 .label {
+    color: #1fa641;
+    display: inline-block;
+    font-size: 1.8em;
+    margin: auto;
+    margin-bottom: .25em;
+    border: .1em solid #1fa641;
+    border-top: .8em solid #1fa641;
+    padding: 15px 30px;
+}
+.item.chapter h1 .title {
+    color: #1fa641;
+    display: block;
+    font-size: 1.8em;
+}
+/* @preface
+   -------------------------------------------------------------------------- */
+.item.preface h1 {
+    color: #000;
+    font-size: 1.4em;
+    padding-bottom: .5em;
+    margin:0 0 2.45em 0;
+    border-bottom: 1px solid #1fa641;
+}
+.item.preface h2 {
+    color: #000;
+    font-size: 1.2em;
+    margin: 2em 0 1.6em 0;
+    border-left: 0.2em solid #1fa641;
+    padding: 0.3125em 0 0.3125em 0.625em;
+
+}
+
+/* @prologue
+   -------------------------------------------------------------------------- */
+/* @title
+   -------------------------------------------------------------------------- */
+
+
+.item.title h1,
+.item.title h2,
+.item.title h3 {
+    font-weight: normal;
+    text-align: center;
+}
+.item.title h1 {
+    font-size: 2em;
+    line-height: 1.1;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+.item.title h2 {
+    font-size: 1.5em;
+    margin-top: .5em;
+}
+.item.title h3 {
+    font-size: 1em;
+    font-style: italic;
+    margin-top: 1em;
+}
+/* @toc
+   -------------------------------------------------------------------------- */
+/* ebook toc is defined using divs as recommended by Kindle Publishing Guidelines
+   @see http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf
+*/
+.item.toc .level-1 {
+    margin-left: 1em;
+}
+.item.toc div.level-2 a{
+    margin-left: 2em;
+}
+.item.toc div.level-3 {
+    margin-left: 3em;
+}
+.item.toc div.level-4 {
+    margin-left: 4em;
+}
+.item.toc div.level-5 {
+    margin-left: 5em;
+}
+.item.toc div.level-6 {
+    margin-left: 6em;
+}
+

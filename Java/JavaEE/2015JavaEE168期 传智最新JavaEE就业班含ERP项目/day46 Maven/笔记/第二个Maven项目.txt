@@ -1,0 +1,87 @@
+
+第六步：新建第二个项目模块HelloFriend目录及约定的目录结构
+
+HelloFriend
+ 	src
+ 		main
+ 			java
+ 			resources（暂时省略）
+ 	test
+ 			java
+ 			resources（暂时省略）
+ 	pom.xml
+
+第七步：在项目HelloFriend根目录建立pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.itcast.maven</groupId>
+  <artifactId>HelloFriend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>HelloFriend</name>
+  
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.9</version>
+			<scope>test</scope>
+		</dependency>		
+		
+		<dependency>
+			<groupId>itcast</groupId>
+			<artifactId>HelloWorld</artifactId>
+			<version>0.0.1</version>
+			<scope>compile</scope>
+		</dependency>		
+	</dependencies>
+</project>
+
+第八步：在src/main/java/cn/itcast/maven目录下新建文件HelloFriend.java
+
+package cn.itcast.maven;
+
+import cn.itcast.maven.HelloWorld;
+
+public class HelloFriend {
+
+	public String sayHelloToFriend(String name){
+		HelloWorld hw = new HelloWorld();
+		String str = hw.sayHello(name)+" I am "+this.getMyName();
+		System.out.println(str);
+		return str;
+	}
+	
+	public String getMyName(){
+		return "MAVEN";
+	}
+
+}
+
+第九步：在/src/test/java/cn/itcast/maven目录下新建测试文件HelloFriendTest.java
+package cn.itcast.maven;
+
+import static junit.framework.Assert.assertEquals;
+
+import org.junit.Test;
+
+import cn.itcast.maven.Hello;
+
+
+public class HelloFriendTest {
+	@Test
+	public void tesHelloFriend(){
+		HelloFriend helloFriend = new HelloFriend();
+		String results = helloFriend.sayHelloToFriend("Jock");
+		assertEquals("Hello World Jock! I am MAVEN",results);		
+	}
+}
+
+第十步：在HelloFriend目录下执行命令mvn package
+
+系统报错说没有找到依赖
+
+第十一步：需要重新构建HelloWorkd第一个项目并安装到数据仓库，在命令行HelloWorkd根目录下执行mvn clean install
+
+第十二步：重新在HelloFriend目录下执行命令mvn package
+
+成功

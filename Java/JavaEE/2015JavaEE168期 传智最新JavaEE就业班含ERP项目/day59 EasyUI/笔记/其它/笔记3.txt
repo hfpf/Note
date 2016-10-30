@@ -1,0 +1,19 @@
+回顾上午:
+Easy:
+1.明白做什么用的?
+  jquery插件
+   解压目录介绍 demo src plugins themes 
+   正确引入文件 ../
+2. Draggable
+   html
+   <div  class="uasyui-draggable" data-options="k1:v1,k2:v2" style=""></div>  
+   js+Html
+   <div id="myID" style=""></div>  
+    $(function(){
+       $("#myID").draggable({k1:v1,k2:v2,onDrag:function(){}});
+    });
+    事件:
+    方法:
+     $("#fm").submit();
+
+    

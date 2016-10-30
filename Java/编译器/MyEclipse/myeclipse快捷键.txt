@@ -1,0 +1,19 @@
+代码提示			Alt + /
+代码修复			Ctrl + 1
+快速导包			Ctrl + Shift + O
+单行注释			Ctrl + /
+取消单行注释			Ctrl + /
+多行注释			Ctrl + Shift + /
+取消多行注释			Ctrl + Shift + \
+删除行				Ctrl + D
+代码格式化			Ctrl + Shift + F
+代码编辑区域全屏		Ctrl + M
+查看方法被什么调用		Ctrl + Shift + G
+
+【快速生成get/set方法】
+Atl+Shift+S → R → 空格、↓，空格、↓.... → 回车
+
+
+
+
+

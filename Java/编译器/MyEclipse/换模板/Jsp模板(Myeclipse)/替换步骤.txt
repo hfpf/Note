@@ -1,0 +1,11 @@
+将com.genuitec.eclipse.wizards_13.0.0.me201502130035.jar复制到MyEclipse（2015）安装目录\plugins
+
+【已证实Myeclipse2015这样替换无用，需要自己手动添加代码】
+
+
+
+
+添加代码
+doPost()
+request.setCharacterEncoding("utf-8");			//请求编码(doPost)
+response.setContentType("text/html;charset=utf-8");	//响应编码

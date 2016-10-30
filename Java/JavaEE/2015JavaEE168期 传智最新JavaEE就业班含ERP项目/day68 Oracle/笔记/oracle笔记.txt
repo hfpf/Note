@@ -1,0 +1,47 @@
+【SQL优化原则】
+	1. 使用列名代替*；
+	2. where解析顺序，从右向左
+	   where A and B;	先检查B		尽量把为假的放右边
+	   where A or B;	先检查B		尽量把为真的放右边
+	3.  尽量使用where（和having相比较）
+
+【SQL中null值】
+	1. 包含null的表达式都为null；
+	2. null != null
+
+
+【连接符concat,||】
+select concat('Hello','World') from dual;
+
+select 'Helle'||"world" from dual;
+
+
+【修改日期格式】
+	alter session set NLS_DATE_FORMAT='yyyy-mm-dd';
+
+【转义字符】
+	_转义，取本身含义_，不是代表一位字符的意思
+	select * from emp where ename like '%\_%' escape '\';
+
+【排序】
+	order by 后面可以+列，表达式，别名，序号
+
+	desc只对离自己最近的一列有效，
+
+	null值是最大的，排序有必要时最后加 nulls last；
+	
+
+【日期函数】
+	MONTH_BETWEEN
+	ADD_MONTHS
+	NEXT_DAY
+	LAST_DAY
+	ROUND
+	TRUNC
+
+	select * from emp where sal> any(select sal from emp where deptno =30);结果会按照sal排序desc
+
+
+
+
+

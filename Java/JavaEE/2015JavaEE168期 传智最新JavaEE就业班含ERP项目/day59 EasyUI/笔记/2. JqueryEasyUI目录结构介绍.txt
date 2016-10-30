@@ -1,0 +1,7 @@
+2. JqueryEasyUI目录结构介绍
+	demo	:案例
+	locale	:国际化
+	plugins	:各种插件的实现
+	src		:JqueryEasyUI源码
+	jquery.min.js			:query文件
+	jquery.easyui.min.js	:EasyUI主文件

@@ -1,0 +1,76 @@
+1.struts2中获取请求参数
+
+	在struts2中action是什么?(struts2是一个mvc框架)	
+		V:jsp
+		M:action
+		C:action  StrutsPrepareAndExecuteFilter
+		
+	在struts2中获取请求参数:
+		1.属性驱动
+			1.直接将action做一个model,就可以得到请求参数.
+				问题1:action封装请求参数，会不会存在线程安全问题?
+					不会:因为每一次请求，都是一个新的action。
+				缺点:需要单独定义javaBean,将action中属性copy到javaBean中。	
+				优点:简单。				
+				这种方式 ，底层是通过反射来实现的。
+				
+			2.在action中声明一个model。
+				private User user;提供get/set方法
+				
+				在页面上使用ognl来描述
+				<input type="text" name="user.username">
+				
+				优点:简单，解决了第一种封装的问题。
+				缺点:在页面上使用了ognl表达式，页面不通用了。
+				
+				问题:这种方式，数据是怎样封装的?
+					是通过struts2中的interceptor进行了数据封装.
+					 <interceptor name="params" class="com.opensymphony.xwork2.interceptor.ParametersInterceptor"/>
+				
+				
+				
+		2.模型驱动(在开发中应用比较多)
+			步骤：
+				1.让action类实现ModelDriven
+				2.重写getModel方法
+				3.在action中实现化一个model对象，让getModel方法返回这个对象。
+				
+				public class Login3Action extends ActionSupport implements ModelDriven<User> {
+
+					private User user = new User();
+
+					public User getModel() {
+						return user;
+					}
+				｝
+			优点:解决了属性驱动存在的问题
+			缺点:一次只能封装一个model对象.
+			
+			 struts2 有很多围绕模型驱动的特性 
+			* <interceptor name="modelDriven" class="com.opensymphony.xwork2.interceptor.ModelDrivenInterceptor"/> 为模型驱动提供了更多特性
+
+	--------------------------------------------------------------------------
+	扩展:
+		1.将数据封装到List集合
+			页面:
+				username1:<input type="text" name="users[0].username"><br>
+				password1:<input type="password" name="users[0].password"><br>
+				
+				username2:<input type="text" name="users[1].username"><br>
+				password2:<input type="password" name="users[1].password"><br>
+	
+			action类:
+				private List<User> users;
+				get/set方法
+				
+		2.将数据封装到Map集合
+			页面:
+				username1:<input type="text" name="map['aaa'].username"><br>
+				password1:<input type="password" name="map['aaa'].password"><br>
+				
+				username2:<input type="text" name="map['bbb'].username"><br>
+				password2:<input type="password" name="map['bbb'].password"><br>
+			
+			action类:
+				private Map<String, User> map;
+				提供get/set

@@ -1,0 +1,29 @@
+2.防止表单重复提交
+		问题:什么是表单重复提交？			
+		regist.jsp----->RegistServlet
+		表单重复提交 危害： 刷票、 重复注册、带来服务器访问压力（拒绝服务）	
+		
+	解决方案:
+		在页面上生成一个令牌(就是一个随机字符串),将其存储到session中，并在表单中携带.
+		在服务器端，获取数据时，也将令牌获取，将它与session中存储的token对比，没问题，
+		将session中令牌删除。
+		
+	struts2中怎样解决表单重复提交:
+		在struts2中解决表单重复提交，可以使用它定义的一个interceptor。
+		 <interceptor name="token" class="org.apache.struts2.interceptor.TokenInterceptor"/>
+		 
+		步骤:
+			1.在页面上需要使用一个token tag
+				在表单中添加一个标签 	<s:token/>
+					
+				就会在页面上生成一个令牌，并存在于表单中。
+		
+			2.需要在action中引入token拦截器
+				<interceptor-ref name="token"/>
+			
+			3.需要配置视图
+				<result name="invalid.token">/token.jsp</result>
+				
+		 通过 <s:actionError/> 显示错误信息 
+		 覆盖重复提交信息  struts.messages.invalid.token=您已经重复提交表单，请刷新后重试
+		 

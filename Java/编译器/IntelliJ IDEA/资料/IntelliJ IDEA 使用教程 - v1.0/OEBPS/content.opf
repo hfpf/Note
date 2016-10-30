@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
+
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:title>IntelliJ IDEA 使用教程</dc:title>
+        <dc:language>zh</dc:language>
+        <dc:identifier id="BookId" opf:scheme="URN">76f253b8-045b-498b-9c06-85bfeb67d8ef</dc:identifier>
+        <dc:creator opf:role="aut">极客学院</dc:creator>
+        <dc:publisher>easybook 4.9.0</dc:publisher>
+        <dc:date opf:event="publication">2016</dc:date>
+        <dc:date opf:event="creation">2016-08-11</dc:date>
+        <meta name="cover" content="cover" />
+    </metadata>
+ 
+    <manifest>
+        <item id="titlepage" href="titlepage.html" media-type="application/xhtml+xml"/>
+        <item id="preface" href="preface.html" media-type="application/xhtml+xml" />
+        <item id="chapter-1" href="chapter-1.html" media-type="application/xhtml+xml" />
+        <item id="chapter-2" href="chapter-2.html" media-type="application/xhtml+xml" />
+        <item id="chapter-3" href="chapter-3.html" media-type="application/xhtml+xml" />
+        <item id="chapter-4" href="chapter-4.html" media-type="application/xhtml+xml" />
+        <item id="chapter-5" href="chapter-5.html" media-type="application/xhtml+xml" />
+        <item id="chapter-6" href="chapter-6.html" media-type="application/xhtml+xml" />
+        <item id="chapter-7" href="chapter-7.html" media-type="application/xhtml+xml" />
+        <item id="chapter-8" href="chapter-8.html" media-type="application/xhtml+xml" />
+        <item id="chapter-9" href="chapter-9.html" media-type="application/xhtml+xml" />
+        <item id="chapter-10" href="chapter-10.html" media-type="application/xhtml+xml" />
+        <item id="chapter-11" href="chapter-11.html" media-type="application/xhtml+xml" />
+        <item id="chapter-12" href="chapter-12.html" media-type="application/xhtml+xml" />
+        <item id="chapter-13" href="chapter-13.html" media-type="application/xhtml+xml" />
+        <item id="chapter-14" href="chapter-14.html" media-type="application/xhtml+xml" />
+        <item id="chapter-15" href="chapter-15.html" media-type="application/xhtml+xml" />
+        <item id="chapter-16" href="chapter-16.html" media-type="application/xhtml+xml" />
+        <item id="chapter-17" href="chapter-17.html" media-type="application/xhtml+xml" />
+        <item id="chapter-18" href="chapter-18.html" media-type="application/xhtml+xml" />
+        <item id="chapter-19" href="chapter-19.html" media-type="application/xhtml+xml" />
+        <item id="chapter-20" href="chapter-20.html" media-type="application/xhtml+xml" />
+        <item id="chapter-21" href="chapter-21.html" media-type="application/xhtml+xml" />
+        <item id="chapter-22" href="chapter-22.html" media-type="application/xhtml+xml" />
+        <item id="chapter-23" href="chapter-23.html" media-type="application/xhtml+xml" />
+        <item id="chapter-24" href="chapter-24.html" media-type="application/xhtml+xml" />
+        <item id="chapter-25" href="chapter-25.html" media-type="application/xhtml+xml" />
+        <item id="chapter-26" href="chapter-26.html" media-type="application/xhtml+xml" />
+        <item id="chapter-27" href="chapter-27.html" media-type="application/xhtml+xml" />
+        <item id="chapter-28" href="chapter-28.html" media-type="application/xhtml+xml" />
+        <item id="chapter-29" href="chapter-29.html" media-type="application/xhtml+xml" />
+        <item id="chapter-30" href="chapter-30.html" media-type="application/xhtml+xml" />
+        <item id="chapter-31" href="chapter-31.html" media-type="application/xhtml+xml" />
+        <item id="chapter-32" href="chapter-32.html" media-type="application/xhtml+xml" />
+        <item id="chapter-33" href="chapter-33.html" media-type="application/xhtml+xml" />
+        <item id="chapter-34" href="chapter-34.html" media-type="application/xhtml+xml" />
+        <item id="chapter-35" href="chapter-35.html" media-type="application/xhtml+xml" />
+        <item id="chapter-36" href="chapter-36.html" media-type="application/xhtml+xml" />
+        <item id="chapter-37" href="chapter-37.html" media-type="application/xhtml+xml" />
+        <item id="afterword" href="afterword.html" media-type="application/xhtml+xml" />
+        <item id="stylesheet" href="css/easybook.css" media-type="text/css" />
+        <item id="figure-1" href="images/xxviii-jrebel-setup-9.jpg" media-type="image/jpg" />
+        <item id="figure-2" href="images/xxvi-a-settings-introduce-2.gif" media-type="image/gif" />
+        <item id="figure-3" href="images/x-b-font-setting-2.jpg" media-type="image/jpg" />
+        <item id="figure-4" href="images/xxviii-jrebel-setup-5.jpg" media-type="image/jpg" />
+        <item id="figure-5" href="images/xxvi-a-settings-introduce-29.jpg" media-type="image/jpg" />
+        <item id="figure-6" href="images/xviii-a-file-and-code-templates-introduce-1.gif" media-type="image/gif" />
+        <item id="figure-7" href="images/remote-debugging-1.jpg" media-type="image/jpg" />
+        <item id="figure-8" href="images/remote-debugging-4.jpg" media-type="image/jpg" />
+        <item id="figure-9" href="images/xxi-b-eclipse-project-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-10" href="images/xxvi-a-settings-introduce-11.gif" media-type="image/gif" />
+        <item id="figure-11" href="images/xxi-b-eclipse-project-settings-9.jpg" media-type="image/jpg" />
+        <item id="figure-12" href="images/xxvi-a-settings-introduce-16.gif" media-type="image/gif" />
+        <item id="figure-13" href="images/hotkey-alt-enter-introduce-3.gif" media-type="image/gif" />
+        <item id="figure-14" href="images/iii-b-repeatedly-install-3.jpg" media-type="image/jpg" />
+        <item id="figure-15" href="images/xvi-d-version-control-system-github-introduce-3.jpg" media-type="image/jpg" />
+        <item id="figure-16" href="images/xv-a-project-create-10.gif" media-type="image/gif" />
+        <item id="figure-17" href="images/hotkey-alt-enter-introduce-7.gif" media-type="image/gif" />
+        <item id="figure-18" href="images/xxii-a-maven-setting-1.jpg" media-type="image/jpg" />
+        <item id="figure-19" href="images/xxi-d-eclipse-project-tomcat-run-2.gif" media-type="image/gif" />
+        <item id="figure-20" href="images/xix-c-postfix-completion-introduce-1.gif" media-type="image/gif" />
+        <item id="figure-21" href="images/xxii-b-maven-hello-world-project-1.gif" media-type="image/gif" />
+        <item id="figure-22" href="images/xvi-f-version-control-system-settings-introduce-4.jpg" media-type="image/jpg" />
+        <item id="figure-23" href="images/xxvi-a-settings-introduce-19.jpg" media-type="image/jpg" />
+        <item id="figure-24" href="images/xiii-c-compiler-setting-3.gif" media-type="image/gif" />
+        <item id="figure-25" href="images/xx-a-plugins-settings-3.jpg" media-type="image/jpg" />
+        <item id="figure-26" href="images/xxviii-jrebel-setup-4.jpg" media-type="image/jpg" />
+        <item id="figure-27" href="images/remote-debugging-5.jpg" media-type="image/jpg" />
+        <item id="figure-28" href="images/xxvi-a-settings-introduce-13.gif" media-type="image/gif" />
+        <item id="figure-29" href="images/xxvi-a-settings-introduce-35.gif" media-type="image/gif" />
+        <item id="figure-30" href="images/xxvi-a-settings-introduce-39.jpg" media-type="image/jpg" />
+        <item id="figure-31" href="images/iii-a-first-install-5.jpg" media-type="image/jpg" />
+        <item id="figure-32" href="images/xxviii-jrebel-setup-2.jpg" media-type="image/jpg" />
+        <item id="figure-33" href="images/xxvi-a-settings-introduce-15.jpg" media-type="image/jpg" />
+        <item id="figure-34" href="images/hotkey-alt-enter-introduce-11.gif" media-type="image/gif" />
+        <item id="figure-35" href="images/x-c-code-theme-setting-2.jpg" media-type="image/jpg" />
+        <item id="figure-36" href="images/xxi-b-eclipse-project-settings-4.jpg" media-type="image/jpg" />
+        <item id="figure-37" href="images/xi-b-file-symbols-1.jpg" media-type="image/jpg" />
+        <item id="figure-38" href="images/xxi-b-eclipse-project-settings-8.gif" media-type="image/gif" />
+        <item id="figure-39" href="images/xv-a-project-create-7.jpg" media-type="image/jpg" />
+        <item id="figure-40" href="images/xix-d-postfix-completion-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-41" href="images/x-d-encoding-setting-2.gif" media-type="image/gif" />
+        <item id="figure-42" href="images/xx-b-plugins-install-1.gif" media-type="image/gif" />
+        <item id="figure-43" href="images/xviii-b-file-and-code-templates-settings-2.jpg" media-type="image/jpg" />
+        <item id="figure-44" href="images/iii-a-first-install-4.jpg" media-type="image/jpg" />
+        <item id="figure-45" href="images/xxvi-a-settings-introduce-36.gif" media-type="image/gif" />
+        <item id="figure-46" href="images/xiii-c-compiler-setting-2.jpg" media-type="image/jpg" />
+        <item id="figure-47" href="images/hotkey-alt-enter-introduce-4.gif" media-type="image/gif" />
+        <item id="figure-48" href="images/xvi-b-version-control-system-svn-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-49" href="images/xxvi-a-settings-introduce-34.gif" media-type="image/gif" />
+        <item id="figure-50" href="images/xviii-b-file-and-code-templates-settings-6.jpg" media-type="image/jpg" />
+        <item id="figure-51" href="images/xxviii-jrebel-setup-1.jpg" media-type="image/jpg" />
+        <item id="figure-52" href="images/jk_weixin.png" media-type="image/png" />
+        <item id="figure-53" href="images/xxvi-a-settings-introduce-4.jpg" media-type="image/jpg" />
+        <item id="figure-54" href="images/xxviii-jrebel-setup-14.jpg" media-type="image/jpg" />
+        <item id="figure-55" href="images/xiv-c-language-level-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-56" href="images/xxi-b-eclipse-project-settings-11.gif" media-type="image/gif" />
+        <item id="figure-57" href="images/xxii-a-maven-setting-2.jpg" media-type="image/jpg" />
+        <item id="figure-58" href="images/iv-a-ubuntu-install-1.jpg" media-type="image/jpg" />
+        <item id="figure-59" href="images/xxii-b-maven-hello-world-project-2.gif" media-type="image/gif" />
+        <item id="figure-60" href="images/xxvi-a-settings-introduce-25.gif" media-type="image/gif" />
+        <item id="figure-61" href="images/xxvi-a-settings-introduce-31.gif" media-type="image/gif" />
+        <item id="figure-62" href="images/xxi-c-eclipse-project-tomcat-settings-2.jpg" media-type="image/jpg" />
+        <item id="figure-63" href="images/hotkey-alt-enter-introduce-10.gif" media-type="image/gif" />
+        <item id="figure-64" href="images/v-a-mac-install-3.jpg" media-type="image/jpg" />
+        <item id="figure-65" href="images/remote-debugging-3.jpg" media-type="image/jpg" />
+        <item id="figure-66" href="images/viii-a-installation-directory-1.jpg" media-type="image/jpg" />
+        <item id="figure-67" href="images/ix-interface-introduce-5.jpg" media-type="image/jpg" />
+        <item id="figure-68" href="images/xxvii-c-keymap-premise-3.jpg" media-type="image/jpg" />
+        <item id="figure-69" href="images/xiii-c-compiler-setting-1.jpg" media-type="image/jpg" />
+        <item id="figure-70" href="images/xx-a-plugins-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-71" href="images/xxiv-a-refactor-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-72" href="images/iv-a-ubuntu-install-3.jpg" media-type="image/jpg" />
+        <item id="figure-73" href="images/xxiii-b-debug-use-2.gif" media-type="image/gif" />
+        <item id="figure-74" href="images/xvii-a-live-templates-introduce-1.gif" media-type="image/gif" />
+        <item id="figure-75" href="images/xxvi-a-settings-introduce-5.gif" media-type="image/gif" />
+        <item id="figure-76" href="images/iii-c-uninstall-1.jpg" media-type="image/jpg" />
+        <item id="figure-77" href="images/xxvi-a-settings-introduce-20.gif" media-type="image/gif" />
+        <item id="figure-78" href="images/iii-b-repeatedly-install-1.jpg" media-type="image/jpg" />
+        <item id="figure-79" href="images/hotkey-alt-enter-introduce-13.gif" media-type="image/gif" />
+        <item id="figure-80" href="images/xxiii-b-debug-use-5.gif" media-type="image/gif" />
+        <item id="figure-81" href="images/xxvi-a-settings-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-82" href="images/xv-b-project-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-83" href="images/xxvi-a-settings-introduce-23.jpg" media-type="image/jpg" />
+        <item id="figure-84" href="images/xvii-d-live-templates-surround-settings-1.gif" media-type="image/gif" />
+        <item id="figure-85" href="images/xxi-c-eclipse-project-tomcat-settings-1.gif" media-type="image/gif" />
+        <item id="figure-86" href="images/xiv-b-sdk-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-87" href="images/xvi-d-version-control-system-github-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-88" href="images/xvi-a-version-control-system-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-89" href="images/ix-interface-introduce-3.jpg" media-type="image/jpg" />
+        <item id="figure-90" href="images/xxvi-a-settings-introduce-8.jpg" media-type="image/jpg" />
+        <item id="figure-91" href="images/xxvi-a-settings-introduce-12.gif" media-type="image/gif" />
+        <item id="figure-92" href="images/xix-a-emmet-introduce-1.gif" media-type="image/gif" />
+        <item id="figure-93" href="images/xxvi-a-settings-introduce-37.jpg" media-type="image/jpg" />
+        <item id="figure-94" href="images/xxi-a-eclipse-project-introduce-1.gif" media-type="image/gif" />
+        <item id="figure-95" href="images/xxviii-jrebel-setup-7.jpg" media-type="image/jpg" />
+        <item id="figure-96" href="images/xv-a-project-create-5.jpg" media-type="image/jpg" />
+        <item id="figure-97" href="images/xvi-c-version-control-system-git-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-98" href="images/xxviii-jrebel-setup-8.jpg" media-type="image/jpg" />
+        <item id="figure-99" href="images/xxvi-a-settings-introduce-21.jpg" media-type="image/jpg" />
+        <item id="figure-100" href="images/xiii-b-befour-launch-2.jpg" media-type="image/jpg" />
+        <item id="figure-101" href="images/xiv-c-language-level-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-102" href="images/xxiii-a-debug-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-103" href="images/xi-a-file-symbols-1.jpg" media-type="image/jpg" />
+        <item id="figure-104" href="images/xxviii-jrebel-setup-6.jpg" media-type="image/jpg" />
+        <item id="figure-105" href="images/xxii-c-maven-component-1.jpg" media-type="image/jpg" />
+        <item id="figure-106" href="images/xv-a-project-create-6.jpg" media-type="image/jpg" />
+        <item id="figure-107" href="images/xxvi-a-settings-introduce-33.gif" media-type="image/gif" />
+        <item id="figure-108" href="images/xxv-b-database-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-109" href="images/xxvii-c-keymap-premise-1.jpg" media-type="image/jpg" />
+        <item id="figure-110" href="images/xiv-d-module-setting-2.jpg" media-type="image/jpg" />
+        <item id="figure-111" href="images/xxi-c-eclipse-project-tomcat-settings-3.jpg" media-type="image/jpg" />
+        <item id="figure-112" href="images/iii-b-repeatedly-install-2.jpg" media-type="image/jpg" />
+        <item id="figure-113" href="images/xxvi-a-settings-introduce-30.gif" media-type="image/gif" />
+        <item id="figure-114" href="images/xix-a-emmet-introduce-2.gif" media-type="image/gif" />
+        <item id="figure-115" href="images/hotkey-alt-enter-introduce-15.gif" media-type="image/gif" />
+        <item id="figure-116" href="images/hotkey-alt-enter-introduce-2.gif" media-type="image/gif" />
+        <item id="figure-117" href="images/xv-a-project-create-2.jpg" media-type="image/jpg" />
+        <item id="figure-118" href="images/xxvi-a-settings-introduce-32.gif" media-type="image/gif" />
+        <item id="figure-119" href="images/x-a-theme-setting-1.jpg" media-type="image/jpg" />
+        <item id="figure-120" href="images/xxvi-a-settings-introduce-6.jpg" media-type="image/jpg" />
+        <item id="figure-121" href="images/xviii-b-file-and-code-templates-settings-4.jpg" media-type="image/jpg" />
+        <item id="figure-122" href="images/iv-a-ubuntu-install-4.jpg" media-type="image/jpg" />
+        <item id="figure-123" href="images/chapter.jpg" media-type="image/jpg" />
+        <item id="figure-124" href="images/iii-c-uninstall-3.jpg" media-type="image/jpg" />
+        <item id="figure-125" href="images/xii-a-invalidate-cache-3.jpg" media-type="image/jpg" />
+        <item id="figure-126" href="images/book_view.png" media-type="image/png" />
+        <item id="figure-127" href="images/xxvi-a-settings-introduce-18.jpg" media-type="image/jpg" />
+        <item id="figure-128" href="images/vii-a-first-run-wizard-6.jpg" media-type="image/jpg" />
+        <item id="figure-129" href="images/xxi-b-eclipse-project-settings-5.jpg" media-type="image/jpg" />
+        <item id="figure-130" href="images/xvi-d-version-control-system-github-introduce-4.jpg" media-type="image/jpg" />
+        <item id="figure-131" href="images/xxviii-jrebel-setup-10.jpg" media-type="image/jpg" />
+        <item id="figure-132" href="images/iii-a-first-install-1.jpg" media-type="image/jpg" />
+        <item id="figure-133" href="images/xviii-b-file-and-code-templates-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-134" href="images/xv-a-project-create-4.jpg" media-type="image/jpg" />
+        <item id="figure-135" href="images/xviii-a-file-and-code-templates-introduce-2.gif" media-type="image/gif" />
+        <item id="figure-136" href="images/xx-a-plugins-settings-2.jpg" media-type="image/jpg" />
+        <item id="figure-137" href="images/xxvi-a-settings-introduce-40.jpg" media-type="image/jpg" />
+        <item id="figure-138" href="images/xxvi-a-settings-introduce-38.gif" media-type="image/gif" />
+        <item id="figure-139" href="images/xxv-a-database-connection-1.gif" media-type="image/gif" />
+        <item id="figure-140" href="images/hotkey-alt-enter-introduce-6.gif" media-type="image/gif" />
+        <item id="figure-141" href="images/xxviii-jrebel-setup-11.jpg" media-type="image/jpg" />
+        <item id="figure-142" href="images/xvi-g-svn-feature-2.jpg" media-type="image/jpg" />
+        <item id="figure-143" href="images/vii-a-first-run-wizard-4.jpg" media-type="image/jpg" />
+        <item id="figure-144" href="images/xii-a-invalidate-cache-1.jpg" media-type="image/jpg" />
+        <item id="figure-145" href="images/xxiii-b-debug-use-3.gif" media-type="image/gif" />
+        <item id="figure-146" href="images/xvi-e-version-control-system-operation-introduce-4.jpg" media-type="image/jpg" />
+        <item id="figure-147" href="images/xi-a-file-symbols-2.gif" media-type="image/gif" />
+        <item id="figure-148" href="images/xvii-b-live-templates-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-149" href="images/ix-interface-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-150" href="images/xvi-f-version-control-system-settings-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-151" href="images/xxviii-jrebel-setup-3.jpg" media-type="image/jpg" />
+        <item id="figure-152" href="images/xxi-d-eclipse-project-tomcat-run-1.gif" media-type="image/gif" />
+        <item id="figure-153" href="images/xiv-b-sdk-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-154" href="images/hotkey-alt-enter-introduce-5.gif" media-type="image/gif" />
+        <item id="figure-155" href="images/vii-a-first-run-wizard-7.jpg" media-type="image/jpg" />
+        <item id="figure-156" href="images/xviii-b-file-and-code-templates-settings-5.gif" media-type="image/gif" />
+        <item id="figure-157" href="images/xvi-b-version-control-system-svn-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-158" href="images/xxvi-a-settings-introduce-17.gif" media-type="image/gif" />
+        <item id="figure-159" href="images/jk_book.png" media-type="image/png" />
+        <item id="figure-160" href="images/xvi-f-version-control-system-settings-introduce-3.jpg" media-type="image/jpg" />
+        <item id="figure-161" href="images/xxiv-a-refactor-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-162" href="images/iii-a-first-install-7.jpg" media-type="image/jpg" />
+        <item id="figure-163" href="images/viii-a-setting-synchronize-1.jpg" media-type="image/jpg" />
+        <item id="figure-164" href="images/x-b-font-setting-3.jpg" media-type="image/jpg" />
+        <item id="figure-165" href="images/xviii-b-file-and-code-templates-settings-3.jpg" media-type="image/jpg" />
+        <item id="figure-166" href="images/xxvi-a-settings-introduce-28.gif" media-type="image/gif" />
+        <item id="figure-167" href="images/vii-a-first-run-wizard-2.jpg" media-type="image/jpg" />
+        <item id="figure-168" href="images/xxii-e-maven-dependent-exclude-2.jpg" media-type="image/jpg" />
+        <item id="figure-169" href="images/xxiii-b-debug-use-4.gif" media-type="image/gif" />
+        <item id="figure-170" href="images/ix-interface-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-171" href="images/xxi-b-eclipse-project-settings-10.gif" media-type="image/gif" />
+        <item id="figure-172" href="images/xxiii-b-debug-use-1.gif" media-type="image/gif" />
+        <item id="figure-173" href="images/xxvii-b-ideavim-1.jpg" media-type="image/jpg" />
+        <item id="figure-174" href="images/xiii-b-befour-launch-1.jpg" media-type="image/jpg" />
+        <item id="figure-175" href="images/viii-a-configuration-files-1.jpg" media-type="image/jpg" />
+        <item id="figure-176" href="images/hotkey-alt-enter-introduce-12.gif" media-type="image/gif" />
+        <item id="figure-177" href="images/xxi-b-eclipse-project-settings-7.jpg" media-type="image/jpg" />
+        <item id="figure-178" href="images/viii-a-installation-directory-2.jpg" media-type="image/jpg" />
+        <item id="figure-179" href="images/hotkey-alt-enter-introduce-16.gif" media-type="image/gif" />
+        <item id="figure-180" href="images/weixin.jpg" media-type="image/jpg" />
+        <item id="figure-181" href="images/xix-b-emmet-settings-3.jpg" media-type="image/jpg" />
+        <item id="figure-182" href="images/ix-interface-introduce-6.jpg" media-type="image/jpg" />
+        <item id="figure-183" href="images/ix-interface-introduce-4.jpg" media-type="image/jpg" />
+        <item id="figure-184" href="images/x-d-encoding-setting-1.jpg" media-type="image/jpg" />
+        <item id="figure-185" href="images/simple.png" media-type="image/png" />
+        <item id="figure-186" href="images/hotkey-alt-enter-introduce-9.jpg" media-type="image/jpg" />
+        <item id="figure-187" href="images/xxvi-a-settings-introduce-26.gif" media-type="image/gif" />
+        <item id="figure-188" href="images/xxvi-a-settings-introduce-10.jpg" media-type="image/jpg" />
+        <item id="figure-189" href="images/xxvii-a-keymap-setting-2.jpg" media-type="image/jpg" />
+        <item id="figure-190" href="images/xxvi-a-settings-introduce-24.gif" media-type="image/gif" />
+        <item id="figure-191" href="images/hotkey-alt-enter-introduce-1.gif" media-type="image/gif" />
+        <item id="figure-192" href="images/xvi-g-svn-feature-1.jpg" media-type="image/jpg" />
+        <item id="figure-193" href="images/iii-a-first-install-6.jpg" media-type="image/jpg" />
+        <item id="figure-194" href="images/xiv-a-project-and-module-introduce-1.gif" media-type="image/gif" />
+        <item id="figure-195" href="images/hotkey-alt-enter-introduce-14.gif" media-type="image/gif" />
+        <item id="figure-196" href="images/xv-a-project-create-1.jpg" media-type="image/jpg" />
+        <item id="figure-197" href="images/xvii-a-live-templates-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-198" href="images/xxviii-jrebel-setup-12.jpg" media-type="image/jpg" />
+        <item id="figure-199" href="images/viii-a-configuration-files-2.jpg" media-type="image/jpg" />
+        <item id="figure-200" href="images/xv-a-project-create-9.gif" media-type="image/gif" />
+        <item id="figure-201" href="images/xxii-d-maven-tomcat-run-1.gif" media-type="image/gif" />
+        <item id="figure-202" href="images/xvi-d-version-control-system-github-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-203" href="images/xvi-e-version-control-system-operation-introduce-3.jpg" media-type="image/jpg" />
+        <item id="figure-204" href="images/xvi-f-version-control-system-settings-introduce-5.jpg" media-type="image/jpg" />
+        <item id="figure-205" href="images/xxvi-a-settings-introduce-22.jpg" media-type="image/jpg" />
+        <item id="figure-206" href="images/xxi-e-eclipse-project-tomcat-stop-1.gif" media-type="image/gif" />
+        <item id="figure-207" href="images/xxii-e-maven-dependent-exclude-1.jpg" media-type="image/jpg" />
+        <item id="figure-208" href="images/xvi-f-version-control-system-settings-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-209" href="images/xxviii-jrebel-setup-15.jpg" media-type="image/jpg" />
+        <item id="figure-210" href="images/hotkey-alt-enter-introduce-8.gif" media-type="image/gif" />
+        <item id="figure-211" href="images/x-b-font-setting-1.jpg" media-type="image/jpg" />
+        <item id="figure-212" href="images/xxvii-c-keymap-premise-2.jpg" media-type="image/jpg" />
+        <item id="figure-213" href="images/xxvii-a-keymap-setting-3.jpg" media-type="image/jpg" />
+        <item id="figure-214" href="images/xiii-a-make-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-215" href="images/xxi-e-eclipse-project-output-war-1.gif" media-type="image/gif" />
+        <item id="figure-216" href="images/xxvi-a-settings-introduce-7.gif" media-type="image/gif" />
+        <item id="figure-217" href="images/xxi-b-eclipse-project-settings-2.jpg" media-type="image/jpg" />
+        <item id="figure-218" href="images/xxviii-jrebel-setup-13.jpg" media-type="image/jpg" />
+        <item id="figure-219" href="images/xi-a-file-symbols-3.png" media-type="image/png" />
+        <item id="figure-220" href="images/xvi-e-version-control-system-operation-introduce-2.jpg" media-type="image/jpg" />
+        <item id="figure-221" href="images/xxvi-a-settings-introduce-27.gif" media-type="image/gif" />
+        <item id="figure-222" href="images/iv-a-ubuntu-install-2.jpg" media-type="image/jpg" />
+        <item id="figure-223" href="images/xix-b-emmet-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-224" href="images/xvii-c-live-templates-variables-settings-1.jpg" media-type="image/jpg" />
+        <item id="figure-225" href="images/xxi-b-eclipse-project-settings-6.jpg" media-type="image/jpg" />
+        <item id="figure-226" href="images/xii-a-invalidate-cache-2.jpg" media-type="image/jpg" />
+        <item id="figure-227" href="images/xv-a-project-create-8.jpg" media-type="image/jpg" />
+        <item id="figure-228" href="images/xxvi-a-settings-introduce-3.jpg" media-type="image/jpg" />
+        <item id="figure-229" href="images/xx-b-plugins-install-2.gif" media-type="image/gif" />
+        <item id="figure-230" href="images/xxvi-a-settings-introduce-9.gif" media-type="image/gif" />
+        <item id="figure-231" href="images/vii-a-first-run-wizard-1.jpg" media-type="image/jpg" />
+        <item id="figure-232" href="images/xv-a-project-create-3.jpg" media-type="image/jpg" />
+        <item id="figure-233" href="images/remote-debugging-2.jpg" media-type="image/jpg" />
+        <item id="figure-234" href="images/vii-a-first-run-wizard-5.jpg" media-type="image/jpg" />
+        <item id="figure-235" href="images/iii-a-first-install-3.jpg" media-type="image/jpg" />
+        <item id="figure-236" href="images/xi-b-file-symbols-2.png" media-type="image/png" />
+        <item id="figure-237" href="images/iii-a-first-install-2.jpg" media-type="image/jpg" />
+        <item id="figure-238" href="images/xix-b-emmet-settings-2.gif" media-type="image/gif" />
+        <item id="figure-239" href="images/xxi-b-eclipse-project-settings-3.jpg" media-type="image/jpg" />
+        <item id="figure-240" href="images/xxvi-a-settings-introduce-14.gif" media-type="image/gif" />
+        <item id="figure-241" href="images/xiv-d-module-setting-1.jpg" media-type="image/jpg" />
+        <item id="figure-242" href="images/v-a-mac-install-1.jpg" media-type="image/jpg" />
+        <item id="figure-243" href="images/xxi-d-eclipse-project-tomcat-run-3.jpg" media-type="image/jpg" />
+        <item id="figure-244" href="images/iii-c-uninstall-2.jpg" media-type="image/jpg" />
+        <item id="figure-245" href="images/xxvii-a-keymap-setting-1.jpg" media-type="image/jpg" />
+        <item id="figure-246" href="images/xvi-e-version-control-system-operation-introduce-1.jpg" media-type="image/jpg" />
+        <item id="figure-247" href="images/v-a-mac-install-2.jpg" media-type="image/jpg" />
+        <item id="figure-248" href="images/x-c-code-theme-setting-1.jpg" media-type="image/jpg" />
+        <item id="figure-249" href="images/vii-a-first-run-wizard-3.jpg" media-type="image/jpg" />
+        <item id="figure-250" href="images/xvii-b-live-templates-settings-2.jpg" media-type="image/jpg" />
+        <item id="cover" href="images/cover.jpg" media-type="image/jpeg"/>
+        <item id="font-1" href="fonts/Inconsolata.ttf" media-type="application/x-font-ttf" />
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+    </manifest>
+
+    <spine toc="ncx">
+        <itemref idref="titlepage"/>
+        <itemref idref="preface" />
+        <itemref idref="chapter-1" />
+        <itemref idref="chapter-2" />
+        <itemref idref="chapter-3" />
+        <itemref idref="chapter-4" />
+        <itemref idref="chapter-5" />
+        <itemref idref="chapter-6" />
+        <itemref idref="chapter-7" />
+        <itemref idref="chapter-8" />
+        <itemref idref="chapter-9" />
+        <itemref idref="chapter-10" />
+        <itemref idref="chapter-11" />
+        <itemref idref="chapter-12" />
+        <itemref idref="chapter-13" />
+        <itemref idref="chapter-14" />
+        <itemref idref="chapter-15" />
+        <itemref idref="chapter-16" />
+        <itemref idref="chapter-17" />
+        <itemref idref="chapter-18" />
+        <itemref idref="chapter-19" />
+        <itemref idref="chapter-20" />
+        <itemref idref="chapter-21" />
+        <itemref idref="chapter-22" />
+        <itemref idref="chapter-23" />
+        <itemref idref="chapter-24" />
+        <itemref idref="chapter-25" />
+        <itemref idref="chapter-26" />
+        <itemref idref="chapter-27" />
+        <itemref idref="chapter-28" />
+        <itemref idref="chapter-29" />
+        <itemref idref="chapter-30" />
+        <itemref idref="chapter-31" />
+        <itemref idref="chapter-32" />
+        <itemref idref="chapter-33" />
+        <itemref idref="chapter-34" />
+        <itemref idref="chapter-35" />
+        <itemref idref="chapter-36" />
+        <itemref idref="chapter-37" />
+        <itemref idref="afterword" />
+    </spine>
+
+    <guide>
+        <reference href="titlepage.html" type="cover" title="Cover"/>
+    </guide>
+
+</package>

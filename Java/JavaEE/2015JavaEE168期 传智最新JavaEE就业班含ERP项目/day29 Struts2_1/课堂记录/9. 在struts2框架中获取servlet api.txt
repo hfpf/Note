@@ -1,0 +1,45 @@
+在struts2框架中获取servlet api
+				
+	对于struts2框架，不建议直接使用servlet api;
+	
+	在struts2中获取servlet api有三种方式:
+		1.通过ActionContext来获取
+			1.获取一个ActionContext对象。
+				ActionContext context=ActionContext.getContext();
+			2.获取servlet api
+				注意:通过ActionContext获取的不是真正的Servlet api,而是一个Map集合。
+				
+				1.context.getApplication()
+				2.context.getSession()
+				3.context.getParameter();---得到的就相当于request.getParameterMap()
+				4.context.put(String,Object) 相当于request.setAttribute(String,String);
+					
+		
+		2.注入方式获取(这种方式是真正的获取到了servlet api)
+			
+			1.要求action类必须实现提定接口。
+				ServletContextAware  ： 注入ServletContext对象
+				ServletRequestAware  ：注入 request对象
+				ServletResponseAware ： 注入response对象
+
+			2.重定接口中的方法。				
+				private HttpServletRequest request;
+			3.声明一个web对象，使用接口中的方法的参数对声明的web对象赋值.	
+				public void setServletRequest(HttpServletRequest request) {
+					this.request = request;
+				}
+
+			扩展:分析其实现：
+				是使用struts2中的一个interceptor完成的.
+				<interceptor name="servletConfig" class="org.apache.struts2.interceptor.ServletConfigInterceptor"/>
+				
+				 if (action instanceof ServletRequestAware) { //判断action是否实现了ServletRequestAware接口
+					HttpServletRequest request = (HttpServletRequest) context.get(HTTP_REQUEST); //得到request对象.
+					((ServletRequestAware) action).setServletRequest(request);//将request对象通过action中重写的方法注入。
+				}
+
+		3.通过ServletActionContext获取.
+			在ServletActionContext中方法都是static。			
+			getRequest();
+			getResposne();
+			getPageContext();

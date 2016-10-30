@@ -1,0 +1,26 @@
+﻿Struts2 利用 s:property 标签和 OGNL 表达式来读取值栈中的属性值
+ 
+ 1). 值栈中的属性值:
+ 
+ 	> 对于对象栈: 对象栈中某一个对象的属性值
+ 	
+ 	> Map 栈: request, session, application 的一个属性值 或 一个请求参数的值. 
+ 	
+ 2). 读取对象栈中对象的属性:
+ 
+ 	> 若想访问 Object Stack 里的某个对象的属性. 可以使用以下几种形式之一: 
+		
+	  object.propertyName ; object['propertyName'] ; object["propertyName"]	
+		
+	> ObjectStack 里的对象可以通过一个从零开始的下标来引用. ObjectStack 里的栈顶对象可以用 [0] 来引用, 
+	     它下面的那个对象可以用 [1] 引用. 
+	   
+	  [0].message   
+	     
+	> [n] 的含义是从第 n 个开始搜索, 而不是只搜索第 n 个对象
+	
+	> 若从栈顶对象开始搜索, 则可以省略下标部分: message 
+	
+	> 结合 s:property 标签: <s:property value="[0].message" /> 相当于 <s:property value="message" />
+ 
+ 3). 默认情况下, Action 对象会被 Struts2 自动的放到值栈的栈顶. 

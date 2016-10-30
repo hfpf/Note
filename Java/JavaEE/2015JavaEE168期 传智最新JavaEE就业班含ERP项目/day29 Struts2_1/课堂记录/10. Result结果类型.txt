@@ -1,0 +1,45 @@
+Result结果类型
+				
+	<result>标签
+		1.name  与action中的method的返回值匹配，进行跳转.
+			
+		2.type  作用:是用于定义跳转方式
+			
+		对于type属性它的值有以下几种:
+			在struts-default.xml文件中定义了type可以取的值
+			
+			<result-type name="chain" class="com.opensymphony.xwork2.ActionChainResult"/>
+			<result-type name="dispatcher" class="org.apache.struts2.dispatcher.ServletDispatcherResult" default="true"/>
+			<result-type name="freemarker" class="org.apache.struts2.views.freemarker.FreemarkerResult"/>
+			<result-type name="httpheader" class="org.apache.struts2.dispatcher.HttpHeaderResult"/>
+			<result-type name="redirect" class="org.apache.struts2.dispatcher.ServletRedirectResult"/>
+			<result-type name="redirectAction" class="org.apache.struts2.dispatcher.ServletActionRedirectResult"/>
+			<result-type name="stream" class="org.apache.struts2.dispatcher.StreamResult"/>
+			<result-type name="velocity" class="org.apache.struts2.dispatcher.VelocityResult"/>
+			<result-type name="xslt" class="org.apache.struts2.views.xslt.XSLTResult"/>
+			<result-type name="plainText" class="org.apache.struts2.dispatcher.PlainTextResult" />
+		
+		必会: chain  dispatcher  redirect redirectAction  stream
+			
+			dispatcher:		它代表的是请求转发，也是默认值。它一般用于从action跳转到页面。
+			chain:			它也相当于请求转发。它一般情况下用于从一个action跳转到另一个action。
+			
+			redirect:		它代表的是重定向  它一般用于从action跳转到页面
+			redirectAction: 它代表的是重定向  它一般用于从action跳转另一个action。
+			
+			stream:			代表的是服务器端返回的是一个流，一般用于下载。
+			
+		了解: freemarker  velocity
+
+	----------------------------------------------------
+	局部结果页面与全局结果页面
+		 局部结果页面 和 全局结果页面 
+		<action name="result" class="cn.itcast.struts2.demo6.ResultAction">
+					<!-- 局部结果  当前Action使用 -->
+					<result name="success">/demo6/result.jsp</result> 
+		</action>
+		 
+		<global-results>
+					<!-- 全局结果 当前包中 所有Action都可以用-->
+					<result name="success">/demo6/result.jsp</result>
+		</global-results>

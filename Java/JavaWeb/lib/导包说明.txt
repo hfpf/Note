@@ -1,0 +1,16 @@
+数据库：
+	mysql驱动
+	c3p0（jar包和配置文件）
+		mchange-commons-0.2（mysql）
+	commons-dbutils
+	itcast-tools
+		commons-beanutils
+			commons-logging
+javamail
+	mail.jar
+	activation.jar
+上传
+	commons-fileupload
+	commons-io
+ajax
+	json-lib

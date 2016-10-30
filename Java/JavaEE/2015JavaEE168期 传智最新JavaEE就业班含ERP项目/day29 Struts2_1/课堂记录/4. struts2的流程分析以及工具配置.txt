@@ -1,0 +1,34 @@
+struts2的流程分析以及工具配置
+	
+	1.流程分析
+		请求 ---- StrutsPrepareAndExecuteFilter 核心控制器 ----- Interceptors 拦截器（实现代码功能 ） ----- Action 的execute --- 结果页面 Result 
+		* 拦截器 在 struts-default.xml定义
+		* 执行拦截器 是 defaultStack 中引用拦截器 
+
+		---- 通过源代码级别断点调试，证明拦截器是执行 
+
+				
+	2.关于手动配置struts.xml文件中提示操作
+		
+		 如果安装Aptana编辑器 ，请不要用Aptana自带xml编辑器 编写struts2配置文件 
+		 struts.xml提示来自于 DTD约束， 
+			<!DOCTYPE struts PUBLIC
+			"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+			"http://struts.apache.org/dtds/struts-2.3.dtd">
+			如果可以上网，自动缓存dtd，提供提示功能
+			如果不能上网，也可以配置本地DTD提示 
+
+		*** 导入DTD时，应该和配置DTD版本一致 
+		
+	3.关联struts2源文件
+		如果是com.opensymphony.xxx   在xwork-core下
+		如果是org.apache.struts2     在core下
+		
+		
+	4.使用插件  struts2-config-browser-plugin-2.3.15.1
+		提供在浏览器中查看 struts2 配置加载情况 
+
+		将解压struts2/lib/struts2-config-browser-plugin-2.3.7.jar 复制WEB-INF/lib下 
+
+		访问 http://localhost/struts2_day01/config-browser/index.action 查看 struts2配置加载情况
+	

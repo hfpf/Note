@@ -1,0 +1,2 @@
+  * 核心JAR包：xstream-1.4.7.jar；
+  * 必须依赖包：xpp3_min-1.1.4c（XML Pull Parser，一款速度很快的XML解析器）；

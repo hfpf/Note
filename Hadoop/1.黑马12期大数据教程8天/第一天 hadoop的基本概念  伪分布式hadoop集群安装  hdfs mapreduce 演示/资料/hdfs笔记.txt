@@ -1,0 +1,30 @@
+1.HDFS shell
+	1.0查看帮助
+		hadoop fs -help <cmd>
+	1.1上传
+		hadoop fs -put <linux上文件> <hdfs上的路径>
+	1.2查看文件内容
+		hadoop fs -cat <hdfs上的路径>
+	1.3查看文件列表
+		hadoop fs -ls /
+	1.4下载文件
+		hadoop fs -get <hdfs上的路径> <linux上文件>
+
+2.使用java接口操作HDFS
+	见eclipse工程下的demo
+
+3.hadoop通信机制
+	不同进程之间的方法进行调用
+
+4.HDFS源码分析
+	FileSystem.get --> 通过反射实例化了一个DistributedFileSystem --> new DFSCilent()把他作为自己的成员变量
+	在DFSClient构造方法里面，调用了createNamenode，使用了RPC机制，得到了一个NameNode的代理对象，就可以和NameNode进行通信了
+	
+	FileSystem --> DistributedFileSystem --> DFSClient --> NameNode的代理
+	
+		
+		
+		
+		
+		
+		

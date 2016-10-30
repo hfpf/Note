@@ -1,0 +1,14 @@
+1. 在环境变量中正确配置JAVA_HOME，在环境变量中更改JDK的根目录：
+	C:\myProgramFiles\Java\jdk1.8.0_92
+
+2. 在Nexus安装目录下，找到【\~\bin\jsw\conf】文件夹，打开【wrapper.conf】文件
+找到这行：
+# Set the JVM executable
+
+下面有【wrapper.java.command=....】
+将这行更改为【wrapper.java.command=自己的JDK安装目录\bin\java】即可。
+
+以我的JDK安装目录为例子
+# Set the JVM executable
+# (modify this to absolute path if you need a Java that is not on the OS path)
+wrapper.java.command=C:\myProgramFiles\Java\jdk1.8.0_92\bin\java

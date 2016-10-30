@@ -1,0 +1,82 @@
+1.国际化
+	
+	1、 国际化原理 ？ 什么是国际化 ？ 
+	同一款软件 可以为不同用户，提供不同语言界面  ---- 国际化软件
+	需要一个语言资源包（很多properties文件，每个properties文件 针对一个国家或者语言 ，
+	通过java程序根据来访者国家语言，自动读取不同properties文件 ）
+		
+	2、 资源包编写 
+		properties文件命名 ：  基本名称_语言（小写）_国家（大写）.properties
+	例如 ：
+		messages_zh_CN.properties 中国中文
+		messages_en_US.properties 美国英文
+	3、 ResourceBundle 根据不同Locale（地域信息），读取不同国家 properties文件
+	ResourceBundle bundle = ResourceBundle.getBundle("messages", Locale.US);
+
+	----------------------------
+	struts2中国际化:
+		struts2中对国际化进行了封装，我们只需要根据其提供的API进行访问就可以。
+		
+		问题1:在struts2中国际化时properties文件怎样定义？(怎样定义properties)
+		
+			1.全局
+				需要通过一个常量来声明.
+				struts.custom.i18n.resources=testmessages,testmessages2
+				
+				对于properties配置文件可以放置在任意位置
+				
+				<constant name="struts.custom.i18n.resources" value="message"> 代表message.properties在src下
+				<constant name="struts.custom.i18n.resources" value="cn.itcast.i18n.resource.message"> 代表message.properties在cn.itcast.i18n.resource包下.
+			2.局部
+				1.针对于action类
+					位置:与action类在同一个包下.
+					名称:ActionClassName.properties.
+					这个配置文件只对当前action有效。
+				2.针对于package下所有action
+					位置:在指定的包下
+					名称:package.properties
+				3.jsp页面临时使用某一个properties文件.
+					<s:i18n name="cn.itcast.action.package"></s:i18n>
+			
+		
+		问题2:在struts2中国际化操作可以在哪些位置使用?(在哪此位置上使用)
+		
+			1.action类中使用
+			
+			2.配置文件中使用<validation.xml>
+			
+			3.在jsp页面上使用
+
+			
+		问题3:怎样在struts2中操作国际化?(怎样使用)
+			1.在action类中使用
+				前提:action类要继承ActionSupport类。
+					
+				getText(String name)就可以获取配置文件中对应名称的值。
+				
+			2.在validation.xml文件中使用
+				
+				<message key="名称"/>
+				
+			3.在jsp页面上使用
+			
+				<s:text name="名称"> 如果没有使用<s:i18n name="">来指定，会从全局配置文件中获取。
+				如果要从某一个配置文件中获取，通过name属性来指定，  包名.配置文件名称 .
+	--------------------------------------------------------
+	在struts2中国际化配置文件中使用动态文本
+		1.action中怎样使用
+			msg=hello world  {0}
+			this.getText("msg",new String[]{"tom"})
+			
+			结果就是 hello world tom
+			
+		2.jsp页面上怎样使用
+			msg=hello world  {0}
+			
+			<s:i18n name="cn.itcast.action.I18nDemo1Action">
+				<s:text name="msg">
+					<s:param>张三</s:param>
+				</s:text>
+			</s:i18n>
+			
+			结果就是 hello world  张三.

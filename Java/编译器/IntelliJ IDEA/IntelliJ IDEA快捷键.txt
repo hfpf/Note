@@ -1,0 +1,47 @@
+Ctrl + Alt + L			格式化代码(建议修改)
+Ctrl + Alt + Left/Right	返回至上次浏览的位置
+Ctrl + Alt + T			把代码包在一块内，例如try/catch
+Ctrl + Alt + V			可以新建变量。例如把new String("123")赋成一个变量
+Ctrl + E				可以显示最近编辑的文件列表
+Ctrl + F				查找文本
+Ctrl + F4				关闭当前文件
+Ctrl + F12				可以显示当前文件的结构
+Ctrl + H / Alt + 8		显示类结构图
+Ctrl + J				查看所有代码模板
+Ctrl + N				查找类
+Ctrl + Shift + N		查找文件
+Ctrl + Shift + Alt + N	查找类中的方法或变量
+Ctrl + P				显示方法参数
+Ctrl + Q				显示注释文档
+Ctrl + R				替换文本
+Ctrl + X				删除光标所在行
+Ctrl + +/-				当前方法展开、折叠
+Ctrl + Shift + +/-		全部展开、折叠
+Ctrl + Shift + Up/Down/Left/Right	调整窗口上下左右大小
+
+
+
+Alt + Enter				导入包,自动修正
+Alt + Insert			代码自动生成
+Alt + Shift + Up/Down	一行上下移动
+Alt + Up/Down			可在方法间快速移动
+
+
+
+Shift + F6				重命名
+Shift + Enter			切换到下一行
+
+
+
+http://www.open-open.com/lib/view/open1364279138578.html 
+
+
+
+
+
+
+
+
+
+
+

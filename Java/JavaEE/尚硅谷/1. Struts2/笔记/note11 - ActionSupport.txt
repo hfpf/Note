@@ -1,0 +1,18 @@
+﻿ActionSupport
+
+1). ActionSupport 是默认的 Action 类: 若某个 action 节点没有配置 class 属性, 则 ActionSupport 即为
+待执行的 Action 类. 而 execute 方法即为要默认执行的 action 方法
+
+<action name="testActionSupport">
+	<result>/testActionSupport.jsp</result>
+</action>
+
+等同于
+
+<action name="testActionSupport"
+	class="com.opensymphony.xwork2.ActionSupport"
+	method="execute">
+	<result>/testActionSupport.jsp</result>
+</action>
+
+2). 在手工完成字段验证, 显示错误消息, 国际化等情况下, 推荐继承 ActionSupport. 

@@ -1,0 +1,84 @@
+log4j
+
+1. 它是什么
+  用来做日志的工具！市场上95%以上的软件都在使用它来作为日志工具！
+  给你的程序做日记！
+
+2. 让log4j与System.out.println()进行比较
+  * 前者专业日志工具
+    > 可以随意的指定输出目的地（可以是控制台，文件）
+    > 可以灵活控制级别（只输出错误级别的日志，而信息级别的不输出）
+    > 可以控制输出的格式！
+  * 后者只能输出到控制台！无法控制级别（信息、错误）！
+
+3. 什么东西使用了log4j
+  * c3p0
+  * hibernate
+  * spring
+
+------------------------------
+
+log4j的第一例
+
+1. 导包：log4j.1.2.16.jar
+
+--------------------
+
+示例代码
+
+	@Test
+	public void fun1() {
+		/*
+		 * 1. 得到日志器
+		 */
+		Logger logger = Logger.getLogger(Demo1.class);
+		/*
+		 * 2. 创建格式（简单格式）
+		 */
+		Layout layout = new SimpleLayout();
+		/*
+		 * 3. 使用格式来创建目的地（控制台）
+		 */
+		Appender appender = new ConsoleAppender(layout);
+		/*
+		 * 4. 把目的地给日志器
+		 */
+		logger.addAppender(appender);
+		
+		// 设置日志器级别
+		logger.setLevel(Level.ALL);//只输出错误级别以上的日志
+		
+		/*
+		 * 5. 输出日志
+		 */
+		logger.debug("hello");//调试级别
+		logger.info("hello");//信息级别
+		logger.warn("hello");//警告级别
+		logger.error("hello");//错误级别
+		logger.fatal("hello");//大错误级别
+	}
+
+--------------------
+
+日志器相关信息
+
+1. 目的地(发送器)：Appender
+2. 格式：Layout
+3. 级别：Level
+
+--------------------
+
+通过配置来设置以上相关信息
+
+log4j.properties --> 还是在使用properties配置文件！
+
+1. 把log4j.properties文件放到src下！
+
+
+
+
+
+
+
+
+

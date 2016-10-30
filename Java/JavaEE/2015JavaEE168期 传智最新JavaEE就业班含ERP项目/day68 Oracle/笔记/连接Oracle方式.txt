@@ -1,0 +1,6 @@
+Oracle12c£º
+
+¿ØÖÆÌ¨	£ºsqlplus c##scott/tiger@192.168.1.1:1521/orcl
+
+web	£ºhttps://192.168.1.1:5500/em
+

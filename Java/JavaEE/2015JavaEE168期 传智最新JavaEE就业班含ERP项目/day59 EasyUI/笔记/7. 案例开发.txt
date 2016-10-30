@@ -1,0 +1,19 @@
+案例开发:
+利用Datagrid实现一个CRUD
+
+1.DB的实现 详见db.txt
+2.Servlet的实现
+  通过每次提交增加" flag='各种操作名称' " 的方式来减少servlet的数量
+3. 2种jar包的加入
+   数据库jar包
+   java<-->json 互换需要的jar包
+4.StuDB 的实现
+   getConn();
+   closeRes(rs,stmt,conn);
+   closeRes(stmt,conn);
+   getAllStu();
+   addStu();
+   delStu();
+   uptStu();
+   getNum();
+5.servlet中实现对StuDB层的调用

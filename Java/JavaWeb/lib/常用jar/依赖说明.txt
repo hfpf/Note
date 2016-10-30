@@ -1,0 +1,14 @@
+【jar包依赖关系】
+
+1. 连接池
+c3p0-0.9.2-pre1.jar 		c3p0核心jar包
+mchange-commons-0.2.jar		c3p0必须依赖jar包
+
+2. 自己的小工具itcast-tools-1.4.2.jar
+commons-beanutils-1.8.3.jar	核心依赖jar包
+commons-dbutils-1.4.jar		核心依赖jar包
+	commons-logging-1.1.1.jar	核心依赖jar包
+
+
+
+

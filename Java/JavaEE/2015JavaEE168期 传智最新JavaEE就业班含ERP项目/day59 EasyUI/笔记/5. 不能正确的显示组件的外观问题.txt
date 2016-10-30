@@ -1,0 +1,8 @@
+在页面开头加入以下语句
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	 <html xmlns="http://www.w3.org/1999/xhtml">
+
+ Html5加这一句：
+	<!DOCTYPE html>
+ 
+不加可能会出现样式改变.不能正确的显示组件的外观

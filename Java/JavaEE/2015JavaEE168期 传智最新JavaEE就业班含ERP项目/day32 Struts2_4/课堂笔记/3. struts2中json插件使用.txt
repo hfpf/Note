@@ -1,0 +1,33 @@
+3。struts2中json插件使用
+	
+	1.struts2中怎样处理异步提交(ajax)
+	
+		原始:
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.getWriter().write("hello " + msg);
+		response.getWriter().close();
+		
+		还可以使用struts2中提供的json插件:
+		
+			1.导入json插件包
+				在struts2的lib包下  struts2-json-plugin-2.3.15.1.jar。
+				
+			2.在struts.xml文件中配置
+				1.<package extends="json-default">
+				2.设置视图<result type="json">
+				
+			这样设置后，会将valueStack栈顶数据变成json。
+			对于我们的程序，也就是会将action对象转换成json。
+			
+			
+			<param name="root">p</param> 如果没有设置，可以理解成将整个action都转换成json的数据。也就是
+			 在action中提供的getXxx方法，就是json中的一个属性。
+			 
+			如果设置了root,那么，只将指定数据转换成json.
+			
+		--------------------------------------------------------
+		怎样设置转换成json的对象中不包含特定的属性?
+		
+			1. @JSON(serialize=false) 在getXxx方法上设置 
+			2. 还可以通过json插件的interceptor完成.
+				<param name="includeProperties">ps\[\d+\]\.name,ps\[\d+\]\.price,ps\[\d+\]\.count</param>

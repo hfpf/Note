@@ -1,0 +1,41 @@
+ 4. 拖动
+	1. 将div中增加一个class样式: class="easyui-draggable"
+		<div style="width:300px;height:200px;background:pink" class="easyui-draggable"></div>
+
+	2. 用js实现
+		<script type="">
+		  //$("#mydd").draggable(); 错误的方式? why? 这段代码没有得到执行的机会
+		  $(function(){
+				$("#mydd").draggable();
+		  });
+		</script>
+
+		<div style="" id="mydd"></div>
+
+	原理: jqueryEasyUI.js 这个js文件,他会去页面上寻找判断每一个元素.看元素中的class属性是否是以easyui开头.
+	那么这个js文件中的程序会将这个元素将其渲染为对应的组件.
+
+	结论1: 几乎每一种插件都有2种方式来实现.一种是通过纯html标签来实现 class="easyui-**"
+		通过html标签+js代码来实现
+		如果内容变化不大,不需要经常改变	:html来实现
+		如果内容经常变化				:js+html来实现
+
+	结论2: 今天学习的html标签多了data-options="k1:v1, k2:v2" ,让easyUI来识别.
+		通过识别data-options中的各种属性和属性值为当前组件增加各种属性.
+			class data-options
+			$("#mydd").方法名({});
+			
+		方法名是有规律的:  
+			$("#mydd").tree({k1:v1,k2:v2});
+			$("#mydd").menu({}); 
+			$("#mydd").draggable({});
+	   
+		方法中传递的是一个对象. 对象中的属性是以键值对的形式存在,多个属性之间用,分割.
+		   
+	结论3: 如何加事件
+		$("#mydd").draggable({
+			事件名1:function(){},
+			事件名2:function(){},
+		});
+
+	结论4:方法 

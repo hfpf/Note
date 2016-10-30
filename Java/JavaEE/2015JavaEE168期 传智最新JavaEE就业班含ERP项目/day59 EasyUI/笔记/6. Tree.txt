@@ -1,0 +1,14 @@
+Tree:
+  MyEclipse对Json格式的文件没有完全支持.
+  1.建立了一个json文件.MyE将这个空的json发布到了项目下,后期修改了json文件之后,
+     MyE没有正确的去管理这个文件.
+      FireBub--->网络--->json-->响应
+     重新加载发布项目
+  2.出现乱码 将json文件 另存为utf-8格式
+  
+DateGrid
+ 1. html
+ 2. js+html
+ 3.混合方式
+
+ 

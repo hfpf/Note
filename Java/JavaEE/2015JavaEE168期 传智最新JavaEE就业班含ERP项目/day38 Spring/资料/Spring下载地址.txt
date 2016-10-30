@@ -1,0 +1,1 @@
+http://repo.springsource.org/libs-release-local/org/springframework/spring/

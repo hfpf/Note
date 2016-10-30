@@ -1,0 +1,4 @@
+struts.xml文件的分离:
+	
+		目的:就是为了阅读方便。可以让一个模块一个配置文件，在struts.xml文件中通过
+		<include file="test.xml"/>导入其它的配置文件。

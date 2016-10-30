@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <title>文件代码模板的使用</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/easybook.css" />
+
+
+    </head>
+
+<body><div class="container">
+<div class="item chapter">
+    <h1 class="title"><span class="label">18</span> <span class="title">文件代码模板的使用</span></h1>
+    <h2 id="8cd1b906418483209750deda078665a2">文件代码模板的介绍</h2>
+
+<p>文件代码模板可以简单理解为：我们在项目中创建某些类型文件时，就已经在对应这些新文件中预设了代码内容。因为文字表达都带有点无力，所以下面用 Gif 动态图来演示。</p>
+
+<div class="figure" id="figure-18-1">
+    <img src="images/xviii-a-file-and-code-templates-introduce-1.gif" alt="文件代码模板的介绍"  />
+
+    <p class="caption"><strong>图片 18.1</strong> 文件代码模板的介绍</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图 Gif 所示，IntelliJ IDEA 默认新建类自带的类注释格式一般不够友好或是规范，所以我们一般需要自己根据公司编码规范进行设置。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-18-2">
+    <img src="images/xviii-a-file-and-code-templates-introduce-2.gif" alt="文件代码模板的介绍"  />
+
+    <p class="caption"><strong>图片 18.2</strong> 文件代码模板的介绍</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图 Gif 所示，这是根据我自己的需求进行设置的类注释，这种注释方式会更友好。</li>
+  </ul>
+</blockquote>
+
+<p>根据演示我们应该已经很好地理解了文件代码模板是什么东西了。对此我们可以衍生出很多玩法，比如：我们的项目 Controller、Service、Dao 等常用新对象都是要各自继承某个类、实现某些接口或预设某些方法，也都可以通过这样的文件代码模板来实现。</p>
+
+<blockquote>
+  <ul>
+  <li>官网介绍：<a href="https://www.jetbrains.com/idea/help/file-and-code-templates.html">https://www.jetbrains.com/idea/help/file-and-code-templates.html</a></li>
+  </ul>
+</blockquote>
+
+<h2 id="f0b74283160b668ef11085583dd0b6fd">文件代码模板的设置</h2>
+
+<div class="figure" id="figure-18-3">
+    <img src="images/xviii-b-file-and-code-templates-settings-1.jpg" alt="文件代码模板的设置"  />
+
+    <p class="caption"><strong>图片 18.3</strong> 文件代码模板的设置</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图标注 1 所示，文件代码模板支持的类型基本常见的文件类型都涵盖了。</li>
+  <li>如上图标注 2 所示，这是 Java 文件模板新建的代码模板，其中 <code>${PACKAGE_NAME}、${NAME}</code> 是 IntelliJ IDEA 预设的变量。</li>
+  <li>如上图标注 3 所示，IntelliJ IDEA 的文件代码模板是可以使用 <code>Velocity Template Language</code> (VTL) 进行书写的。如图 2 上的 <code>#if ... #end</code> 和 <code>#parse</code> 都是 VTL 的语法。</li>
+  <li>如上图标注 4 所示，介绍当前文件模板的一些信息，以及一些预设变量的作用介绍。</li>
+  <li>如上图标注 5 所示，这四个按钮是文件代码模板的主要操作按钮，四个操作分别是：</li>
+  </ul>
+  
+  <blockquote>
+    <ul>
+    <li><code>Create Template</code> 创建一个文件代码模板。 </li>
+    <li><code>Remove Template</code> 删除一个文件代码模板，标注 1 所示的这些预设模板是不允许删除的，只能能删除预设之外的新增的。</li>
+    <li><code>Copy Template</code> 复制一个文件代码模板。 </li>
+    <li><code>Reset To Default</code> 对被修改的预设文件代码模板，还原到默认状态。</li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<div class="figure" id="figure-18-4">
+    <img src="images/xviii-b-file-and-code-templates-settings-2.jpg" alt="文件代码模板的设置"  />
+
+    <p class="caption"><strong>图片 18.4</strong> 文件代码模板的设置</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图标注 1 所示，IntelliJ IDEA 还支持其他常见会新建的文件类型，基本上我们根本不用担心有不支持的文件类型，常用的基本都被涵盖了。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-18-5">
+    <img src="images/xviii-b-file-and-code-templates-settings-3.jpg" alt="文件代码模板的设置"  />
+
+    <p class="caption"><strong>图片 18.5</strong> 文件代码模板的设置</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图标注 1 所示，该 <code>File Header</code> 文件就是前面 Java 文件代码模板中引入语句中 <code>#parse("File Header.java")</code> 文件。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-18-6">
+    <img src="images/xviii-b-file-and-code-templates-settings-4.jpg" alt="文件代码模板的设置"  />
+
+    <p class="caption"><strong>图片 18.6</strong> 文件代码模板的设置</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图标注箭头所示，<code>${DESCRIPTION}</code> 是我们自己定义的变量，自定义变量格式有两种方式：<code>$变量名 或 ${变量名}</code>。</li>
+  <li>自定义的变量在创建对应的文件时候就必须输入内容，这个在本文最上面的 Gif 演示中已经有体现了。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-18-7">
+    <img src="images/xviii-b-file-and-code-templates-settings-5.gif" alt="文件代码模板的设置"  />
+
+    <p class="caption"><strong>图片 18.7</strong> 文件代码模板的设置</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图 Gif 所示，当我们需要用到一个固定值的自定义变量的时候并且该变量多个地方被引用，我们可以通过 VTL 语法的 <code>#set( $变量名 = "变量值内容" );</code> 来设置。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-18-8">
+    <img src="images/xviii-b-file-and-code-templates-settings-6.jpg" alt="文件代码模板的设置"  />
+
+    <p class="caption"><strong>图片 18.8</strong> 文件代码模板的设置</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>因为 <code>Code</code> 模块改动的人不多，所以放在最后。我们是无法新建、删除 <code>Code</code> 里面的代码模板。</li>
+  <li>如上图标注 1 所示，在我们通过快捷方式生成某个类的测试方法时候会自动调用此 <code>Code</code> 模板，所以我们可以解释该 <code>Code</code> 功能主要用在 IntelliJ IDEA 自动帮我们生成某些代码的时候引用的模板。</li>
+  </ul>
+</blockquote>
+
+<h2 id="e0a91715b199069c1e6e27821762e236">文件代码模板预设的变量</h2>
+
+<p>因为变量的命名太明了不过了，所以这里不多讲解，直接贴出官网的英文解释：</p>
+
+<blockquote>
+  <ul>
+  <li>${PACKAGE_NAME} - the name of the target package where the new class or interface will be created.</li>
+  <li>${PROJECT_NAME} - the name of the current project.</li>
+  <li>${FILE_NAME} - the name of the PHP file that will be created.</li>
+  <li>${NAME} - the name of the new file which you specify in the New File dialog box during the file creation.</li>
+  <li>${USER} - the login name of the current user.</li>
+  <li>${DATE} - the current system date.</li>
+  <li>${TIME} - the current system time.</li>
+  <li>${YEAR} - the current year.</li>
+  <li>${MONTH} - the current month.</li>
+  <li>${DAY} - the current day of the month.</li>
+  <li>${HOUR} - the current hour.</li>
+  <li>${MINUTE} - the current minute.</li>
+  <li>${PRODUCT_NAME} - the name of the IDE in which the file will be created.</li>
+  <li>${MONTH_NAME_SHORT} - the first 3 letters of the month name. Example: Jan, Feb, etc.</li>
+  <li>${MONTH_NAME_FULL} - full name of a month. Example: January, February, etc.</li>
+  </ul>
+</blockquote>
+
+<p>PHP 的文件类型预设的变量比上面的还多一点，具体可以查阅官网：</p>
+
+<blockquote>
+  <ul>
+  <li>官网变量介绍：<a href="https://www.jetbrains.com/idea/help/file-template-variables.html">https://www.jetbrains.com/idea/help/file-template-variables.html</a></li>
+  </ul>
+</blockquote>
+
+</div>
+</div></body>
+</html>

@@ -1,0 +1,45 @@
+window.alert();		弹出对话框
+console.log();		在控制台弹出
+
+数组的声明：
+① var a = new Array();
+② var a = new Array(5);
+③ var a = new Array(1, 2, 3);
+
+json格式：
+var a = {"name":"xiaoming", "age":18, "sex":"男"}
+json数组：
+var a = [{"name":"xiaoming", "age":18, "sex":"男"}, {"name":"xiaoming", "age":18, "sex":"男"}]
+
+json可以实现多个参数传入
+
+jquery能做什么？
+① 找到元素
+	$("XXX");
+② 获取元素的属性
+   赋值：
+	$("img").attr("src", "images/1.jpg");	修改属性
+	$("#a1").attr("src", "images/1.jpg");	按照ID
+	$("#a1").css("src", "images/1.jpg");	修改CSS的属性
+		.click()			单击事件
+//attr 传两个参数的时候修改，传一个参数获取
+//css  传两个参数的时候修改，传一个参数获取
+	 
+页面加载完再执行：$(function(){
+					})
+
+curson:pointer 当鼠标移入的时候出现小手
+
+.index()返回触发发事件的元素在数组的位置
+
+.siblings() 用于筛选同辈元素的表达式
+
+重构
+
+新建定时器
+	var timer = window.setInterval(function(), 毫秒);
+清除定时器
+	window.clearInterval(timer);
+
+.focus() 焦点
+.blur();失去焦点

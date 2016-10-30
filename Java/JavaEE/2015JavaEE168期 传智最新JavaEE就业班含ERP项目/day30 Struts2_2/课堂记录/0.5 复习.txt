@@ -1,0 +1,59 @@
+复习:
+	1.框架:是一个半成品，可以在其基础上在次开发。
+	2.struts2框架:它是一个web层使用的mvc框架。
+	3.struts2核心  1.struts2核心  2.xwork核心
+	4.struts2入门:
+		1.导jar包
+			struts2/apps/strut_blank.war文件
+		2.需要配置struts2
+			1.web.xml
+				StrutsPrepareAndExecuteFilter
+			2.struts.xml
+				位置:src以下(clasess)
+				
+			3.struts.xml文件中标签
+				<package> 用于管理action
+					name:包名   唯一
+					namespace:与action的name属性确定访问action的路径.  默认值""
+					extends:继承的包名  struts-default
+				<action> 声明一个action
+					name:action名称  在同一个包下不能重名
+					class:action类全名   ActionSupport
+					method:action类中的方法名  方法无参数，返回值为String   execute
+				<result> 结果视图
+					name:与action的method方法的返回值匹配跳转
+					type:跳转方式
+						
+					在struts-default.xml文件中定义
+						chain  请求转发  action
+						dispatcher 请求转发 页面
+						redirect  重定向 页面
+						redirectActiono 重定向  action
+						stream 下载.
+	
+	5.struts2框架加载配置文件顺序
+		1.default.properties
+		2.struts-default.xml  struts-plugin.xml  struts.xml
+		3.struts.properties
+		4.web.xml
+		
+	6.定义常量
+		1.struts.xml
+		2.struts.properties
+		3.web.xml
+		
+	7.struts2中action创建方式
+		1.pojo类
+		2.implements Action
+		3.extends ActionSupport
+		
+	8.struts2中action方法访问方式
+		1.method=xxx;
+		2.通配符
+		3.动态方法调用
+		
+	9.关于在struts2中获取Servlet API
+		1.ActionContext
+			ActionContext context=ActionContext.getContext();
+		2.使用注入
+		3.ServletActionContext

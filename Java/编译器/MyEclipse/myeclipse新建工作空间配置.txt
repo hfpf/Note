@@ -1,0 +1,15 @@
+1. General --> Workspace --> UTF-8
+2. 搜索jsp --> 编码改成 UTF-8
+3. General --> Editors --> Associations --> JSP --> MyEclipse JSP Editor 设为default
+4. Java --> Installed JREs --> 添加 JDK安装目录 不使用默认的
+5. Tomcat（Myeclipse2015 设置发生变化）	注意1.选择JDK 2.Launch选择Run mode    3. enable并且设置路径
+6.（Myeclipse2015 无法关闭此项）去除MyEclise自带tomcat
+7.（Myeclipse2015 无法关闭此项） General --> Startup and Shutdown --> MyEclipse Derby 将其关闭
+8. 护眼绿色参数 “色调”（Hue）设为85，“饱和度”（Sat）设为90，“亮度” （Lum）设为205
+
+如果你是win7系统，还要修改字体（解决中文字体大小）：
+第一步：C:\Windows\Fonts，找到Courier New，鼠标右键-->显示
+第二步：Ceneral --> Appearance --> Colors and Fonts --> Basic --> Text Font --> Edit，选择Courier New字体
+
+
+9. 配置Maven

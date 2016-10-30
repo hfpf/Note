@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <title>Mac 系统下安装 IntelliJ IDEA</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/easybook.css" />
+
+
+    </head>
+
+<body><div class="container">
+<div class="item chapter">
+    <h1 class="title"><span class="label">5</span> <span class="title">Mac 系统下安装 IntelliJ IDEA</span></h1>
+    <h2 id="19c93d0ae1bdba77157e4fa6447ed3fe">系统要求</h2>
+
+<blockquote>
+  <ul>
+  <li>系统支持：Mac OS X 10.5 以上</li>
+  <li>JDK 版本：Apple Java 6 或 Oracle Java 7 以上</li>
+  <li>内存：最低要求 1 G，推荐 2 G 以上</li>
+  <li>硬盘：最低要求 2 G</li>
+  <li>显示器：最低要求 1024 X 768 分辨率</li>
+  <li>更多信息可以阅读：<a href="https://www.jetbrains.com/idea/download/system_requirements.jsp?os=mac">https://www.jetbrains.com/idea/download/system_requirements.jsp?os=mac</a></li>
+  </ul>
+</blockquote>
+
+<h2 id="ac8549da29ab0e3da0f2f046167c8e58">重要说明</h2>
+
+<p>我这里以 Mac 系统为例进行讲解。但是，在学习下面内容之前请先看下章节：<a href="windows-install.md">Windows 下安装</a></p>
+
+<p>因为它们配置流程是基本一样的，只是系统不同，开始的步骤不太一样而已，因此相同部分我这里是不会再讲的，我只讲 IntelliJ IDEA 在 Mac 安装特殊的地方。</p>
+
+<h2 id="61cfd77f798fe210845d98a8ff2d3a41">Mac 下安装过程</h2>
+
+<div class="figure" id="figure-5-1">
+    <img src="images/v-a-mac-install-1.jpg" alt="Mac 下安装过程"  />
+
+    <p class="caption"><strong>图片 5.1</strong> Mac 下安装过程</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>运行下载到 <code>ideaIU-14.1.4.dmg</code>，效果如上图所示。</li>
+  <li>根据提示把左侧的 IntelliJ IDEA 图标拖动到右侧目录图</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-5-2">
+    <img src="images/v-a-mac-install-2.jpg" alt="Mac 下安装过程"  />
+
+    <p class="caption"><strong>图片 5.2</strong> Mac 下安装过程</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>拖动完成之后即可在 <code>应用程序</code> 中看到 IntelliJ IDEA 的启动图标，点击运行即可。</li>
+  </ul>
+</blockquote>
+
+<h2 id="1bc64b916658417788511425c3fce42d">Mac 修改运行 JDK 版本</h2>
+
+<div class="figure" id="figure-5-3">
+    <img src="images/v-a-mac-install-3.jpg" alt="Mac 下安装过程"  />
+
+    <p class="caption"><strong>图片 5.3</strong> Mac 下安装过程</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如果你的 Mac 安装有多个 JDK，你想使用高版本的 JDK 运行 IntelliJ IDEA 可以按如下方式进行修改：</li>
+  <li>在 <code>应用程序</code> 中找到 <code>IntelliJ IDEA.app</code> 然后对此进行 <code>右键 &gt; 显示包内容 &gt; Contents &gt; Info.plist</code>，效果如上图所示。</li>
+  <li>找到上图红圈标注的代码，修改 <code>JVMVersion</code> 的属性值，如果是 JDK 7，则改为 <code>1.7*</code>。如果是 JDK 8，则改为 <code>1.8*</code>。</li>
+  </ul>
+</blockquote>
+
+</div>
+</div></body>
+</html>

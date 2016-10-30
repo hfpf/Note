@@ -1,0 +1,12 @@
+mysql导包：
+c3p0-0.9.2-pre1
+mchange-commons-0.2
+
+Oracle需要导
+c3p0-oracle-thin-extras-0.9.2-pre1
+
+配置文件要求：
+	文件名称：必须叫c3p0-config.xml
+	文件位置：必须在src下
+	
+	

@@ -1,0 +1,7 @@
+com.mysql.jdbc.PacketTooBigException: Packet for query is too large (9802817 > 1048576). You can change this value on the server by setting the max_allowed_packet' variable.
+
+在my.ini中设置，在[mysqld]下添加max_allowed_packet=10M，例如：
+
+[mysqld] 
+max_allowed_packet=64M
+

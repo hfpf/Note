@@ -1,0 +1,76 @@
+linux基础
+
+1、简介
+来由
+安装
+网络基本配置
+
+
+
+2、登陆系统--界面/远程登陆ssh/用户管理
+2.1 图形界面
+2.2 shell界面
+2.3 远程登陆SSH
+
+2.4 用户管理
+			useradd		userdel 	usermod(-l 改登陆名   -d 改用户的家目录)
+			groupadd	groupdel	groupmod
+		
+
+3、文件管理
+			ls  cd	pwd		mkdir	 echo  cat 	touch		
+			cp	mv	rm		rmdir
+			more	less	tail (tail -f 动态查看文件的实时更新)		head
+			ln	
+			find		grep
+			wc  (date)
+			gzip
+			tar    
+			(tar -cvf aaa.tar file1.txt file2.txt 将file1和2打包成aaa.tar)
+			(tar -zcvf aaa.tar.gz file1.txt file2.txt 将file1和2打包成aaa.tar并压缩)
+			(tar -zxvf aaa.tar.gz file1.txt file2.txt 将aaa.tar.gz解压)
+
+4、文件权限
+			chown
+			chmod
+
+			
+			
+			
+5、系统(网络)管理
+			top(看实时的进程信息)		ps(看瞬时的进程快照)		kill	free	
+			df		du	（在生产实践中经常使用）	
+			netstat(-natp)		ifconfig	ping  (此三条也是频繁使用的指令)
+			shutdown
+			halt
+			reboot
+			
+			
+6、常见软件安装  
+			jdk1.7
+			mysql
+
+			
+			
+7、rpm软件包安装
+以mysql安装为例
+sudo -ivh MySQL-server.xxx.rpm
+发现了冲突包
+用这条指令去查询存在哪些冲突包
+sudo rpm -qa | grep mysql		
+然后删除
+sudo rpm -e mysql-libs-5.1.66-2.el6_3.i686
+发现有依赖关系不能删，这样做
+sudo rpm -e mysql-libs-5.1.66-2.el6_3.i686 --nodeps
+/usr/bin/mysql_secure_installation
+
+
+
+8、手动安装软件举例  jdk的安装
+tar -zxvf jdk-7u65-linux-i586.tar.gz -C ./app/    解压安装包到 当前目录的app目录下
+
+
+
+sudoer配置
+用root身份来操作以下命令：
+vi /etc/sudoers			

@@ -1,0 +1,37 @@
+复习:
+	1.action处理请求参数
+		1.属性驱动
+			1.直接将action做为model
+			2.在action声明一个model.在页面上需要使用ognl来给组件起名.
+		2.模型驱动
+			让action实现ModelDriven接口，重写getModel()方法，实例化一个model对象，
+			getModel方法返回的就是实例化的model对象。
+	2.struts2中类型转换
+		struts2中类型转换器的根接口TypeConverte
+		
+		自定义类型转换器:
+			1.创建一个类实现TypeConverter接口(继承DefaultTypeConverter  StrutsTypeConverter)
+			2.重写方法
+			3.注册类型转换器
+				1.局部--action
+					ActionClassName-conversion.properties
+					属性名=类转换器全名
+				2.局部--model
+					modelClassName-conversion.properties
+					属性名=类转换器全名	
+				3.全局
+					src下创建一个xwork-conversion.properties
+					要转换的类型全名=类型转换器全名
+					
+					
+	3.struts2中请求参数校验
+		1.手动编码
+			要求:action类继承ActionSupport类，重写validate方法，在方法中使用addFieldError(String,String)
+				 添加错误信息，在页面上使用<s:fielderror>展示错误信息。
+				 
+		2.xml配置
+			
+			位置:与action类在同一个包下.
+			名称:actionclassName-validation.xml.
+			约束:在xwrok-core.jar包下查找。
+			书写

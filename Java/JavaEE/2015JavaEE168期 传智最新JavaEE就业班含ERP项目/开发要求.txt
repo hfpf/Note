@@ -1,0 +1,6 @@
+【变量设置】
+<constant name="struts.serve.static.browserCache" value="false"/> 
+	false不缓存，true浏览器会缓存静态内容，产品环境设置true、开发环境设置false 
+
+<constant name="struts.devMode" value="true" />  
+	提供详细报错页面，修改struts.xml后不需要重启服务器 （开发要求）

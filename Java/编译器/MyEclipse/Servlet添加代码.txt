@@ -1,0 +1,2 @@
+request.setCharacterEncoding("utf-8");			//ÇëÇó±àÂë(doPost)
+response.setContentType("text/html;charset=utf-8");	//ÏìÓ¦±àÂë

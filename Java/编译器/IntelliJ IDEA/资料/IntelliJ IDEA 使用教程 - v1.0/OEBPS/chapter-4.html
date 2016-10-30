@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <title>Ubuntu 系统下安装 IntelliJ IDEA</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/easybook.css" />
+
+
+    </head>
+
+<body><div class="container">
+<div class="item chapter">
+    <h1 class="title"><span class="label">4</span> <span class="title">Ubuntu 系统下安装 IntelliJ IDEA</span></h1>
+    <h2 id="19c93d0ae1bdba77157e4fa6447ed3fe">系统要求</h2>
+
+<blockquote>
+  <ul>
+  <li>系统支持：只要是支持 GNOME 或 KDE 桌面系统，建议是 Ubuntu（32位和64位都可以）</li>
+  <li>JDK 版本：Oracle JDK 1.6 或以上</li>
+  <li>内存：最低要求 1 GB，推荐 2 GB 以上</li>
+  <li>硬盘：最低要求 2 GB</li>
+  <li>显示器：最低要求 1024 X 768 分辨率</li>
+  <li>更多信息可以阅读：<a href="https://www.jetbrains.com/idea/download/system_requirements.jsp?os=linux">https://www.jetbrains.com/idea/download/system_requirements.jsp?os=linux</a></li>
+  </ul>
+</blockquote>
+
+<h2 id="ac8549da29ab0e3da0f2f046167c8e58">重要说明</h2>
+
+<p>我这里以 Ubuntu 系统为例进行讲解。但是，在学习下面内容之前请先看下章节：<a href="windows-install.md">Windows 下安装</a></p>
+
+<p>因为它们配置流程是基本一样的，只是系统不同，开始的步骤不太一样而已，因此相同部分我这里是不会再讲的，我只讲 IntelliJ IDEA 在 Linux 安装特殊的地方。</p>
+
+<h2 id="7495070df4f151dde6fe6026d5dff640">Ubuntu 下安装过程</h2>
+
+<p>先把你下载到的 <code>ideaIU-14.1.4.tar.gz</code> 移动到你平时存放软件的目录下，然后进行解压，我电脑是放在 /opt 下。</p>
+
+<blockquote>
+  <ul>
+  <li>终端下解压命令：<code>tar xfz ideaIU-14.1.4.tar.gz</code>，解压出来的目录名称是：<code>idea-IU-141.1532.4</code></li>
+  <li>可能在解压过程中你需要 <code>sudo</code> 命令权限，或者是切换到 root 账号下。如果你是切换到 root 用户下就一定要注意，解压完记得再切回来你常用的账户，不然等下生成的 IntelliJ IDEA 配置文件是放在 <code>/home/root</code> 下，这样就跟你常用的那个用户没啥关系了。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-4-1">
+    <img src="images/iv-a-ubuntu-install-1.jpg" alt="Ubuntu 下安装过程"  />
+
+    <p class="caption"><strong>图片 4.1</strong> Ubuntu 下安装过程</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>在假设你已经通过终端切换到了你常用的用户下之后，现在用终端进入解压目录下的 <code>bin 子目录</code> 下，然后在终端下运行启动命令：<code>./idea.sh</code>，运行的效果如上图箭头所示。剩下的配置步骤就跟 Windows 基本一样了，如标注 1 所示，所以这里不多讲。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-4-2">
+    <img src="images/iv-a-ubuntu-install-2.jpg" alt="Ubuntu 下安装过程"  />
+
+    <p class="caption"><strong>图片 4.2</strong> Ubuntu 下安装过程</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>其中，在整个首次启动的配置过程中，唯一跟 Windows 不太一样的就是上图标注 1 这个地方。原因是 Linux 下创建启动图标是非常非常非常的麻烦，所以 IntelliJ IDEA 帮我们考虑到了，所以只要勾选下即可解决这种麻烦事。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-4-3">
+    <img src="images/iv-a-ubuntu-install-3.jpg" alt="Ubuntu 下安装过程"  />
+
+    <p class="caption"><strong>图片 4.3</strong> Ubuntu 下安装过程</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>创建完启动图标之后，我们可以在如上图标注 1 所示的 Dash 这个地方找到 IntelliJ IDEA 图标。但是图标我们一般是放在启动栏上的，所以这里你可以按着箭头的方向拖动 IntelliJ IDEA 图标到启动栏上即可。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-4-4">
+    <img src="images/iv-a-ubuntu-install-4.jpg" alt="Ubuntu 下安装过程"  />
+
+    <p class="caption"><strong>图片 4.4</strong> Ubuntu 下安装过程</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>启动的最后效果如上图，是不是有点过于简单了？！</li>
+  </ul>
+</blockquote>
+
+<h2 id="81824cff2443f41548943de01501231e">卸载</h2>
+
+<p>Linux 的卸载是不需要执行程序的，只需要：删除对应目录。</p>
+
+<blockquote>
+  <ul>
+  <li>删除主程序目录，也就是我们本文上面讲的解压出来的 <code>idea-IU-141.1532.4</code>。</li>
+  <li>如果不想保留你的配置文件，还可以删除配置目录，目录所在位置：./home/你用登录名/.IntelliJIdea14</li>
+  </ul>
+</blockquote>
+
+</div>
+</div></body>
+</html>

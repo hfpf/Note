@@ -1,0 +1,13 @@
+﻿第一天	hadoop的基本概念  伪分布式hadoop集群安装  hdfs mapreduce 演示
+第二天  hdfs的原理和使用操作、编程
+第三天  mapreduce的原理和编程
+第四天  常见mr算法实现和shuffle的机制
+第五天  hadoop2.x中HA机制的原理和全分布式集群安装部署及维护
+第六天  hbase  hive
+第七天  storm+kafka
+第八天  实战项目
+
+83544844
+段海涛
+
+

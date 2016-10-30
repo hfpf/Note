@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <title>IntelliJ IDEA 编译方式介绍</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/easybook.css" />
+
+
+    </head>
+
+<body><div class="container">
+<div class="item chapter">
+    <h1 class="title"><span class="label">13</span> <span class="title">IntelliJ IDEA 编译方式介绍</span></h1>
+    <h2 id="145463e9ac4ba14e559052dafea7f0b6">编译方式介绍</h2>
+
+<p>相比较于 Eclipse 的实时自动编译，IntelliJ IDEA 的编译更加手动化，虽然 IntelliJ IDEA 也支持通过设置开启实时编译，但是不建议，因为太占资源了。IntelliJ IDEA 编译方式除了手工点击编译按钮进行编译之外，还有就是在容器运行之前配置上一个编译事件，先编译后运行。默认下 IntelliJ IDEA 也都是这样的设置，所以实际开发中你也不用太注意编译这件事。虽然 IntelliJ IDEA 没有实时编译，但是对于代码检查完全是没有影响。但是多个类之间的关联关系还是要等 Make 或 Rebuild 触发的时候才会做相关检查的。</p>
+
+<p>在 IntelliJ IDEA 里，编译方式一共有三种：</p>
+
+<blockquote>
+  <ul>
+  <li>Compile：对选定的目标（Java 类文件），进行强制性编译，不管目标是否是被修改过。</li>
+  <li>Rebuild：对选定的目标（Project），进行强制性编译，不管目标是否是被修改过，由于 Rebuild 的目标只有 Project，所以 Rebuild 每次花的时间会比较长。</li>
+  <li>Make：使用最多的编译操作。对选定的目标（Project 或 Module）进行编译，但只编译有修改过的文件，没有修改过的文件不会编译，这样平时开发大型项目才不会浪费时间在编译过程中。</li>
+  </ul>
+</blockquote>
+
+<h2 id="8c075170871613187dfc37c199745903">编译触发按钮</h2>
+
+<div class="figure" id="figure-13-1">
+    <img src="images/xiii-a-make-introduce-1.jpg" alt="IntelliJ IDEA 编译触发按钮"  />
+
+    <p class="caption"><strong>图片 13.1</strong> IntelliJ IDEA 编译触发按钮</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图标注 1 所示，Compile 的操作有：<code>Compile</code> 指定类</li>
+  <li>如上图标注 1 所示，Rebuild 的操作有：<code>Rebuild Project</code></li>
+  <li>如上图标注 1 所示，Make 的操作有：<code>Make Project</code>、<code>Make Module</code></li>
+  </ul>
+</blockquote>
+
+<h2 id="519a1a1d1c17637152f9cf245932d2a7">运行之前的编译</h2>
+
+<div class="figure" id="figure-13-2">
+    <img src="images/xiii-b-befour-launch-1.jpg" alt="IntelliJ IDEA 运行之前的编译"  />
+
+    <p class="caption"><strong>图片 13.2</strong> IntelliJ IDEA 运行之前的编译</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图所示，IntelliJ IDEA 默认在运行 JUnit 之前会先进行 <code>Make</code> 操作。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-13-3">
+    <img src="images/xiii-b-befour-launch-2.jpg" alt="IntelliJ IDEA 运行之前的编译"  />
+
+    <p class="caption"><strong>图片 13.3</strong> IntelliJ IDEA 运行之前的编译</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图所示，IntelliJ IDEA 默认在运行 tomcat 之前会先进行 <code>Make</code> 操作。</li>
+  </ul>
+</blockquote>
+
+<h2 id="ce5fcb71512b1e2fe8680a1aa55849ab">编译器的设置和选择</h2>
+
+<div class="figure" id="figure-13-4">
+    <img src="images/xiii-c-compiler-setting-1.jpg" alt="编译器的设置和选择"  />
+
+    <p class="caption"><strong>图片 13.4</strong> 编译器的设置和选择</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>上图标注 1 所示，也是我们本文前面讲的，IntelliJ IDEA 是支持自动编译的，默认是不开启的，也建议不用开启，原因前面已经说了。</li>
+  <li>上图标注 2 所示，设置编译 <code>heap</code> 大小，默认是 <code>700</code>，建议使用 64 位的用户，在内存足够的情况下，建议改为 <code>1500</code> 或以上。如果你在编译的时候出错，报：<code>OutOfMemoryError</code>，一般也是要来改这个地方。</li>
+  <li>上图标注 3 所示，还可以设置编译时的 <code>VM</code> 参数，这个你可以根据需求进行设置，一般人是用不上的。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-13-5">
+    <img src="images/xiii-c-compiler-setting-2.jpg" alt="编译器的设置和选择"  />
+
+    <p class="caption"><strong>图片 13.5</strong> 编译器的设置和选择</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图标注 1 所示，可以添加目录 或 文件进行编译排除。</li>
+  <li>在项目中，如果有任何一个可编译的文件无法编译通过，则 IntelliJ IDEA 是无法运行起来的，必须等你全部问题解决，编译通过之后才可运行。但是可能开发过程中，某一个包目录的文件编译无法通过，但是我们又不急着改，那我们就可以考虑把该包加入到排除编译列表中，则项目就可以运行起来。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-13-6">
+    <img src="images/xiii-c-compiler-setting-3.gif" alt="编译器的设置和选择"  />
+
+    <p class="caption"><strong>图片 13.6</strong> 编译器的设置和选择</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图动态 Gif 所示，IntelliJ IDEA 支持常见的几种编译器：<code>Javac</code>、<code>Eclipse</code>、<code>Ajc</code> 等。默认是 <code>Javac</code>，也推荐使用 <code>Javac</code>。</li>
+  <li><code>Project bytecode version</code> 针对项目字节码编译版本，一般选择的是当前项目主 JDK 的版本。</li>
+  <li><code>Per-module bytecode version</code> 可以针对 <code>Project</code> 下各个 <code>Module</code> 的特殊需求单独设置不同的 <code>bytecode version</code>，前提是电脑上必须有安装对应的 JDK 版本。</li>
+  </ul>
+</blockquote>
+
+</div>
+</div></body>
+</html>

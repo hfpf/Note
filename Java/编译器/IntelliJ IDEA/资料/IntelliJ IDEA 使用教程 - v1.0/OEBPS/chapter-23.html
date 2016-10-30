@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="">
+
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <title>Maven 项目介绍</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/easybook.css" />
+
+
+    </head>
+
+<body><div class="container">
+<div class="item chapter">
+    <h1 class="title"><span class="label">23</span> <span class="title">Maven 项目介绍</span></h1>
+    <h2 id="6f142dcd2b9ce7c7dd576f3a36fe2e9e">学习前提</h2>
+
+<p>相对于传统的项目，Maven 下管理和构建的项目真的非常好用和简单，所以这里也强调下，尽量使用此类工具进行项目构建。</p>
+
+<p>学习本讲还有一个前提：你必须会 Maven 相关知识点，Maven 相关知识点是不在本专题的讲解范围里面的，所以请自己私下进行学习。如果愿意你也可以看我过去整理的一份材料：<a href="http://www.youmeek.com/intellij-idea-part-xviii-maven/">http://www.youmeek.com/intellij-idea-part-xviii-maven/</a></p>
+
+<h2 id="f289c4dfeff1a0af29ab8a599a494df3">Maven 常用设置介绍</h2>
+
+<div class="figure" id="figure-23-1">
+    <img src="images/xxii-a-maven-setting-1.jpg" alt="Maven 常用设置介绍"  />
+
+    <p class="caption"><strong>图片 23.1</strong> Maven 常用设置介绍</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图标注 1 所示，我们可以指定我们本地 Maven 的安装目录所在，因为我已经配置了 <code>MAVEN_HOME</code> 系统参数，所以直接这样配置 IntelliJ IDEA 是可以找到的。但是假如你没有配置的话，这里可以选择你的 Maven 安装目录。</li>
+  <li>如上图标注 2 所示，我们还可以指定 Maven 的 <code>settings.xml</code> 位置和本地仓库位置。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-23-2">
+    <img src="images/xxii-a-maven-setting-2.jpg" alt="Maven 常用设置介绍"  />
+
+    <p class="caption"><strong>图片 23.2</strong> Maven 常用设置介绍</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图标注 1 所示，<code>Import Maven projects automatically</code> 表示 IntelliJ IDEA 会实时监控项目的 <code>pom.xml</code> 文件，进行项目变动设置。</li>
+  <li>如上图标注 2 所示，在 Maven 导入依赖包的时候是否自动下载源码和文档。默认是没有勾选的，也不建议勾选，原因是这样可以加快项目从外网导入依赖包的速度，如果我们需要源码和文档的时候我们到时候再针对某个依赖包进行联网下载即可。IntelliJ IDEA 支持直接从公网下载源码和文档的。</li>
+  <li>如上图标注 3 所示，可以设置导入的 VM 参数。一般这个都不需要主动改，除非项目真的导入太慢了我们再增大此参数。</li>
+  </ul>
+</blockquote>
+
+<h2 id="56da4c68174359b88f954dbadc224355">Maven 骨架创建 Java Web 项目</h2>
+
+<div class="figure" id="figure-23-3">
+    <img src="images/xxii-b-maven-hello-world-project-1.gif" alt="Maven 骨架创建 Java Web 项目"  />
+
+    <p class="caption"><strong>图片 23.3</strong> Maven 骨架创建 Java Web 项目</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图 Gif 演示，根据已有的 Maven 骨架进行 Java Web 项目创建。其中需要特别注意的是，在创建项目过程中 Maven 会去外网中央仓库中下载对应的依赖或是组件，这个过程根据自身网络环境决定其快慢。如果出现无法下载的情况请自备 VPN 或者通过修改 Maven 配置文件 <code>settings.xml</code> 切换国内的中央仓库。</li>
+  <li>由于我已经试过多次了，所以 Gif 演示中我可以快速创建好，但是你那边不一定是这种情况的。</li>
+  </ul>
+</blockquote>
+
+<h2 id="676ec71c4b448f7fc41100f774fc93d2">启动 Java Web 项目</h2>
+
+<div class="figure" id="figure-23-4">
+    <img src="images/xxii-b-maven-hello-world-project-2.gif" alt="Maven 骨架创建 Java Web 项目"  />
+
+    <p class="caption"><strong>图片 23.4</strong> Maven 骨架创建 Java Web 项目</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图 Gif 演示，配置好项目之后，启动 Tomcat 容器可以良好运行。</li>
+  </ul>
+</blockquote>
+
+<h2 id="aad84612c881be9678074cd7eea0fb56">Maven 组件来管理项目</h2>
+
+<p>我们已经了解了如何通过 Maven 骨架生成一个最简单的 Java Web 项目，可是我们还是使用了 IntelliJ IDEA 的项目管理功能进行 Maven 项目的管理和构建。一般 Maven 的项目我们都可以脱离 IntelliJ IDEA 的项目配置功能进行独立的管理和构建的，接下来我们就讲如何通过 IntelliJ IDEA 提供的 Maven 管理工具进行项目的管理和构建。</p>
+
+<h2 id="69a61c93dbe5f3822f97f4e07ff4d44e">Maven 组件界面介绍</h2>
+
+<div class="figure" id="figure-23-5">
+    <img src="images/xxii-c-maven-component-1.jpg" alt="Maven 组件界面介绍"  />
+
+    <p class="caption"><strong>图片 23.5</strong> Maven 组件界面介绍</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li><p>如上图标注 1 所示，为常用的 Maven 工具栏，其中最常用的有：</p>
+  
+  <blockquote>
+    <ul>
+    <li>第一个按钮：<code>Reimport All Maven Projects</code> 表示根据 <code>pom.xml</code> 重新载入项目。一般当我们在 <code>pom.xml</code> 添加了依赖包或是插件的时候，发现标注 4 的依赖区中没有看到最新写的依赖的话，可以尝试点击此按钮进行项目的重新载入。</li>
+    <li>第六个按钮：<code>Execute Maven Goal</code> 弹出可执行的 Maven 命令的输入框。有些情况下我们需要通过书写某些执行命令来构建项目，就可以通过此按钮。</li>
+    <li>第九个按钮：<code>Show Dependencies</code> 显示项目依赖的结构图，可以方便我们直观项目的依赖包情况。这个功能有些具体的操作下面会专门进行讲解。</li>
+    </ul>
+  </blockquote></li>
+  <li><p>如上图标注 2 所示，常用的 Maven 生命周期的命令，通过双击对应的命令来执行项目编译、打包、部署等操作。</p></li>
+  <li><p>如上图标注 3 所示，为我们在 <code>pom.xml</code> 中配置的插件列表，方便调用插件。</p></li>
+  <li><p>如上图标注 4 所示，为我们在 <code>pom.xml</code> 中配置的依赖包列表。</p></li>
+  <li><p>如上图标注 5 所示，为常见的 Java Web 在 Maven 下的一个项目结构。</p></li>
+  </ul>
+</blockquote>
+
+<h2 id="992bc2649afd2f773c70c5ee6a1562dd">Maven 的 Tomcat 插件运行项目</h2>
+
+<div class="figure" id="figure-23-6">
+    <img src="images/xxii-d-maven-tomcat-run-1.gif" alt="Maven 的 Tomcat 插件运行项目"  />
+
+    <p class="caption"><strong>图片 23.6</strong> Maven 的 Tomcat 插件运行项目</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图 Gif 演示，通过 Maven 生命周期的命令进行编译和打包，及用 Maven 的 Tomcat 插件运行项目。</li>
+  <li>虽然我们可以通过 Maven 组件进行项目的管理，但是这并不等同于我们可以完全抛弃 IntelliJ IDEA 的项目设置，比如我们在 <code>pom.xml</code> 文件中设置了 JDK 编译版本是 1.7，但是在项目的 <code>Ctrl + Shift + Alt + S</code> 配置中，我们配置的 JDK 是 1.8，那即使我们用 Maven 的编译工具或命令进行编译也是会调用 1.8的。还有即使我们在 <code>Ctrl + Shift + Alt + S</code> 配置中没有配置 Artifacts，在我们运行 Maven 的 Tomcat 插件的时候也会自动帮我们生成的。</li>
+  </ul>
+</blockquote>
+
+<h2 id="79339a338ebcb607add70cc59b2a50f3">Maven 快速排查依赖包冲突</h2>
+
+<div class="figure" id="figure-23-7">
+    <img src="images/xxii-e-maven-dependent-exclude-1.jpg" alt="Maven 快速排查依赖包冲突"  />
+
+    <p class="caption"><strong>图片 23.7</strong> Maven 快速排查依赖包冲突</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图箭头所示，点击此按钮会出现左边的项目依赖结构图，通过此图我们可以很好的观察项目的依赖依赖情况。</li>
+  <li>如上图标注 1 所示，我们可以直接在依赖结构图上编辑依赖，常用的就是此排除功能。</li>
+  </ul>
+</blockquote>
+
+<div class="figure" id="figure-23-8">
+    <img src="images/xxii-e-maven-dependent-exclude-2.jpg" alt="Maven 快速排查依赖包冲突"  />
+
+    <p class="caption"><strong>图片 23.8</strong> Maven 快速排查依赖包冲突</p>
+</div>
+
+
+<blockquote>
+  <ul>
+  <li>如上图描述，一般我们在出现红色线的时候是都要进行排除的，防止出现因为版本不同的依赖包造成代码无法编译。</li>
+  </ul>
+</blockquote>
+
+</div>
+</div></body>
+</html>

@@ -1,0 +1,59 @@
+包上的注解
+
+
+首先说一下，这是没有用的东西，你真的没有必要去看它！
+但是，如果你有大把的时间，闲着没事儿非要看，那这里有答案！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+我们知道可以把注解作用在：类、方法、属性、构造器、方法参数、局部变量上，也可以把注解作用在包上。
+
+@Retention(RetentionPolicy.RUNTIME)
+public @interface MyAnn {}
+==========
+
+下面代码会出错：
+
+@MyAnn
+paackage cn.itcast;
+
+public class A {
+}
+
+因为Java不让这么注解包，如果想给包添加注解必须再创建一个文件：package-info.java文件，然后在这个方法中给出对包的注解
+
+
+package-info.java
+@MyAnn package cn.itcast;
+
+==========
+
+反射包上的注解
+
+Package p = Package.getPackage("cn.itcast");
+MyAnn myAnn = p.getAnnocation(MyAnn.class);

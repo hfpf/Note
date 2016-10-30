@@ -1,0 +1,38 @@
+org.apache.ibatis.binding.BindingException Invalid bound statement (not found)
+
+
+最近从eclipse转到intellij idea，确实比eclipse好用太多，但是也是各种不熟悉，导致了很多问题，本来搭好的maven+ssm框架在eclipse上能用，迁移到idea中是各种问题，一一解决之后就剩下这个问题。
+
+
+Junit测试一直是红色的一条，这个问题让我头疼，网上看了很多资料最后发现是intellij idea的问题，在eclipse中把mapper的xml文件放到src代码目录下是可以一起打包进classes的，而在新版intellij idea中是不会一起打包，就会导致找不到xml报错。
+
+首先确保xml中的namespace配置是你的接口全类名，而不是包名！
+确认dao接口中的方法，和xml中一一对应，返回类型，参数都正确。
+
+
+解决方法
+
+第一种，由于idea默认是不打包src中的xml文件，所以在eclipse中你可以把xml放到src中没有问题，但是在idea中，你把mapper的xml文件放到resources资源中就可以正常访问！
+
+【第二种】 在maven配置maven对资源文件的访问，具体做法：在pom中，build节点中加入
+<build>
+        <!--配置maven对resource文件过滤-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
