@@ -1,0 +1,2 @@
+ 将source里面属性的值拷贝到target
+ BeanUtils.copyProperties(Object source, Object target)
