@@ -1,4 +1,4 @@
-Ctrl + Alt + L			格式化代码(建议修改)
+Ctrl + Alt + L			格式化代码(建议修改为Ctrl + Shift + F)
 Ctrl + Alt + Left/Right	返回至上次浏览的位置
 Ctrl + Alt + O			清除无效包引用
 Ctrl + Alt + T			快捷生成结构体，把代码包在一块内，例如try/catch
