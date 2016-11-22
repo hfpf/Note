@@ -1,0 +1,32 @@
+
+表的创建
+db.execSQL("create table info(_id integer primary key autoincrement,name varchar(20)");
+
+db.execSQL("alter table info add phone varchar(20)");
+
+
+增删改查sql语句
+
+--insert into info(name,phone) values('王五','13777777');
+--delete from info where name='王五';
+--update info set phone='139999999'where name='王五';
+--select name,phone from info
+
+
+------------------------------
+数据库事务
+	db.execSQL("create table info (_id integer primary key autoincrement,name varchar(20),phone varchar(20),money varchar(20))");
+		db.execSQL("insert into info ('name','phone','money') values ('张三','138888','2000')");
+		db.execSQL("insert into info ('name','phone','money') values ('李四','139999','5000')");
+
+
+
+
+
+db.execSQL("update info set money= money-200 where name=?",new String[]{"AA"});
+//					int i = 100/0;
+					db.execSQL("update info set money= money+200 where name=?",new String[]{"BB"});
+
+
+
+
