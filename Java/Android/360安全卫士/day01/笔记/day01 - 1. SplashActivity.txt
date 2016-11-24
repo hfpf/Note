@@ -1,0 +1,4 @@
+1. SplashActivity
+	版本名称的展示,从清单配置文件中获取版本名称,PackageManager
+	服务端新版本的检测(本地版本号<服务器版本号)
+	展示logo

@@ -1,0 +1,12 @@
+10. xutils使用过程
+	1. 导入xutils的jar包
+	2. 添加xutils需要使用的权限
+		<uses-permission android:name="android.permission.INTERNET" /> 
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+	3. 获取HttpUtils对象,下载指定链接地址的apk
+	4. HttpUtils对象调用download(下载链接地址,下载后放置文件的路径,下载过程中方法的回调
+		onStart()
+		onloading()
+		onSuccesd()
+		onFail() )
+	5. 下载apk后的安装过程,

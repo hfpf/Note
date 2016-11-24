@@ -1,0 +1,15 @@
+5. 应用去头
+	方式一:每个类都需要去添加此代码
+		在setContentView(R.layout.activity_splash);
+		前设置以下代码
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+	方式二:统一去掉所有activity的头
+	
+	  @android:style/Theme.Light.NoTitleBar方式去头,使用老版本主题样式
+		修改默认样式文件为
+	    <style name="AppTheme" parent="AppBaseTheme">
+			<!-- 在去头的同时,还保留高版本的样式主题 -->
+			<item name="windowActionBar">false</item>
+			<item name="windowNoTitle">true</item>
+	    </style>

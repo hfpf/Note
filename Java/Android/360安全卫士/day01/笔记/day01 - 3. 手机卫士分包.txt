@@ -1,0 +1,31 @@
+3. 手机卫士分包
+	基础课程分包方式,每一个类包名,
+	com.itheima.db
+	com.itheima.db.dao 组件方式
+
+
+	业务逻辑划分包名
+		icbc
+
+		com.icbc.money
+		com.icbc.meeting
+		com.icbc.travel
+	
+	组件划分(四大组件:activity,服务,广播,内容提供者(内容解析者))
+
+		mobilesafe
+
+		com.itheima.mobilesafe.activity
+		com.itheima.mobilesafe.service
+
+
+		数据库操作
+		com.itheima.mobilesafe.db
+		com.itheima.mobilesafe.db.dao
+
+		工具类
+		com.itheima.mobilesafe.utils
+
+		自定义控件(android原有控件,不能满足需求),自定义组合控件
+		com.itheima.mobilesafe.view
+		com.itheima.mobilesafe.ui.widget
