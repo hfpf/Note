@@ -1,4 +1,4 @@
-package cn.qdgxy.logcat.util;
+package cn.qdgxy.securitymax.utils;
 
 import android.util.Log;
 
@@ -9,9 +9,9 @@ import android.util.Log;
  * @author 李欣
  * @version 1.0
  */
-public class LogUtils {
+public class LogUtil {
 
-    private static boolean enableLog = false;  // 控是否打开日志
+    private static boolean enableLog = true;  // 控是否打开日志
 
     /**
      * error级别
