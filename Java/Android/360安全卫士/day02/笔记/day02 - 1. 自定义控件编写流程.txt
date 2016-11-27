@@ -1,0 +1,26 @@
+1. 自定义控件编写流程
+	创建一个默认就能获取焦点的TextView
+	1. 创建一个类继承至TextView,FocusTextView
+	2. 重写其构造方法
+		//使用在通过java代码创建控件
+		public FocusTextView(Context context) {
+			super(context);
+		}
+		
+		//由系统调用(带属性+上下文环境构造方法)
+		public FocusTextView(Context context, AttributeSet attrs) {
+			super(context, attrs);
+		}
+
+		//由系统调用(带属性+上下文环境构造方法+布局文件中定义样式文件构造方法)
+		public FocusTextView(Context context, AttributeSet attrs, int defStyle) {
+			super(context, attrs, defStyle);
+		}
+	3. 将原有TextView上的isFocus方法默认修改为,能够获取焦点
+		//重写获取焦点的方法,由系统调用,调用的时候默认就能获取焦点
+		@Override
+		public boolean isFocused() {
+			return true;
+		}
+	4. 使用过程
+		获取当前类的全路径名称,作为xml中的标签存在,其余属性的使用方式和TextView一致

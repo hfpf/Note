@@ -1,0 +1,9 @@
+4. 设置界面,事件传递过程
+	SettingActivity对应布局文件的跟布局获取点击事件
+	此事件传递给SettingItemView
+
+	1. 点击在SettingItemView非CheckBox区域,事件就由SettingItemView去做响应
+	2. 点击在SettingItemView中CheckBox区域,事件就由SettingItemView传递给CheckBox,由CheckBox去做响应
+	   CheckBox响应当前的点击事件,则SettingItemView就不能再去响应此事件,不能调用onClick方法,去改变状态
+
+	   解决此问题的方案为:不让checkBox响应点击事件

@@ -1,0 +1,11 @@
+3. 自定义组合控件
+	1. 将已经编写好的布局文件,抽取到一个类中去做管理,下次还需要使用此布局结构的时候,
+	  直接使用组合控件对应的对象.
+
+	2. 将组合控件的布局,抽取到单独的一个xml中
+
+	3. 通过一个单独的类,去加载此段布局文件.
+
+	4. checkBox是否选中,决定SettingItemView是否开启,isCheck(){return checkbox.isCheck()}方法
+
+	5. 提供一个SettingItemView,切换选中状态的方法setCheck(boolean isCheck)
