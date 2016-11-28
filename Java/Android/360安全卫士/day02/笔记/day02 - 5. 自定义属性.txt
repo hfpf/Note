@@ -7,6 +7,7 @@
 				<attr name="text" format="string"/>
 			</declare-styleable>
 		<resource>
+		
 	2. 给SettingItemView定义属性,工程res\values\attrs.xml
 		<resource>
 			<declare-styleable name="SettingItemView全类名">
@@ -15,6 +16,7 @@
 				<attr name="deson" format="string"/>
 			</declare-styleable>
 		<resource>
+		
 	3. 自定义属性的使用
 		定义名空间namespace
 		mobilesafe替换掉原有android
@@ -29,6 +31,7 @@
 		    mobilesafe:destitle="自动更新设置"
 		    mobilesafe:desoff="自动更新已关闭"
 		    mobilesafe:deson="自动更新已开启">
+			
 	4. 获取属性值
 	    mobilesafe:destitle="自动更新设置"
 	    mobilesafe:desoff="自动更新已关闭"
