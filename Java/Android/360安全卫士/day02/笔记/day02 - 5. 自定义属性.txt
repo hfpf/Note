@@ -38,16 +38,16 @@
 	    mobilesafe:deson="自动更新已开启"
 	    以上的是哪个属性都需要给自定义组合控件(SettingItemView)内部的两个TextView去使用,获取属性值
 	
-	//通过属性索引获取属性名称&属性值
-	for(int i=0;i<attrs.getAttributeCount();i++){
-		Log.i(tag, "name = "+attrs.getAttributeName(i));
-		Log.i(tag, "value = "+attrs.getAttributeValue(i));
-		Log.i(tag, "分割线 ================================= ");
-	}
-	//通过属性获取属性名称&名空间
-	mDestitle = attrs.getAttributeValue(NAMESPACE, "destitle");
-	mDesoff = attrs.getAttributeValue(NAMESPACE, "desoff");
-	mDeson = attrs.getAttributeValue(NAMESPACE, "deson");
+		//通过属性索引获取属性名称&属性值
+		for(int i=0;i<attrs.getAttributeCount();i++){
+			Log.i(tag, "name = "+attrs.getAttributeName(i));
+			Log.i(tag, "value = "+attrs.getAttributeValue(i));
+			Log.i(tag, "分割线 ================================= ");
+		}
+		//通过属性获取属性名称&名空间
+		mDestitle = attrs.getAttributeValue(NAMESPACE, "destitle");
+		mDesoff = attrs.getAttributeValue(NAMESPACE, "desoff");
+		mDeson = attrs.getAttributeValue(NAMESPACE, "deson");
 
 	5. 将获取的属性值,设置给title,des
 		des根据是否点中决定
