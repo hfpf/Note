@@ -1,3 +1,4 @@
+Ctrl + Alt + H			查看该方法所调用的地方
 Ctrl + Alt + L			格式化代码(建议修改为Ctrl + Shift + F)
 Ctrl + Alt + Left/Right	返回至上次浏览的位置
 Ctrl + Alt + O			清除无效包引用
