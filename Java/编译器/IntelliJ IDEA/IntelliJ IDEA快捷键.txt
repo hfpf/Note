@@ -13,6 +13,7 @@ Ctrl + J				查看所有代码模板
 Ctrl + N				查找类
 Ctrl + Shift + N		查找文件
 Ctrl + Shift + Alt + N	查找类中的方法或变量
+Ctrl + Shift + U		大小写转换
 Ctrl + P				显示方法参数
 Ctrl + Q				显示注释文档
 Ctrl + R				替换文本
