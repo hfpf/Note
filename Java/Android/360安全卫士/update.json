@@ -1,6 +1,6 @@
 {
-    "downloadUrl": "http://10.10.39.123/SecurityMax.apx",
-    "versionCode": "2",
-    "versionDes": "2.0发布了，特别厉害，赶紧来下载吧",
-    "versionName": "2.0"
+    "downloadUrl": "http://10.10.39.123:8080/SecurityMax-release-2.1.5.apk",
+    "versionCode": "10",
+    "versionDes": "2.1.5发布了，特别厉害，赶紧来下载吧",
+    "versionName": "2.1.5"
 }
