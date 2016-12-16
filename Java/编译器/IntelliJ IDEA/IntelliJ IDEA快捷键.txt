@@ -11,6 +11,7 @@ Ctrl + F12				文件方法结构
 Ctrl + H / Alt + 8		显示类结构图
 Ctrl + J				查看所有代码模板
 Ctrl + N				查找类
+Ctrl + Shift + Enter/Ctrl + Right	跳到行尾并且如果行尾没有分号自动补上分号
 Ctrl + Shift + N		查找文件
 Ctrl + Shift + Alt + N	查找类中的方法或变量
 Ctrl + Shift + U		大小写转换
@@ -38,6 +39,8 @@ Shift + F6				重命名
 Shift + Enter			切换到下一行
 
 
+eclipse
+https://my.oschina.net/uniquejava/blog/373826
 
 http://www.open-open.com/lib/view/open1364279138578.html 
 
