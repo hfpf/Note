@@ -1,3 +1,4 @@
+Ctrl + Alt + B			找所有的子类
 Ctrl + Alt + H			查看该方法所调用的地方
 Ctrl + Alt + L			格式化代码(建议修改为Ctrl + Shift + F)
 Ctrl + Alt + Left/Right	返回至上次浏览的位置
@@ -8,7 +9,7 @@ Ctrl + E				可以显示最近编辑的文件列表
 Ctrl + F				查找文本
 Ctrl + F4				关闭当前文件
 Ctrl + F12				文件方法结构
-Ctrl + H / Alt + 8		显示类结构图
+Ctrl + H / Alt + 8		显示类继承关系
 Ctrl + J				查看所有代码模板
 Ctrl + N				查找类
 Ctrl + Shift + Enter/Ctrl + Right	跳到行尾并且如果行尾没有分号自动补上分号
