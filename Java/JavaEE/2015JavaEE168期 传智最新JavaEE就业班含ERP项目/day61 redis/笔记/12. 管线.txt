@@ -1,0 +1,66 @@
+﻿一、请求应答协议和RTT：
+
+    Redis是一种典型的基于C/S模型的TCP服务器。在客户端与服务器的通讯过程中，通常都是客户端率先发起请求，服务器在接收到请求后执行相应的任务，最后再将获取的数据或处理结果以应答的方式发送给客户端。在此过程中，客户端都会以阻塞的方式等待服务器返回的结果。见如下命令序列：
+    Client: INCR X
+    Server: 1
+    Client: INCR X
+    Server: 2
+    Client: INCR X
+    Server: 3
+    Client: INCR X
+    Server: 4
+    在每一对请求与应答的过程中，我们都不得不承受网络传输所带来的额外开销。我们通常将这种开销称为RTT(Round Trip Time)。现在我们假设每一次请求与应答的RTT为250毫秒，而我们的服务器可以在一秒内处理100k的数据，可结果则是我们的服务器每秒至多处理4条请求。要想解决这一性能问题，我们该如何进行优化呢？
+    
+二、管线(pipelining)：
+
+    Redis在很早的版本中就已经提供了对命令管线的支持。在给出具体解释之前，我们先将上面的同步应答方式的例子改造为基于命令管线的异步应答方式，这样可以让大家有一个更好的感性认识。
+    Client: INCR X
+    Client: INCR X
+    Client: INCR X
+    Client: INCR X
+    Server: 1
+    Server: 2
+    Server: 3
+    Server: 4
+    从以上示例可以看出，客户端在发送命令之后，不用立刻等待来自服务器的应答，而是可以继续发送后面的命令。在命令发送完毕后，再一次性的读取之前所有命令的应答。这样便节省了同步方式中RTT的开销。
+    最后需要说明的是，如果Redis服务器发现客户端的请求是基于管线的，那么服务器端在接受到请求并处理之后，会将每条命令的应答数据存入队列，之后再发送到客户端。
+    
+三、Benchmark：
+
+    以下是来自Redis官网的测试用例和测试结果。需要说明的是，该测试是基于loopback(127.0.0.1)的，因此RTT所占用的时间相对较少，如果是基于实际网络接口，那么管线机制所带来的性能提升就更为显著了。
+
+复制代码
+ 1     require 'rubygems'
+ 2     require 'redis'
+ 3     
+ 4     def bench(descr)
+ 5         start = Time.now
+ 6         yield
+ 7         puts "#{descr} #{Time.now-start} seconds"
+ 8     end
+ 9     
+10     def without_pipelining
+11         r = Redis.new
+12         10000.times {
+13             r.ping
+14         }
+15     end
+16     
+17     def with_pipelining
+18         r = Redis.new
+19         r.pipelined {
+20             10000.times {
+21                 r.ping
+22             }
+23         }
+24     end
+25     
+26     bench("without pipelining") {
+27         without_pipelining
+28     }
+29     bench("with pipelining") {
+30         with_pipelining
+31     }
+32     //without pipelining 1.185238 seconds
+33     //with pipelining 0.250783 seconds　
+复制代码

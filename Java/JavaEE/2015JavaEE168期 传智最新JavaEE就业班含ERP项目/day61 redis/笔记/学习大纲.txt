@@ -1,0 +1,26 @@
+﻿学习目标：
+1、redis特点及安装
+2、redis键值操作
+3、redis数据类型[string,link,set,order set,hash]
+4、事务
+5、消息订阅
+6、持久化
+7、集群
+8、运维
+
+
+redis是开源BSD许可高级的key-value存储系统(NoSQL)
+可以用来存储字符串，哈希结构，链表，集合，因此，常用来提供数据结构服务
+
+
+redis和memcached相比的独特之处：
+1、redis可以用来做存储(storage),而memcached是用来做缓存(cache)
+这个特点主要因为其有持久化功能
+
+2、redis中存储的数据有多种结构，而memcached存储的数据只有一种类型“字符串”
+
+
+
+
+
+
