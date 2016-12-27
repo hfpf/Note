@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bootstrap基础入门</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.min.js"></script>
+      <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#ccc;">
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="container">
+		<!--品牌图标-->
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Brand</a>
+			<p class="navbar-text"><a href="#">欢迎光临！</a></p>
+		</div><!--//品牌图标-->
+		<!--折叠菜单-->
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">起步</a></li>
+				<li><a href="#">全局CSS样式</a></li>
+				<li><a href="#">组件</a></li>
+				<li><a href="#">插件</a></li>
+				<li><a href="#">定制</a></li>
+				<li><a href="#">网站实例</a></li>
+			</ul>
+			<!--导航条中的表单-->
+			<form class="navbar-form navbar-left">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="button" class="btn btn-default">Search</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						中文版 <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JavaScript</a></li>
+						<li><a href="#">Apache</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<div class="container" style="padding:30px;background-color:white;">
+<!--缩略图效果-->
+<h2 class="page-header">缩略图效果</h2>
+<div class="row">
+	<div class="col-md-4">
+		<a href="#" class="thumbnail"><img src="images/001.jpg"></a>
+		<div class="caption">
+			<h4>HTML入门</h4>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<a href="#" class="thumbnail"><img src="images/002.jpg"></a>
+		<div class="caption">
+			<h4>CSS入门</h4>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<a href="#" class="thumbnail"><img src="images/003.jpg"></a>
+		<div class="caption">
+			<h4>JavaScript入门</h4>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<a href="#" class="thumbnail"><img src="images/001.jpg"></a>
+		<div class="caption">
+			<h4>HTML入门</h4>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<a href="#" class="thumbnail"><img src="images/002.jpg"></a>
+		<div class="caption">
+			<h4>CSS入门</h4>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<a href="#" class="thumbnail"><img src="images/003.jpg"></a>
+		<div class="caption">
+			<h4>JavaScript入门</h4>
+		</div>
+	</div>
+</div>
+
+<!--分页效果-->
+<div class="text-center">
+	<ul class="pagination pagination-lg">
+		<li><a href="#">&laquo;</a></li>
+		<li class="active"><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li><a href="#">6</a></li>
+		<li><a href="#">7</a></li>
+		<li><a href="#">8</a></li>
+		<li><a href="#">9</a></li>
+		<li><a href="#">10</a></li>
+		<li><a href="#">&raquo;</a></li>
+	</ul>
+</div>
+
+
+<!--路径导航效果-->
+<h2 class="page-header">路径导航效果</h2>
+<ol class="breadcrumb">
+	<li><a href="#">PHP首页</a></li>
+	<li><a href="#">PHP视频</a></li>
+	<li><a href="#">就业班视频</a></li>
+	<li>MVC视频</li>
+</ol>
+
+
+
+<!--选项卡效果-->
+<h2 class="page-header">选项卡效果</h2>
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">Home</a></li>
+	<li><a href="#">Profile</a></li>
+	<li><a href="#">Messages</a></li>
+</ul>
+<br>
+<ul class="nav nav-pills">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
+
+<!--输入框组-->
+<h2 class="page-header">输入框组</h2>
+<div class="input-group">
+	<span class="input-group-addon">$</span>
+	<input type="text" class="form-control" placeholder="Username">
+	<span class="input-group-addon">.00</span>
+</div>
+
+
+<!--按钮式的下拉菜单-->
+<h2 class="page-header">按钮式的下拉菜单的应用</h2>
+<div class="btn-group">
+	<button class="btn btn-danger">PHP的视频</button> 
+	<button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a href="#">HTML</a></li>
+		<li><a href="#">CSS</a></li>
+		<li><a href="#">JavaScript</a></li>
+		<li><a href="#">Apache</a></li>
+	</ul> 
+</div>
+
+<!--按钮组的应用-->
+<h2 class="page-header">按钮组的应用</h2>
+<div class="btn-toolbar">
+	<div class="btn-group btn-group-lg">
+		<button type="button" class="btn btn-primary">Left</button>
+		<button type="button" class="btn btn-primary">Center</button>
+		<button type="button" class="btn btn-primary">Right</button>
+	</div>
+	<div class="btn-group">
+		<button type="button" class="btn btn-success">1</button>
+		<button type="button" class="btn btn-success">2</button>
+		<button type="button" class="btn btn-success">3</button>
+	</div>
+	<div class="btn-group btn-group-sm">
+		<button type="button" class="btn btn-warning">Top</button>
+		<button type="button" class="btn btn-warning">Middle</button>
+		<button type="button" class="btn btn-warning">Bottom</button>
+	</div>
+</div>
+
+
+<!--下拉菜单的应用-->
+<h2 class="page-header">下拉菜单的应用</h2>
+<div class="dropdown">
+	<button type="button" class="btn btn-default" data-toggle="dropdown">
+		PHP课程体系 <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a href="#">HTML</a></li>
+		<li><a href="#">CSS</a></li>
+		<li><a href="#">JavaScript</a></li>
+		<li class="divider"></li>
+		<li><a href="#">Apache</a></li>
+		<li><a href="#">PHP</a></li>
+		<li><a href="#">MySQL</a></li>
+	</ul>
+</div>
+<!--浮动和清除-->
+<h2 class="page-header">浮动和清除的应用</h2>
+<div style="width:330px;border:1px solid red;" class="clearfix bg-warning">
+	<ul class="list-unstyled">
+		<li class="pull-left" style="padding:10px;">
+			<a href="#"><img src="images/img01.jpg"></a><br>
+			<a href="#">挑来挑去就选传智播客</a>
+		</li>
+		<li class="pull-left" style="padding:10px;">
+			<a href="#"><img width="142" height="88" src="images/img02.jpg"></a><br>
+			<a href="#">挑来挑去就选传智播客</a>
+		</li>
+		<li class="pull-left" style="padding:10px;">
+			<a href="#"><img src="images/img03.jpg"></a><br>
+			<a href="#">挑来挑去就选传智播客</a>
+		</li>
+		<li class="pull-left" style="padding:10px;">
+			<a href="#"><img src="images/img04.jpg"></a><br>
+			<a href="#">挑来挑去就选传智播客</a>
+		</li>
+	</ul>
+</div>
+<!--图片样式应用-->
+<h2 class="page-header">图片样式应用</h2>
+<div>
+	<img class="img-responsive img-thumbnail center-block" width="400" src="images/011.jpg">
+	<p>应中国共产党中央委员会总书记、中华人民共和国主席习近平的邀请，越南共产党中央委员会总书记阮富仲于2015年4月7日至10日对中华人民共和国进行正式访问。访问期间，中共中央总书记、国家主席习近平与阮富仲总书记举行会谈。中共中央政治局常委、国务院总理李克强，中共中央政治局常委、全国人大常委会委员长张德江，中共中央政治局常委、全国政协主席俞正声分别会见阮富仲总书记。在友好、坦诚的气氛中，双方相互通报了各自党和国家的情况，就新形势下进一步加强两党两国关系及共同关心的国际和地区问题深入交换了意见，达成广泛共识。也对促进本地区和世界的和平、稳定、合作与发展产生了积极影响。续发挥好中越双边合作指导委员会等两党两国间交流合作机制的作用，统筹推进合作，协调解决问题，服务于两国人民利益。实施好《落实中越全面战略合作伙伴关系行动计划》，推动两国各领域务实合作取得新进展。</p>
+</div>
+
+</div>
+</div>
+</body>
+</html>

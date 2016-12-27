@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bootstrap基础入门</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.min.js"></script>
+      <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body style="padding:50px;background-color:#ccc;">
+<div class="container" style="padding:50px;background-color:#fff;">
+	
+
+
+<!--标签页选项卡-->
+<h2 class="page-header">普通标签页选项卡</h2>
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">历史</a></li>
+	<li><a href="#">家教</a></li>
+	<li><a href="#">文化</a></li>
+	<li><a href="#">小说</a></li>
+</ul>
+<br>
+<!--胶囊式标签页-->
+<h2 class="page-header">胶囊式标签页</h2>
+<ul class="nav nav-pills" style="width:500px;">
+	<li><a href="#">HTML</a></li>
+	<li class="active"><a href="#">CSS</a></li>
+	<li><a href="#">JavaScript</a></li>
+	<li><a href="#">Apache</a></li>
+</ul>
+<br>
+<!--堆叠式胶囊式标签页-->
+<h2 class="page-header">堆叠式胶囊式标签页</h2>
+<ul class="nav nav-pills nav-stacked" style="width:120px;">
+	<li><a href="#">HTML</a></li>
+	<li class="active"><a href="#">CSS</a></li>
+	<li><a href="#">JavaScript</a></li>
+	<li><a href="#">Apache</a></li>
+</ul>
+<!--带下拉菜单的标签页-->
+<h2 class="page-header">带下拉菜单的标签页</h2>
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">HTML</a></li>
+	<li><a href="#">CSS</a></li>
+	<li><a href="#">JavaScript</a></li>
+	<li class="dropdown">
+		<a href="#" data-toggle="dropdown">Apache <span class="caret"></span></a>
+		<ul class="dropdown-menu">
+			<li><a href="#">Listen</a></li>
+			<li><a href="#">DocumentRoot</a></li>
+			<li><a href="#">ServerName</a></li>
+			<li><a href="#">VirtualHost</a></li>
+		</ul>
+	</li>
+</ul>
+
+</div>
+</body>
+</html>
