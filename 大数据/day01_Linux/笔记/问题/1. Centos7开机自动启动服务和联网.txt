@@ -1,0 +1,17 @@
+地址：http://www.itdadao.com/articles/c15a811441p0.html
+
+虚拟机设置选择NAT模式，默认情况下，Centos不是自动连接上网的，需要点击右上角，手动连接上网。
+
+可以修改开机启动配置修改：
+
+1. cd 到/etc/sysconfig/network-scripts/目录
+
+2. 修改 ifcfg-eno16777736文件（要用root权限）
+
+3 . 把ONBOOT="no"改为“yes”
+
+4. 重启
+
+下一次启动的时候就可以自动连接网络了。
+
+
