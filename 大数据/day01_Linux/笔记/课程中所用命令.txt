@@ -150,4 +150,4 @@ mount ****  挂载外部存储设备到文件系统中
 		%%首先生成密钥对
 		ssh-keygen   (提示时，直接回车即可)
 		%%再将A自己的公钥拷贝并追加到B的授权列表文件authorized_keys中
-		ssh-copy-id   B
+		ssh-copy-id   B的IP

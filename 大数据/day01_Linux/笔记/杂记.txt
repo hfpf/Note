@@ -27,6 +27,7 @@ eth0默认没有自启用
 	直接修改  /etc/sysconfig/network-script/ifcfg-eth0
 	删掉UUID  HWADDR
 	配置静态地址
+	
 	然后：
 	rm -rf 　/etc/udev/rules.d/70-persistent-net.rules
 	然后 reboot
