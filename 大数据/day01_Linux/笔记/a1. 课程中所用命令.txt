@@ -120,6 +120,8 @@ linux的命令操作
 	hostname hadoop
 *****修改主机名(重启后永久生效)
 	vi /ect/sysconfig/network
+	sudo hostnamectl --static set-hostname <host-name>（CentOS7）
+	vi /etc/hostname	（CentOS7）
 	
 ****修改IP(重启后无效)
 	ifconfig eth0 192.168.12.22
@@ -148,6 +150,9 @@ mount ****  挂载外部存储设备到文件系统中
 	假如 A  要登陆  B
 	在A上操作：
 		%%首先生成密钥对
-		ssh-keygen   (提示时，直接回车即可)
+		ssh-keygen   (提示时，直接回车即可，生成位置：/home/hadoop/.ssh/id_rsa)
 		%%再将A自己的公钥拷贝并追加到B的授权列表文件authorized_keys中
 		ssh-copy-id   B的IP
+		
+	复制文件（两台主机）
+		scp -v /etc/ hosts root@192.168.10.103:/etc
