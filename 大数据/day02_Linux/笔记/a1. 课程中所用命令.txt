@@ -150,7 +150,7 @@ linux的命令操作
 mount ****  挂载外部存储设备到文件系统中
 	mkdir   /mnt/cdrom      创建一个目录，用来挂载
 	mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom/     将设备/dev/cdrom挂载到 挂载点 ：  /mnt/cdrom中
-
+	
 *****umount
 	umount /mnt/cdrom
 
@@ -163,7 +163,14 @@ mount ****  挂载外部存储设备到文件系统中
 ****重启
 	reboot
 
+****CentOS7关闭防火墙
+关闭防火墙
+	sudo systemctl stop firewalld.service
+关闭开机启动
+	sudo systemctl disable firewalld.service
 
+	
+	
 ******配置主机之间的免密ssh登陆
 	假如 A  要登陆  B
 	在A上操作：
