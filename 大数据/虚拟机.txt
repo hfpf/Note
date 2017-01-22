@@ -1,0 +1,13 @@
+101:初始化安装，关闭防火墙、添加sudo。
+
+102：YUM本地源、软件安装包
+
+高可靠、负载均衡集群
+	103：
+		jdk、mysql、tomcat
+		ngnix、keepalived
+	104：
+		jdk、mysql、tomcat
+		ngnix、keepalived
+
+
