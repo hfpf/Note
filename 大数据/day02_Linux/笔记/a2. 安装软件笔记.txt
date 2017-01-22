@@ -53,6 +53,9 @@
 		aaa/3.txt
 		aaa/1.txt
 
+		zip使用
+		yum install -y unzip zip
+		unzip xxxxxx.zip -d /home/acer/Desktop/
 
 
 ##########安装jdk的过程：

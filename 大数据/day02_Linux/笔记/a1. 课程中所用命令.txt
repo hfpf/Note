@@ -1,8 +1,9 @@
 linux的命令操作
 	命令 --help		查看命令的帮助
+	连续按两下tab可以提示
 
+	
 1、日常操作命令  
-
 **查看当前所在的工作目录
 	pwd
 
@@ -57,6 +58,7 @@ linux的命令操作
 	gg	直接跳到文件的首行
 	G	直接跳到文件的末行
 	dd	删除行，如果  5dd   ，则一次性删除光标后的5行
+	u	撤回
 	yy	复制当前行,  复制多行，则  3yy，则复制当前行附近的3行
 	p	粘贴
 	v	进入字符选择模式，选择完成后，按y复制，按p粘贴
@@ -80,9 +82,13 @@ linux的命令操作
 
 	tail -10  install.log	查看文件尾部的10行
 	tail -f install.log		实时刷新，小f跟踪文件的唯一inode号，就算文件改名后，还是跟踪原来这个inode表示的文件
+	tail -10f install.log	实时刷新最后10行
 	tail -F install.log		实时刷新，按照文件名来跟踪
 
 	head -10 install.log	查看文件头部的10行
+
+*****文件链接
+	ln -s 文件 链接到的文件
 	
 	
 3、文件权限的操作
@@ -113,6 +119,7 @@ linux的命令操作
 	目录没有执行权限的时候普通用户不能进入
 	文件只有读写权限的时候普通用户是可以删除的(删除文件不是修改它,是操作父及目录),只要父级目录有执行和修改的权限
 
+	
 4、基本的用户管理
 
 *****添加用户
@@ -168,9 +175,47 @@ mount ****  挂载外部存储设备到文件系统中
 	sudo systemctl stop firewalld.service
 关闭开机启动
 	sudo systemctl disable firewalld.service
+	
+	
+*****关闭SELinux
+	vi /etc/selinux/config  # 改为 SELINUX=disabled
+
 
 	
+****进程
+	 ps -ef | grep java	查看java进程
+	 kill pid  			删除进程
+
+****端口
+	yum -y install net-tools
+	netstat -ntlp | grep 80
+	 
+	 
+	 
+****添加开机自启服务
+	systemctl enable keepalived
+	systemctl enable nginx
 	
+	
+			任务						旧指令									新指令
+	使某服务自动启动		chkconfig --level 3 httpd  on             	systemctl enable httpd.service
+	使某服务不自动启动		chkconfig --level 3 httpd off				systemctl disable httpd.service
+	检查服务状态			service httpd status						systemctl status httpd.service （服务详细信息） ystemctl is-active httpd.service （仅显示是否 Active)
+	显示所有已启动的服务	chkconfig --list							systemctl list-units --type=service
+	启动某服务				service httpd start							systemctl start httpd.service
+	停止某服务				service httpd stop							systemctl stop httpd.service
+	重启某服务				service httpd restart						systemctl restart httpd.service
+	
+***添加开机自启脚本
+	cp  /opt/script/autostart.sh /etc/rc.d/init.d
+	
+	 
+	 
+*****日志
+	sudo tail -10f /var/log/messages
+	 
+	 
+	 
 ******配置主机之间的免密ssh登陆
 	假如 A  要登陆  B
 	在A上操作：
@@ -180,13 +225,8 @@ mount ****  挂载外部存储设备到文件系统中
 		ssh-copy-id   B的IP
 		
 	复制文件（两台主机）
-		scp -v /etc/ hosts root@192.168.10.103:/etc
-		
-
-******查看端口占用
-	 yum -y install net-tools（CentOS7需要安装）
-	netstart -nltp
-		
+		scp -v /etc/hosts root@192.168.10.103:/etc
+	
 		
 ******后台服务管理
 	service network status	查看指定服务的状态
