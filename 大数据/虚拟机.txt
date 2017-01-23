@@ -10,4 +10,5 @@
 		jdk¡¢mysql¡¢tomcat
 		ngnix¡¢keepalived
 
-
+zookeeper¼¯Èº
+	105¡¢106¡¢107

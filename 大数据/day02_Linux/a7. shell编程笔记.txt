@@ -1,0 +1,5 @@
+source和export的区别：
+	不用export定义的变量只对该shell有效，对子shell也是无效的。 
+	直接执行一个脚本文件是在一个子shell中运行的，
+	而source则是在当前shell环境中运行的。
+	source可以让脚本影响它们的父shell环境,这和export去影响子shell环境相反。

@@ -184,9 +184,14 @@ mount ****  挂载外部存储设备到文件系统中
 
 	
 ****进程
-	 ps -ef | grep java	查看java进程
-	 kill pid  			删除进程
+	yum install psmisc
+	pstree				查看进程树
+	
+	ps -ef | grep java	查看java进程
+	kill pid  			删除进程
 
+	jps		查看java进程，需要安装JDK，配置JAVA_HOME
+	 
 ****端口
 	yum -y install net-tools
 	netstat -ntlp | grep 80
