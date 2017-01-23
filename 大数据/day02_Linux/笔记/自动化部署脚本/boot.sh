@@ -1,10 +1,12 @@
 #!/bin/bash
-
 #本脚本功能为配置ssh，执行安装脚本
+#需要做初始化工作：
+#ssh-keygen				#生成ssh密匙
+#yum install expect		#安装except命令
 
-SERVERS="node-3.itcast.cn node-4.itcast.cn"		#每个主机名
-PASSWORD=123456									#ssh免密登录的保护密码
-INSTALL_FILE=install_everyone.sh				#安装脚本
+SERVERS="centos05"								#每个主机名
+PASSWORD=123456									#每个主机密码
+INSTALL_FILE=install_jdk.sh				#安装脚本
 
 #单个设置ssh免密登录过程
 auto_ssh_copy_id() {
@@ -25,10 +27,12 @@ ssh_copy_id_to_all() {
     done
 }
 
-ssh_copy_id_to_all
+ssh_copy_id_to_all	#向每个主机发送公钥
 
 for SERVER in $SERVERS
 do
-    scp $INSTALL_FILE root@$SERVER:/root	#复制安装脚本
-    ssh root@$SERVER /root/$INSTALL_FILE	#执行安装脚本
+	#安装JDK
+    scp $INSTALL_FILE root@$SERVER:/root			#复制安装脚本
+	ssh root@$SERVER chmod +x /root/$INSTALL_FILE	
+    ssh root@$SERVER /root/$INSTALL_FILE			#执行安装脚本
 done
