@@ -1,8 +1,9 @@
 linux的命令操作
 	命令 --help		查看命令的帮助
+	连续按两下tab可以提示
 
+	
 1、日常操作命令  
-
 **查看当前所在的工作目录
 	pwd
 
@@ -32,9 +33,10 @@ linux的命令操作
 	rm -r aaa	可以把aaa整个文件夹及其中的所有子节点全部删除
 	rm -rf aaa	强制删除aaa
 
-**修改文件夹名称
+**修改文件夹名称，剪切（使用mv命令来为文件或目录改名或将文件由一个目录移入另一个目录中。）
+	语法：mv [选项] 源文件或目录 目标文件或目录
 	mv aaa angelababy
-
+	
 **创建文件
 	touch  somefile.1								创建一个空文件
 	echo "i miss you,my baby" > somefile.2			利用重定向“>”的功能，将一条指令的输出结果写入到一个文件中，会覆盖原文件内容
@@ -56,17 +58,40 @@ linux的命令操作
 	gg	直接跳到文件的首行
 	G	直接跳到文件的末行
 	dd	删除行，如果  5dd   ，则一次性删除光标后的5行
+	u	撤回
 	yy	复制当前行,  复制多行，则  3yy，则复制当前行附近的3行
 	p	粘贴
 	v	进入字符选择模式，选择完成后，按y复制，按p粘贴
-	ctrl + v	进入块选择模式，选择完成后，按y复制，按p粘贴
-	shift + v	进入行选择模式，选择完成后，按y复制，按p粘贴
-
+	Ctrl + v	进入块选择模式，选择完成后，按y复制，按p粘贴
+	Shift + v	进入行选择模式，选择完成后，按y复制，按p粘贴
+	Ctrl + g	显示行号
+	
 查找并替换（在底行命令模式中输入）
 	%s/sad/88888888888888	效果：查找文件中所有sad，替换为88888888888888
 	/you       				效果：查找文件中出现的you，并定位到第一个找到的地方，按n可以定位到下一个匹配位置（按N定位到上一个）
 
 
+*****拷贝文件
+	cp  somefile.1   /home/hadoop/
+复制文件（两台主机）
+	scp -v /etc/ hosts root@192.168.10.103:/etc
+
+*****查看文件内容
+	cat		somefile	一次性将文件内容全部输出（控制台）
+	more	somefile	可以翻页查看, 下翻一页(空格)    上翻一页（b）   退出（q）
+	less	somefile	可以翻页查看,下翻一页(空格)    上翻一页（b），上翻一行(↑)  下翻一行（↓）  可以搜索关键字（/keyword）
+
+	tail -10  install.log	查看文件尾部的10行
+	tail -f install.log		实时刷新，小f跟踪文件的唯一inode号，就算文件改名后，还是跟踪原来这个inode表示的文件
+	tail -10f install.log	实时刷新最后10行
+	tail -F install.log		实时刷新，按照文件名来跟踪
+
+	head -10 install.log	查看文件头部的10行
+
+*****文件链接
+	ln -s 文件 链接到的文件
+	
+	
 3、文件权限的操作
 
 ****linux文件权限的描述格式解读
@@ -95,6 +120,7 @@ linux的命令操作
 	目录没有执行权限的时候普通用户不能进入
 	文件只有读写权限的时候普通用户是可以删除的(删除文件不是修改它,是操作父及目录),只要父级目录有执行和修改的权限
 
+	
 4、基本的用户管理
 
 *****添加用户
@@ -132,7 +158,7 @@ linux的命令操作
 mount ****  挂载外部存储设备到文件系统中
 	mkdir   /mnt/cdrom      创建一个目录，用来挂载
 	mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom/     将设备/dev/cdrom挂载到 挂载点 ：  /mnt/cdrom中
-
+	
 *****umount
 	umount /mnt/cdrom
 
@@ -145,7 +171,52 @@ mount ****  挂载外部存储设备到文件系统中
 ****重启
 	reboot
 
+****CentOS7关闭防火墙
+关闭防火墙
+	sudo systemctl stop firewalld.service
+关闭开机启动
+	sudo systemctl disable firewalld.service
+	
+	
+*****关闭SELinux
+	vi /etc/selinux/config  # 改为 SELINUX=disabled
 
+
+	
+****进程
+	 ps -ef | grep java	查看java进程
+	 kill pid  			删除进程
+
+****端口
+	yum -y install net-tools
+	netstat -ntlp | grep 80
+	 
+	 
+	 
+****添加开机自启服务
+	systemctl enable keepalived
+	systemctl enable nginx
+	
+	
+			任务						旧指令									新指令
+	使某服务自动启动		chkconfig --level 3 httpd  on             	systemctl enable httpd.service
+	使某服务不自动启动		chkconfig --level 3 httpd off				systemctl disable httpd.service
+	检查服务状态			service httpd status						systemctl status httpd.service （服务详细信息） ystemctl is-active httpd.service （仅显示是否 Active)
+	显示所有已启动的服务	chkconfig --list							systemctl list-units --type=service
+	启动某服务				service httpd start							systemctl start httpd.service
+	停止某服务				service httpd stop							systemctl stop httpd.service
+	重启某服务				service httpd restart						systemctl restart httpd.service
+	
+***添加开机自启脚本
+	cp  /opt/script/autostart.sh /etc/rc.d/init.d
+	
+	 
+	 
+*****日志
+	sudo tail -10f /var/log/messages
+	 
+	 
+	 
 ******配置主机之间的免密ssh登陆
 	假如 A  要登陆  B
 	在A上操作：
@@ -155,4 +226,59 @@ mount ****  挂载外部存储设备到文件系统中
 		ssh-copy-id   B的IP
 		
 	复制文件（两台主机）
-		scp -v /etc/ hosts root@192.168.10.103:/etc
+		scp -v /etc/hosts root@192.168.10.103:/etc
+	
+		
+******后台服务管理
+	service network status	查看指定服务的状态
+	service network stop	停止指定服务
+	service network start	启动指定服务
+	service network restart	重启指定服务
+	service --status-al		查看系统中所有的后台服务
+
+设置后台服务的自启配置
+	chkconfig   			查看所有服务器自启配置（数字代表在不同启动级别上是否开启）
+	chkconfig iptables off	关掉指定服务的自动启动
+	chkconfig iptables on	开启指定服务的自动启动
+
+
+*****系统启动级别管理
+
+	#查看当前运行的级别
+		runlevel  //仍然可用
+
+	
+	CentOS6：
+	vi  /etc/inittab
+
+	# Default runlevel. The runlevels used are:
+	#   0 - halt (Do NOT set initdefault to this)
+	#   1 - Single user mode
+	#   2 - Multiuser, without NFS (The same as 3, if you do not have networking)
+	#   3 - Full multiuser mode
+	#   4 - unused
+	#   5 - X11	图形化
+	#   6 - reboot (Do NOT set initdefault to this)
+	#
+	id:3:initdefault:		
+		
+		
+	CentOS7：
+		ls -ltr /lib/systemd/system/runlevel*.target
+		
+		lrwxrwxrwx. 1 root root 13 1月  19 00:55 /lib/systemd/system/runlevel1.target -> rescue.target
+		lrwxrwxrwx. 1 root root 15 1月  19 00:55 /lib/systemd/system/runlevel0.target -> poweroff.target
+		lrwxrwxrwx. 1 root root 17 1月  19 00:55 /lib/systemd/system/runlevel4.target -> multi-user.target
+		lrwxrwxrwx. 1 root root 17 1月  19 00:55 /lib/systemd/system/runlevel3.target -> multi-user.target
+		lrwxrwxrwx. 1 root root 17 1月  19 00:55 /lib/systemd/system/runlevel2.target -> multi-user.target
+		lrwxrwxrwx. 1 root root 13 1月  19 00:55 /lib/systemd/system/runlevel6.target -> reboot.target
+		lrwxrwxrwx. 1 root root 16 1月  19 00:55 /lib/systemd/system/runlevel5.target -> graphical.target
+
+		如设置命令行级别(init 3)方法:
+		ln -svf /lib/systemd/system/runlevel3.target /etc/systemd/system/default.target
+		或
+		ln -svf /lib/systemd/system/multi-user.target /etc/systemd/system/default.target
+		或 
+		systemctl set-default multi-user.target
+
+		
