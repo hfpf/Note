@@ -6,7 +6,7 @@
 
 SERVERS="centos05"								#每个主机名
 PASSWORD=123456									#每个主机密码
-INSTALL_FILE=install_jdk.sh				#安装脚本
+INSTALL_FILE=install_jdk.sh						#安装脚本
 
 #单个设置ssh免密登录过程
 auto_ssh_copy_id() {
@@ -27,11 +27,15 @@ ssh_copy_id_to_all() {
     done
 }
 
-ssh_copy_id_to_all	#向每个主机发送公钥
+#向每个主机发送公钥
+ssh_copy_id_to_all	
 
+#复制hosts文件
+scp /etc/hosts root@$SERVER:/etc/hosts				
+
+#安装JDK
 for SERVER in $SERVERS
 do
-	#安装JDK
     scp $INSTALL_FILE root@$SERVER:/root			#复制安装脚本
 	ssh root@$SERVER chmod +x /root/$INSTALL_FILE	
     ssh root@$SERVER /root/$INSTALL_FILE			#执行安装脚本

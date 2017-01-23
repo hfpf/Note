@@ -10,6 +10,14 @@
 	sudo systemctl stop firewalld.service
 	sudo systemctl disable firewalld.service
 	
+	关闭SELINUX
+	# 改为 SELINUX=disabled
+	vi /etc/selinux/config
+	
 4. 添加sudo
 	vi /etc/sudoers
 
+5. 传送文件
+	yum install lrzsz
+	rz 弹出文件框
+	或者直接拖进
