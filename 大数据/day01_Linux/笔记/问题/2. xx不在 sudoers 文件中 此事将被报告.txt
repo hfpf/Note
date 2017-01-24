@@ -3,4 +3,4 @@
 	
 在文件中添加那一行
 root    ALL=(ALL)       ALL
-xx      ALL=(ALL)       ALL（将此处的XX修改为出现改问题的用户名！）
+xx      ALL=(ALL)       NOPASSWD:ALL（将此处的XX修改为出现改问题的用户名！）
