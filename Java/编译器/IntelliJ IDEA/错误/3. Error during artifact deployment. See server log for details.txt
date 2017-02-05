@@ -1,0 +1,7 @@
+启动出现错误：Error during artifact deployment. See server log for details.
+使用Tomcat启动没有错误
+
+解决方法：
+	在IDEA右下角点击JRebel，将对话中的√全部取消。
+
+
