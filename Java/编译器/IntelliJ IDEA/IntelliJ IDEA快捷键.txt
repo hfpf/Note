@@ -4,6 +4,7 @@ Ctrl + Alt + L			格式化代码(建议修改为Ctrl + Shift + F)
 Ctrl + Alt + Left/Right	返回至上次浏览的位置
 Ctrl + Alt + O			清除无效包引用
 Ctrl + Alt + T			快捷生成结构体，把代码包在一块内，例如try/catch
+Ctrl + Alt + U			类的继承图
 Ctrl + Alt + V			可以新建变量。例如把new String("123")赋成一个变量
 Ctrl + E				可以显示最近编辑的文件列表
 Ctrl + F				查找文本
