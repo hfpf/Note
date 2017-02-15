@@ -99,3 +99,6 @@ HMSET key field value [field value ...]	O(N)	时间复杂度中的N表示被设�
     redis 127.0.0.1:6379> hvals myhash
     1) "hello"
     2) "world" 
+	
+	
+	
