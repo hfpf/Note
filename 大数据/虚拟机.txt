@@ -21,4 +21,7 @@ Docker
 
 	
 Hadoop
-	121£º
+	121£ºnamenodes				datanodes
+	122£ºsecondary namenodes	datanodes
+	123£ºdatanodes
+	124£ºdatanodes
