@@ -60,19 +60,18 @@ do
 done
 
 #找到列表文件willDoing
-ls $log_upload_dir | grep will |grep -v "_COPY_" | grep -v "_DONE_" | while read line
+ls $log_upload_dir | grep "will" | grep -v "_COPY_" | grep -v "_DONE_" | while read line
 do
 	#打印信息
 	echo "upload is in file:"$line
 	#将待上传文件列表willDoing改名为willDoing_COPY_
 	mv $log_upload_dir$line $log_upload_dir$line"_COPY_"
 	#读列表文件willDoing_COPY_的内容（一个一个的待上传文件名）  ,此处的line 就是列表中的一个待上传文件的path
-	cat $log_upload_dir$line"_COPY_" |while read line
+	cat $log_upload_dir$line"_COPY_" | while read line
 	do
 		#打印信息
 		echo "puting [$line] to hdfs [$hdfs_root_dir]"
 		hadoop fs -put $line $hdfs_root_dir
 	done
-	mv $log_upload_dir$line"_COPY_"  $log_upload_dir$line"_DONE_"
+	mv $log_upload_dir$line"_COPY_" $log_upload_dir$line"_DONE_"
 done
-
